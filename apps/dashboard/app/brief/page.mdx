@@ -1,0 +1,91 @@
+import { IviChart } from "@/app/_components/ivi-chart";
+import { IndependenceTable } from "@/app/_components/independence-table";
+
+export const dynamic = "force-dynamic";
+
+# Sensemaking Quality, Not Prediction
+
+<p className="brief-subtitle">Three measures for detecting narrative capture in real time</p>
+
+<p className="brief-byline">Jonathan Miller · Doctor of Engineering, Penn State College of Engineering</p>
+
+<p className="brief-meta">TELL pipeline overview · tell-fyi.vercel.app/brief · May 2026 · v0.1 working draft</p>
+
+<hr className="brief-rule" />
+
+## Abstract
+
+When public discourse outruns institutional response during ambiguous, high-uncertainty events, unevidenced narratives capture the resulting vacuum. The 2024 New Jersey aerial phenomena incident produced a measurable case: more than five thousand FBI tips, four federal agencies declaring "nothing anomalous," a congressional claim of an Iranian drone mothership, a podcast-originated loose-nuclear-weapon theory, and a 269 percent surge in laser strikes against commercial aircraft. TELL is an open-source intelligence pipeline that asks an upstream question. Rather than predicting what an event was, it evaluates whether the information environment was supporting human sensemaking while the answer was unknown. Three novel measures target distinct failure modes. Klein's sensemaking framework and Leveson's STAMP control-structure modeling enter as design requirements rather than post-hoc rhetoric. Retrospective analysis of a 204-document corpus surfaces the structural conditions of narrative capture and produces results stable across three corpus densities.
+
+## The Three Measures
+
+**Information Vacuum Index (IVI).** A rolling-window ratio between the count of public discourse documents and the count of authoritative documents from federal agencies, congressional offices, and primary investigators. Above one means more public talk than institutional response. Above ten means a structural vacuum.
+
+**Narrative Velocity Divergence (NVD).** A per-narrative ratio between the rate at which a named narrative spreads and the rate at which evidence supporting it accumulates. Above one means the narrative is outpacing its evidence base. Computed across eight named narratives.
+
+**Source Independence Graph (SIG).** A topology measure that traces every document carrying a narrative back to its attributable origin source, then computes the count of independent sources versus the count of amplifying outlets. A score of one with a high amplification ratio is the structural signature of an echo chamber, not corroboration.
+
+These three plug into four Sensemaking Quality Metrics: contradicting-evidence lag, composite narrative-capture risk, evidence-narrative alignment, and premature-closure resistance.
+
+## Headline Findings
+
+<table>
+  <thead>
+    <tr><th>Measure</th><th>Result</th><th>Date</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>IVI peak</td><td><strong>17.0</strong> (17 discourse, 0 authoritative)</td><td>2024-12-24</td></tr>
+    <tr><td>Iranian Mothership NVD</td><td><strong>1.20</strong> (narrative outpacing evidence)</td><td>2024-12-11</td></tr>
+    <tr><td>Iranian Mothership SIG</td><td><strong>score 1, 6× amplification</strong></td><td>invariant</td></tr>
+    <tr><td>Mass-hysteria contradiction lag</td><td><strong>1,128 hours</strong> (47 days unchallenged)</td><td>from 2024-12-16</td></tr>
+    <tr><td>Composite capture-risk alert</td><td>fires on Iranian Mothership</td><td>2024-12-11, 12</td></tr>
+    <tr><td>Mean entropy (H1–H5), 26 days</td><td><strong>86.5%</strong> of theoretical maximum</td><td>26 days</td></tr>
+    <tr><td>Evidence-narrative alignment</td><td><strong>95.7%</strong> of windows</td><td>47 windows</td></tr>
+  </tbody>
+</table>
+
+The Iranian Mothership result is invariant across corpus sizes of 38, 96, and 204 documents. The 1,128-hour lag on the institutional mass-hysteria framing is not a pipeline failure. It is a measurement of which framings institutional silence protects.
+
+<figure>
+  <IviChart topic="nj-drones" />
+  <figcaption>Figure 1. Information Vacuum Index, seven-day rolling window, New Jersey drones corpus. The accent-shaded band marks December 11–25, 2024. Peak IVI 17.0 on the seven days ending December 24, 2024. The top ten IVI windows in the corpus all fall inside the December 16–25 stretch.</figcaption>
+</figure>
+
+<figure>
+  <IndependenceTable topic="nj-drones" corpusVersion="nj-drones-2026-04-08" />
+  <figcaption>Figure 2. Source Independence Graph, all narratives. The Iranian Mothership row is flagged as an echo chamber: independence score 1, six documents, six unique domains, all amplifying a single congressional statement. Drones-Legit (independence score 31 across 105 documents and 49 domains) is the contrasting case that genuine corroboration produces.</figcaption>
+</figure>
+
+## Validation Status
+
+Eight abstract claims, scored against committed code, persisted data, and reproducible test runs:
+
+<table>
+  <thead>
+    <tr><th>Claim</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Multi-source ingestion (gov, news, aviation, academic, social)</td><td><strong>validated</strong></td></tr>
+    <tr><td>Information Vacuum Index</td><td><strong>validated</strong></td></tr>
+    <tr><td>Narrative Velocity Divergence</td><td><strong>validated</strong></td></tr>
+    <tr><td>Source Independence Graph</td><td><strong>validated</strong></td></tr>
+    <tr><td>Klein and Leveson as design requirements</td><td>partial</td></tr>
+    <tr><td>Surfaces contradicting evidence within hours</td><td>partial (2 of 3 same-day)</td></tr>
+    <tr><td>Maintains structured uncertainty across hypotheses</td><td><strong>validated</strong></td></tr>
+    <tr><td>Flags conditions conducive to narrative capture</td><td><strong>validated</strong></td></tr>
+  </tbody>
+</table>
+
+Six validated, two partial. Stability of the three signal methods confirmed across three corpus builds.
+
+## Generalization
+
+The New Jersey case is the validation corpus, not the point. The architecture generalizes to ambiguous high-uncertainty events with the same structural shape: biosecurity incidents where early reports are unclear and institutional response is deliberately slow, emerging-technology governance where public discourse outpaces regulatory understanding, contested-attribution cyber incidents, and critical-infrastructure failures with competing pre-root-cause explanations.
+
+## Resources
+
+- **Live dashboard.** [tell-fyi.vercel.app](https://tell-fyi.vercel.app)
+- **Reproducible claim ledger.** `dev/tell/docs/abstract-claims.md`
+- **Architecture mapping.** `dev/tell/docs/methods/framework-mapping.md`
+- **Methods documentation.** `dev/tell/docs/methods/` (`ivi.md`, `nvd.md`, `independence.md`, `sqm.md`)
+- **Citation.** Miller, TELL pipeline, Penn State D.Eng. praxis, 2026.

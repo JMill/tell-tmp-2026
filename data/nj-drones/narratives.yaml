@@ -1,0 +1,103 @@
+# NJ Drones — Narrative Definitions
+#
+# The narratives that circulated during and after the November 2024 -
+# January 2025 New Jersey aerial phenomena incident. Each narrative has a
+# stable slug that events in timeline.yaml can reference.
+
+metadata:
+  corpus: nj-drones
+  last_updated: 2026-04-06
+  authored_by: JMill
+
+narratives:
+  - slug: iranian-mothership
+    label: "Iranian Mothership"
+    category: adversary
+    hypothesis: H4-foreign  # subtype of classified/adversary tech
+    hypothesis_id: H4       # code-level hypothesis bucket (H1-H5)
+    keywords: ["iran", "mothership", "iranian ship", "van drew"]
+    first_seen: 2024-12-11
+    originating_source: Rep. Jeff Van Drew (R-NJ), public statement
+    claim: An Iranian ship off the East Coast was launching drones.
+    evidence_weight: rumor
+    notes: Denied by the Pentagon. Later retracted by Van Drew.
+
+  - slug: loose-nuke
+    label: "Loose Nuke / Dirty Bomb"
+    category: domestic-classified
+    hypothesis: H4-domestic
+    hypothesis_id: H4
+    keywords: ["nuclear", "nuke", "loose nuke", "dirty bomb", "nnsa", "doe search"]
+    first_seen: 2024-12
+    originating_source: podcast (unspecified)
+    claim: The low-altitude grid search pattern matched DoE/NNSA search for a loose nuke or dirty bomb.
+    evidence_weight: rumor
+    notes: Denied by DoE/NNSA. Picked up by mainstream media.
+
+  - slug: test-flights
+    label: "FAA-Approved Test Flights"
+    category: domestic-legitimate
+    hypothesis: H3
+    hypothesis_id: H3
+    keywords: ["test flight", "faa-approved", "military contractor", "approved test", "leavitt", "trump white house"]
+    first_seen: 2024-12
+    originating_source: online forums; later Trump White House Press Secretary (2025-01-28)
+    claim: U.S. military contractors conducting approved test flights of new assets.
+    evidence_weight: weak
+    notes: Official explanation offered by Trump White House in January 2025.
+
+  - slug: war-game
+    label: "War Game Exercise"
+    category: domestic-classified
+    hypothesis: H4-domestic
+    hypothesis_id: H4
+    keywords: ["war game", "wargame", "drone incursion response", "exercise"]
+    first_seen: 2024-12
+    originating_source: online forums
+    claim: USG or contractors conducting an approved war gaming exercise to test drone incursion response.
+    evidence_weight: weak
+
+  - slug: false-flag
+    label: "False Flag Operation (Project Blue Beam)"
+    category: conspiracy
+    hypothesis: H4-domestic
+    hypothesis_id: H4
+    keywords: ["blue beam", "false flag", "fake alien", "authoritarian"]
+    first_seen: 2024-12
+    originating_source: online forums (Project Blue Beam, 1990s)
+    claim: USG and business elites staging a fake alien invasion to justify authoritarian rule.
+    evidence_weight: rumor
+
+  - slug: mass-hysteria
+    label: "Mass Hysteria / Misidentification"
+    category: dismissal
+    hypothesis: H1  # sensor/data artifact
+    hypothesis_id: H1
+    keywords: ["mass hysteria", "misidentification", "commercial aircraft", "hobbyist", "nothing anomalous", "hogan", "orion"]
+    first_seen: 2024-12
+    originating_source: Biden White House; mainstream media
+    claim: Majority of sightings were misidentification of commercial aircraft, police helicopters, and hobbyist drones, propelled into a mass hysteria response.
+    evidence_weight: weak
+
+  - slug: uap
+    label: "Genuine UAP"
+    category: unknown
+    hypothesis: H5
+    hypothesis_id: H5
+    keywords: ["uap", "ufo", "non-human", "whistleblower", "langley air"]
+    first_seen: 2024-12
+    originating_source: online and mainstream media
+    claim: Some observations represent UAPs with flight characteristics consistent with other UAP events (Langley Air Field 2023, whistleblower testimony).
+    evidence_weight: weak
+
+  - slug: drones-legit
+    label: "Legitimate Drones (Unattributed)"
+    category: observation
+    hypothesis: H3
+    hypothesis_id: H3
+    keywords: ["drone", "drones", "aerial", "sighting"]
+    first_seen: 2024-11-12
+    originating_source: initial military reports
+    claim: Actual drones were present in the airspace, regardless of operator.
+    evidence_weight: moderate
+    notes: This is the lowest-common-denominator narrative that does not specify operator or intent.

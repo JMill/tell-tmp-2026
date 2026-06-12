@@ -1,0 +1,298 @@
+# NJ Drones Ground-Truth Timeline
+#
+# This is the single load-bearing document for the retrospective evaluation.
+# Canonical events, dates, and narrative tags used to validate whether the
+# pipeline's weak-signal detection methods fire when expected.
+#
+# AUTHORING NOTE: The events below were drafted on 2026-04-08 from the verified
+# research dossier at research/2026-04-07-verified-events.md as a working
+# starting point. JMill is expected to review, refine, and correct these
+# entries as empirical work uncovers discrepancies. Do NOT delegate canonical
+# date corrections to an LLM — the ground truth must be human-audited against
+# primary sources.
+#
+# Schema (per event):
+#   id:              unique slug, e.g. "2024-11-13-picatinny-first-sighting"
+#   date:            ISO 8601 (YYYY-MM-DD) or YYYY-MM-DDTHH:MM if precise
+#   title:           short human-readable title
+#   summary:         1-3 sentence description
+#   category:        observation | institutional-statement | media-coverage |
+#                    policy-action | narrative-claim | evidence | other
+#   narratives:      list of narrative tags this event belongs to
+#                    (iranian-mothership | loose-nuke | test-flights |
+#                     war-game | false-flag | mass-hysteria | uap | drones-legit)
+#   sources:         list of source URLs (at least one, more preferred)
+#   evidence_weight: strong | moderate | weak | rumor
+#   notes:           freeform
+
+metadata:
+  corpus: nj-drones
+  window_start: 2024-11-01
+  window_end: 2025-01-31
+  last_updated: 2026-04-08
+  authored_by: JMill (with Claude research support)
+  source_dossier: research/2026-04-07-verified-events.md
+  version: 0.2.0-draft
+
+events:
+
+  - id: 2024-11-13-picatinny-first-sighting
+    date: 2024-11-13
+    title: First reported sighting at Picatinny Arsenal
+    summary: A contractor at Picatinny Arsenal in Morris County, NJ reported seeing "a light rising straight up from the tree line and toward the arsenal." This is the first confirmed observation in retrospective reporting.
+    category: observation
+    narratives: [drones-legit]
+    sources:
+      - https://dronexl.co/2024/11/22/mysterious-drone-swarm-picatinny-arsenal-nj-multi-agency-investigation/
+      - https://dronelife.com/2024/11/21/unexplained-drone-activity-over-morris-county-sparks-public-concern-and-official-investigation/
+    evidence_weight: moderate
+    notes: Picatinny Police later confirmed 11 reports between Nov 13 and Dec 6. Picatinny is a U.S. Army weapons R&D facility.
+
+  - id: 2024-11-18-morris-county-le-observations
+    date: 2024-11-18
+    title: Additional Morris County sightings with law enforcement observers
+    summary: Additional unauthorized drones reported flying over the Picatinny area and surrounding Morris County. Local law enforcement reportedly observed drone activity firsthand.
+    category: observation
+    narratives: [drones-legit]
+    sources:
+      - https://www.yahoo.com/news/theyre-not-drones-says-picatinny-202450061.html
+    evidence_weight: moderate
+    notes: Picatinny officials publicly disclaimed that the sightings were related to arsenal activities.
+
+  - id: 2024-11-22-faa-bedminster-tfr
+    date: 2024-11-22
+    title: FAA issues two-week TFR over Trump's Bedminster golf club
+    summary: FAA issued a two-week temporary flight restriction over Trump's Bedminster golf club starting around November 22, 2024, after observed drone activity in the area.
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: moderate
+    notes: Predates the broader December TFRs. Exact NOTAM number needs verification from tfr.faa.gov.
+
+  - id: 2024-12-03-fbi-investigation-opens
+    date: 2024-12-03
+    title: FBI Newark opens formal investigation, requests public tips
+    summary: The FBI Newark field office formally initiated its investigation into the drone activity by requesting that the public report any sightings of suspected drones near the Raritan River corridor in New Jersey.
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://www.fbi.gov/contact-us/field-offices/newark/news/fbi-newark-seeks-information-on-drone-sightings
+    evidence_weight: strong
+    notes: Formal start of FBI involvement, distinct from the earlier informal sightings reporting.
+
+  - id: 2024-12-05-nrc-radioactive-alert
+    date: 2024-12-05
+    title: NRC alerts on lost radioactive medical equipment (seed of loose-nuke narrative)
+    summary: The U.S. Nuclear Regulatory Commission issued an alert that a piece of medical equipment used for cancer scans had been "lost in transit" in or near New Jersey. This unrelated alert became the seed of the loose-nuke conspiracy theory when conflated with the drone sightings.
+    category: institutional-statement
+    narratives: [loose-nuke]
+    sources:
+      - https://abcnews.com/US/fact-check-radioactive-material-triggered-drone-theories-missing/story?id=116884712
+    evidence_weight: strong
+    notes: The material was later found and disposed of properly. Canonical bridge from a real NRC alert to the loose-nuke narrative.
+
+  - id: 2024-12-09-kirby-first-address
+    date: 2024-12-09
+    title: John Kirby first addresses drone sightings at White House briefing
+    summary: John Kirby, NSC Communications Advisor at the Biden White House, first addressed the drone sightings at a press briefing. Stated no evidence of national security threat; characterized many sightings as misidentifications.
+    category: institutional-statement
+    narratives: [mass-hysteria, drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: First major White House engagement on the topic.
+
+  - id: 2024-12-10-fbi-3000-tips-congress
+    date: 2024-12-10
+    title: FBI tells Congress it has over 3,000 reports
+    summary: An FBI spokesperson briefed Congress that the bureau had collected over 3,000 reports via the tip line related to the drone sightings but had not determined a full explanation.
+    category: institutional-statement
+    narratives: [drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: The 3,000-to-5,000 progression over the following week is informative for Information Vacuum Index analysis — public reporting volume outpacing institutional characterization capacity.
+
+  - id: 2024-12-11-fantasia-large-drones
+    date: 2024-12-11
+    title: NJ Assemblywoman Fantasia shares briefing notes describing "six foot diameter" drones
+    summary: New Jersey State Assemblywoman Dawn Fantasia shared briefing notes describing observed drones as "up to six feet in diameter operating for six to seven hours per night." This characterization of size and endurance became a strong data point for those rejecting the hobbyist-drone framing.
+    category: institutional-statement
+    narratives: [drones-legit, uap]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: Six-foot-diameter, six-to-seven-hour endurance is well beyond typical hobbyist class. This differentiates the uap/drones-legit framing from the mass-hysteria framing.
+
+  - id: 2024-12-11-van-drew-iranian-mothership
+    date: 2024-12-11
+    title: Rep. Jeff Van Drew claims Iranian mothership launching drones
+    summary: Rep. Jeff Van Drew (R-NJ) appeared on Fox News with anchor Harris Faulkner and claimed that "from very high sources" Iran had launched a mothership approximately a month earlier off the U.S. East Coast that was launching drones over New Jersey. Called for the drones to be shot down.
+    category: narrative-claim
+    narratives: [iranian-mothership]
+    sources:
+      - https://www.foxnews.com/media/new-jersey-lawmaker-warns-drones-originate-iranian-mothership-shot-down
+      - https://www.washingtontimes.com/news/2024/dec/11/jeff-van-drew-claims-new-jersey-drones-iranian-mot/
+    evidence_weight: rumor
+    notes: Canonical origin of the Iranian mothership narrative. This is a narrative-claim event — it documents what Van Drew said, not that the claim was true.
+
+  - id: 2024-12-11-singh-pentagon-denial
+    date: 2024-12-11
+    title: Pentagon spokesperson Sabrina Singh denies Iranian mothership claim
+    summary: Pentagon spokesperson Sabrina Singh told reporters "There is no Iranian ship off the coast of the United States, and there's no so-called 'mothership' launching drones toward the United States." Singh added no evidence of foreign entity involvement. Same-day denial.
+    category: institutional-statement
+    narratives: [iranian-mothership]
+    sources:
+      - https://www.nbcnews.com/news/us-news/iranian-mothership-not-drone-sightings-new-jersey-pentagon-says-rcna183863
+      - https://www.usnews.com/news/world/articles/2024-12-11/no-iranian-drone-mothership-off-the-united-states-launching-drones-pentagon-says
+      - https://www.upi.com/Top_News/US/2024/12/11/new-jersey-drone-sightings/5751733955224/
+      - https://www.newsweek.com/drones-new-jersey-iran-jeff-van-drew-1999348
+    evidence_weight: strong
+    notes: Same-day denial. The speed of the denial matters for NVD calculation — this is the canonical "contradicting evidence surfaced within hours" test case for Claim 6 in abstract-claims.md.
+
+  - id: 2024-12-12-joint-dhs-fbi-statement
+    date: 2024-12-12
+    title: Joint DHS/FBI statement issued
+    summary: DHS and FBI issued a joint statement on the New Jersey drone reports, establishing the federal line that there was no evidence of foreign involvement.
+    category: institutional-statement
+    narratives: [drones-legit, mass-hysteria]
+    sources:
+      - https://www.dhs.gov/archive/news/2024/12/12/joint-dhsfbi-statement-reports-drones-new-jersey
+      - https://www.fbi.gov/news/press-releases/joint-dhs-fbi-statement-on-reports-of-drones-in-new-jersey
+    evidence_weight: strong
+    notes: The Dec 12 DHS/FBI joint statement is distinct from the broader Dec 16 DoD/DHS/FAA/FBI statement that cited 5,000 reports.
+
+  - id: 2024-12-12-hogan-orion-video
+    date: 2024-12-12
+    title: Larry Hogan posts video later identified as Orion constellation
+    summary: Former Maryland Governor Larry Hogan posted a video on X claiming "dozens of large drones" over his Davidsonville, Maryland residence. Within days, astronomers identified the objects as the constellation Orion. A community note was added to the post.
+    category: narrative-claim
+    narratives: [mass-hysteria]
+    sources:
+      - https://www.baltimoresun.com/2024/12/16/drones-larry-hogan-orion-constellation/
+      - https://newrepublic.com/post/189416/republican-larry-hogan-maga-conspiracy-drones
+      - https://dronexl.co/2024/12/13/ex-maryland-gov-hogan-mystery-drones-stars/
+    evidence_weight: rumor
+    notes: Textbook example of misidentification under an active narrative. Useful SQM validation case — the pipeline should be able to flag this as a narrative-claim without corroborating evidence.
+
+  - id: 2024-12-13-stewart-airport-closure
+    date: 2024-12-13
+    title: Stewart International Airport runway closure (~1 hour)
+    summary: Stewart International Airport (SWF) in Newburgh, NY closed its runways for approximately one hour due to drone activity. FAA confirmed slowed air traffic. Governor Hochul's "this has gone too far" statement followed the next day.
+    category: evidence
+    narratives: [drones-legit]
+    sources:
+      - https://www.cbsnews.com/newyork/news/drones-new-york-stewart-airfield/
+      - https://www.nbcnews.com/news/us-news/-gone-far-ny-gov-calls-federal-assistance-mysterious-drones-shut-airpo-rcna184256
+      - https://www.governor.ny.gov/news/statement-governor-kathy-hochul-additional-drone-activity
+    evidence_weight: strong
+    notes: Real safety-impact event with institutional confirmation.
+
+  - id: 2024-12-15-mayorkas-statement
+    date: 2024-12-15
+    title: DHS Secretary Mayorkas public statement
+    summary: DHS Secretary Alejandro Mayorkas confirmed some drone sightings publicly while noting that others were "misidentified manned aircraft." Called for expanded counter-UAS authority for state and local law enforcement.
+    category: institutional-statement
+    narratives: [drones-legit, mass-hysteria]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: Policy ask that ultimately fed into the Dec 20 Senate counter-UAS authority bill.
+
+  - id: 2024-12-16-joint-5000-sightings-statement
+    date: 2024-12-16
+    title: Joint DoD/DHS/FAA/FBI statement — "over 5,000 sightings, nothing anomalous"
+    summary: The Department of Defense, DHS, FAA, and FBI issued a joint statement concluding their investigation reviewed "over 5,000 reported sightings" and found "nothing anomalous." Characterized activity as a mix of commercial aircraft, hobbyist drones, helicopters, stars, and law enforcement aircraft. The 5,000 reports yielded "about 100 leads."
+    category: institutional-statement
+    narratives: [drones-legit, mass-hysteria]
+    sources:
+      - https://abcnews.go.com/US/east-coast-drones-latest-fbi-dod-statement/story?id=116855247
+    evidence_weight: strong
+    notes: High-water mark of the "mass hysteria" framing. This is the canonical "institutional response" event for the IVI window.
+
+  - id: 2024-12-16-kim-komando-loose-nuke-podcast
+    date: 2024-12-16
+    title: Kim Komando podcast "Are the NJ drones searching for nukes?" airs
+    summary: A podcast episode on "The Current powered by Kim Komando" amplified the loose-nuke theory, linking the drone sightings to the December 5 NRC alert about lost radioactive medical equipment.
+    category: narrative-claim
+    narratives: [loose-nuke]
+    sources:
+      - https://podcasts.apple.com/us/podcast/are-the-new-jersey-drones-searching-for-nukes/id660921339?i=1000680609545
+    evidence_weight: rumor
+    notes: Kim Komando is a verified amplifier of the theory on this date. Joe Rogan engaged separately around the same time.
+
+  - id: 2024-12-17-laser-strikes-surge
+    date: 2024-12-17
+    title: FAA reports 269% surge in laser strikes on aircraft
+    summary: FAA reported a 269% increase in laser strikes on aircraft in NJ in December 2024 vs. 2023. 59 laser incidents between Dec 1-16 (vs. 16 the previous year). On Dec 17 alone, 123 laser strikes nationwide, 24 of them over NJ. A helicopter pilot was struck in the eyes and required treatment.
+    category: evidence
+    narratives: [drones-legit]
+    sources:
+      - https://abcnews.go.com/US/new-jersey-drones-laser-strikes-pilots-faa/story?id=116926439
+      - https://www.cnn.com/2024/12/18/us/faa-laser-strikes-drone-mystery/index.html
+      - https://nj1015.com/drones-linked-surge-laser-strikes/
+    evidence_weight: strong
+    notes: Real public-safety consequence of the information vacuum. Strong SQM input — when IVI was highest, laser strikes peaked.
+
+  - id: 2024-12-18-faa-22-tfrs
+    date: 2024-12-18
+    title: FAA issues 22 TFRs over critical NJ infrastructure
+    summary: FAA issued 22 Temporary Flight Restrictions over critical infrastructure across 22 NJ communities, effective Dec 18, 2024 through Jan 17, 2025. 1-nautical-mile radii up to 400 feet altitude. NOTAM authorized "deadly force" against drones posing "imminent security threat."
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://www.npr.org/2024/12/19/g-s1-39142/drone-flights-prohibited-new-jersey
+      - https://abcnews.go.com/US/drone-updates-faa-temporarily-bans-drone-operations-parts/story?id=116936091
+      - https://avweb.com/aviation-news/faa-institutes-22-new-anti-drone-temporary-flight-restrictions/
+      - https://abc7ny.com/post/faa-bans-drones-flying-parts-new-jersey-mid-january-due-special-security-reasons/15675861/
+    evidence_weight: strong
+    notes: The largest single FAA policy action of the incident. Affected communities — Hamilton, Bridgewater, Cedar Grove, North Brunswick, Metuchen, Evesham, Camden, Gloucester City, Westampton, South Brunswick, Edison, Branchburg, Sewaren, Jersey City, Harrison, Elizabeth, Bayonne, Winslow, Burlington, Clifton, Hancocks Bridge, Kearny.
+
+  - id: 2024-12-19-faa-ny-extension
+    date: 2024-12-19
+    title: FAA extends drone restrictions to parts of NY State
+    summary: The FAA extended TFRs to cover parts of New York State, including portions of Brooklyn and Queens. Geographic expansion follows geographic expansion of public reports.
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: Continuation of the federal posture into NY.
+
+  - id: 2024-12-20-senate-counter-uas-extension
+    date: 2024-12-20
+    title: Senate passes counter-UAS authority extension through Sept 2025
+    summary: The Senate passed a bill extending FAA drone oversight and counter-UAS authorities until September 30, 2025. Direct legislative response to the NJ drone public pressure.
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: Real policy outcome that emerged from the information environment, regardless of what the drones actually were.
+
+  - id: 2024-12-30-faa-five-counties-extension
+    date: 2024-12-30
+    title: FAA adds restrictions in five more NJ counties through Jan 18
+    summary: FAA implemented additional restrictions in five NJ counties effective Dec 30, 2024 through Jan 18, 2025.
+    category: policy-action
+    narratives: [drones-legit]
+    sources:
+      - https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    evidence_weight: strong
+    notes: Continuation of the federal response posture into the new year.
+
+  - id: 2025-01-28-leavitt-faa-authorized
+    date: 2025-01-28
+    title: Trump WH Press Secretary Karoline Leavitt — "FAA-approved research flights"
+    summary: At her first White House press briefing as Trump's Press Secretary, Karoline Leavitt said the drones over NJ "were authorized to be flown by the FAA for research and various other reasons" and also attributed some to hobbyists. "This was not the enemy."
+    category: institutional-statement
+    narratives: [test-flights]
+    sources:
+      - https://abcnews.go.com/Politics/leavitt-reveals-nj-drones-authorized-faa-white-house/story?id=118187426
+      - https://www.cnn.com/2025/01/28/politics/white-house-drones/
+      - https://www.inquirer.com/news/new-jersey/drones-new-jersey-faa-trump-karoline-leavitt-20250128.html
+      - https://www.upi.com/Top_News/US/2025/01/28/new-jersey-drones-biden/4871738105961/
+      - https://www.washingtontimes.com/news/2025/jan/28/trump-white-house-says-new-jersey-drones-faa-autho/
+    evidence_weight: strong
+    notes: Legacy media treated this as the "case closed" moment. UAP-community outlets, ASA, and some members of Congress rejected the framing as inadequate. Phase D NVD work should compare narrative velocity of this resolution claim against the actual evidence base (unnamed research programs, no specifics on which entities, no engagement with the six-foot-diameter Fantasia reports).

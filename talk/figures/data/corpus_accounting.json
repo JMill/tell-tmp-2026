@@ -1,0 +1,23 @@
+{
+  "corpus_version": "nj-drones-2026-04-09",
+  "extracted_from": "production Neon branch (read-only)",
+  "query": "select corpus_version, count(*) as documents, count(distinct source_id) as sources from documents where corpus_version like 'nj-drones%%' group by corpus_version order by corpus_version",
+  "note": "Per-build document counts. The talk states the layered accounting: 200+ cumulative documents, 105 scored in the analysis build.",
+  "rows": [
+    {
+      "corpus_version": "nj-drones-2026-04-07",
+      "documents": 2,
+      "sources": 2
+    },
+    {
+      "corpus_version": "nj-drones-2026-04-08",
+      "documents": 96,
+      "sources": 49
+    },
+    {
+      "corpus_version": "nj-drones-2026-04-09",
+      "documents": 105,
+      "sources": 49
+    }
+  ]
+}

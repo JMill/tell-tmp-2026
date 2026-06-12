@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use vercel-blob-client in your work, please cite it as below."
+title: "vercel-blob-client: Reverse-engineered Python REST client for Vercel Blob"
+abstract: >-
+  A Python client for Vercel Blob produced by reverse-engineering the
+  @vercel/blob JavaScript SDK. The upload endpoint (vercel.com/api/blob) and
+  the private-fetch pattern (storeId.private.blob.vercel-storage.com/key)
+  are both undocumented; this client provides a production-proven
+  implementation validated against a multi-gigabyte research corpus.
+type: software
+authors:
+  - family-names: Miller
+    given-names: Jonathan
+    affiliation: "Penn State, Doctor of Engineering program"
+    email: jbm213@psu.edu
+version: "0.1.0"
+date-released: "2026-04-19"
+url: "https://github.com/JMill/praxis-deng"
+repository-code: "https://github.com/JMill/praxis-deng/tree/main/dev/tell/python/vercel_blob_client"
+keywords:
+  - vercel
+  - vercel-blob
+  - blob-storage
+  - rest-client

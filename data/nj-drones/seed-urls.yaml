@@ -1,0 +1,877 @@
+# NJ Drones — Seed URL List
+#
+# Starting points for the retrospective corpus ingestion. The batch ingester
+# (signals ingest batch) reads this file, iterates each entry, and pipelines
+# it through the appropriate adapter.
+#
+# Schema (per entry):
+#   url:         the canonical URL to fetch
+#   source_kind: gov | news | social | academic | aviation | forum | podcast | other
+#   adapter:     which ingest adapter to use (wayback | direct)
+#   event_date:  approximate date of the event the URL documents (YYYY-MM-DD)
+#   narratives:  list of narrative tags this URL relates to (see narratives.yaml)
+#   notes:       optional free-text
+#
+# All URLs below are derived from the verified research dossier at
+# research/2026-04-07-verified-events.md. Each corresponds to at least one
+# canonical event in timeline.yaml.
+
+metadata:
+  corpus: nj-drones
+  last_updated: 2026-04-09
+  compiled_from: research/2026-04-07-verified-events.md + web search expansion
+  total_entries: 112
+
+seeds:
+  # ===== GOVERNMENT SOURCES =====
+
+  - url: https://www.fbi.gov/contact-us/field-offices/newark/news/fbi-newark-seeks-information-on-drone-sightings
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-03
+    narratives: [drones-legit]
+    notes: FBI Newark field office formal request for public tips, initiating the federal investigation.
+
+  - url: https://www.fbi.gov/news/press-releases/joint-dhs-fbi-statement-on-reports-of-drones-in-new-jersey
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-12
+    narratives: [drones-legit, mass-hysteria]
+    notes: Joint DHS/FBI statement establishing the "no foreign involvement" framing.
+
+  - url: https://www.dhs.gov/archive/news/2024/12/12/joint-dhsfbi-statement-reports-drones-new-jersey
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-12
+    narratives: [drones-legit, mass-hysteria]
+    notes: Same statement as above, from the DHS side of the archive.
+
+  - url: https://www.governor.ny.gov/news/statement-governor-kathy-hochul-additional-drone-activity
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: Governor Hochul's "this has gone too far" statement after the Stewart Airport closure.
+
+  # ===== NEWS: TIER 1 NATIONAL =====
+
+  - url: https://www.cnn.com/2024/12/18/us/faa-laser-strikes-drone-mystery/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [drones-legit]
+    notes: CNN on the FAA-reported 269% surge in laser strikes during the drone window.
+
+  - url: https://www.cnn.com/2025/01/28/politics/white-house-drones/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-28
+    narratives: [test-flights]
+    notes: CNN on the Leavitt "not the enemy" Trump WH statement.
+
+  - url: https://www.nbcnews.com/news/us-news/iranian-mothership-not-drone-sightings-new-jersey-pentagon-says-rcna183863
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: NBC News on Sabrina Singh's Pentagon denial of the Iranian mothership claim.
+
+  - url: https://www.nbcnews.com/news/us-news/-gone-far-ny-gov-calls-federal-assistance-mysterious-drones-shut-airpo-rcna184256
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: NBC News on Hochul's federal-assistance call after Stewart Airport closure.
+
+  - url: https://abcnews.go.com/US/east-coast-drones-latest-fbi-dod-statement/story?id=116855247
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [drones-legit, mass-hysteria]
+    notes: ABC News on the Dec 16 joint agency statement ("over 5,000 sightings, nothing anomalous").
+
+  - url: https://abcnews.go.com/US/drone-updates-faa-temporarily-bans-drone-operations-parts/story?id=116936091
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [drones-legit]
+    notes: ABC News on the 22 FAA TFRs covering critical NJ infrastructure.
+
+  - url: https://abcnews.go.com/US/new-jersey-drones-laser-strikes-pilots-faa/story?id=116926439
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [drones-legit]
+    notes: ABC News on pilot laser strikes surge linked to the drone hysteria.
+
+  - url: https://abcnews.go.com/Politics/leavitt-reveals-nj-drones-authorized-faa-white-house/story?id=118187426
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-28
+    narratives: [test-flights]
+    notes: ABC News on the Leavitt "FAA-approved research flights" statement.
+
+  - url: https://www.cbsnews.com/newyork/news/drones-new-york-stewart-airfield/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: CBS New York on the Stewart International Airport runway closure.
+
+  - url: https://www.cbsnews.com/news/mystery-drones-nj-online-rumor-radioactive-material/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [loose-nuke]
+    notes: CBS News on officials pushing back against the loose-nuke rumor.
+
+  - url: https://www.npr.org/2024/12/19/g-s1-39142/drone-flights-prohibited-new-jersey
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-19
+    narratives: [drones-legit]
+    notes: NPR on the federal TFR expansion covering dozens of NJ locations.
+
+  # ===== NEWS: IRANIAN MOTHERSHIP NARRATIVE CLUSTER =====
+
+  - url: https://www.foxnews.com/media/new-jersey-lawmaker-warns-drones-originate-iranian-mothership-shot-down
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: Fox News coverage of Van Drew's original claim on-air.
+
+  - url: https://www.washingtontimes.com/news/2024/dec/11/jeff-van-drew-claims-new-jersey-drones-iranian-mot/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: Washington Times on Van Drew's Iranian mothership claim.
+
+  - url: https://www.newsweek.com/drones-new-jersey-iran-jeff-van-drew-1999348
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: Newsweek on the Pentagon's denial of the Iranian mothership claim.
+
+  - url: https://www.usnews.com/news/world/articles/2024-12-11/no-iranian-drone-mothership-off-the-united-states-launching-drones-pentagon-says
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: US News on the Pentagon denial.
+
+  - url: https://www.upi.com/Top_News/US/2024/12/11/new-jersey-drone-sightings/5751733955224/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [iranian-mothership]
+    notes: UPI on the Pentagon denial of Van Drew's claim.
+
+  - url: https://www.upi.com/Top_News/US/2025/01/28/new-jersey-drones-biden/4871738105961/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-28
+    narratives: [test-flights]
+    notes: UPI on the Trump WH closing explanation.
+
+  - url: https://www.washingtontimes.com/news/2025/jan/28/trump-white-house-says-new-jersey-drones-faa-autho/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-28
+    narratives: [test-flights]
+    notes: Washington Times on Leavitt's Jan 28 statement.
+
+  - url: https://www.inquirer.com/news/new-jersey/drones-new-jersey-faa-trump-karoline-leavitt-20250128.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-28
+    narratives: [test-flights]
+    notes: Philadelphia Inquirer on Leavitt's Jan 28 statement.
+
+  # ===== NEWS: MASS HYSTERIA / DEBUNKING =====
+
+  - url: https://www.baltimoresun.com/2024/12/16/drones-larry-hogan-orion-constellation/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [mass-hysteria]
+    notes: Baltimore Sun on astronomers identifying Hogan's "drones" as the Orion constellation.
+
+  - url: https://newrepublic.com/post/189416/republican-larry-hogan-maga-conspiracy-drones
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [mass-hysteria]
+    notes: New Republic on Hogan's drone video and its debunking.
+
+  - url: https://abc7ny.com/post/faa-bans-drones-flying-parts-new-jersey-mid-january-due-special-security-reasons/15675861/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [drones-legit]
+    notes: ABC 7 New York on the FAA 22-community TFR set.
+
+  # ===== NEWS: LOCAL + AVIATION INDUSTRY =====
+
+  - url: https://nj1015.com/drones-linked-surge-laser-strikes/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [drones-legit]
+    notes: NJ 101.5 local coverage of laser strikes surge.
+
+  - url: https://avweb.com/aviation-news/faa-institutes-22-new-anti-drone-temporary-flight-restrictions/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [drones-legit]
+    notes: AVweb aviation industry coverage of the 22 FAA TFRs.
+
+  - url: https://dronelife.com/2024/11/21/unexplained-drone-activity-over-morris-county-sparks-public-concern-and-official-investigation/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2024-11-21
+    narratives: [drones-legit]
+    notes: DroneLife on the earliest reported Morris County sightings.
+
+  - url: https://dronexl.co/2024/11/22/mysterious-drone-swarm-picatinny-arsenal-nj-multi-agency-investigation/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2024-11-22
+    narratives: [drones-legit]
+    notes: DroneXL on the Picatinny Arsenal multi-agency investigation.
+
+  - url: https://dronexl.co/2024/12/13/ex-maryland-gov-hogan-mystery-drones-stars/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [mass-hysteria]
+    notes: DroneXL on Hogan's debunked drone video.
+
+  # ===== NEWS: UAP / ASA FRAME =====
+
+  - url: https://thenationaldesk.com/news/americas-news-now/mystery-drones-over-jersey-were-absolutely-witnessing-a-national-security-gap-uap-unidentified-anomalous-phenomena-ufo-airspace-security-americans-for-safe-aerospace
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [uap]
+    notes: National Desk interview with Ryan Graves of Americans for Safe Aerospace. Source for the detect/identify/respond framing that maps onto the praxis architecture.
+
+  - url: https://defensescoop.com/2024/12/16/new-jersey-drones-federal-assessments-suggest-not-uap-or-us-military-assets/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [drones-legit, uap]
+    notes: DefenseScoop on AARO's UAS-not-UAP categorization decision.
+
+  # ===== NEWS: LOOSE NUKE NARRATIVE CLUSTER =====
+
+  - url: https://abcnews.com/US/fact-check-radioactive-material-triggered-drone-theories-missing/story?id=116884712
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [loose-nuke]
+    notes: ABC News fact-check on the loose-nuke theory origins tied to the NRC alert.
+
+  - url: https://www.thedailybeast.com/joe-rogan-concerned-that-nj-drones-could-be-looking-for-something-scary/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [loose-nuke]
+    notes: Daily Beast on Joe Rogan amplifying the loose-nuke theory.
+
+  - url: https://www.yahoo.com/news/theyre-not-drones-says-picatinny-202450061.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-11-20
+    narratives: [drones-legit]
+    notes: Yahoo News syndication of Picatinny officials disclaiming the drones.
+
+  # ===== PODCAST / SOCIAL =====
+
+  - url: https://podcasts.apple.com/us/podcast/are-the-new-jersey-drones-searching-for-nukes/id660921339?i=1000680609545
+    source_kind: podcast
+    adapter: direct
+    event_date: 2024-12-16
+    narratives: [loose-nuke]
+    notes: Kim Komando "The Current" podcast episode titled "Are the New Jersey drones searching for nukes?" — canonical entry point for the loose-nuke narrative.
+
+  # ===== NEWS: WASHINGTON POST =====
+
+  - url: https://www.washingtonpost.com/nation/2024/12/11/drones-new-jersey-phil-murphy/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [drones-legit]
+    notes: Washington Post on Gov. Murphy writing to Biden asking for federal answers on the NJ drone sightings.
+
+  - url: https://www.washingtonpost.com/business/2024/12/14/drones-new-jersey-what-to-know/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: Washington Post "what we know" explainer. Describes drones as "up to 6 feet in diameter," larger than typical hobbyist class.
+
+  - url: https://www.washingtonpost.com/opinions/2024/12/18/ufos-drones-new-jersey-space-aliens/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [mass-hysteria]
+    notes: Washington Post opinion column framing the NJ drone panic as a social phenomenon, not a UFO event.
+
+  # ===== NEWS: THE HILL + POLITICO =====
+
+  - url: https://thehill.com/policy/defense/5037304-congress-drone-sightings-reports/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: The Hill on lawmakers troubled by NE drone sightings, calls for investigation mounting.
+
+  - url: https://thehill.com/homenews/state-watch/5038902-andy-kim-drones-investigation-nj/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit, mass-hysteria]
+    notes: The Hill on Sen. Andy Kim joining police for nighttime drone patrol in Hunterdon County. Kim later revised initial sighting assessment.
+
+  # ===== NEWS: INTERNATIONAL =====
+
+  - url: https://www.aljazeera.com/news/2024/12/12/why-are-mysterious-drones-flying-over-new-jersey
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: Al Jazeera international coverage. Drones described as "up to 1.8 metres (6ft) in diameter."
+
+  - url: https://www.aljazeera.com/news/2024/12/17/no-security-threat-from-reported-drone-sightings-us-federal-agencies-state
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [drones-legit, mass-hysteria]
+    notes: Al Jazeera on the four-agency "no security threat" statement.
+
+  # ===== GOVERNMENT: CONGRESSIONAL =====
+
+  - url: https://www.kim.senate.gov/press_release/senator-kim-joins-nighttime-police-patrol-in-hunterdon-county-to-observe-drones-demands-answers-from-federal-authorities/
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-13
+    narratives: [drones-legit, mass-hysteria]
+    notes: Sen. Andy Kim's official press release after joining Clinton Township police on nighttime drone patrol. Later revised his assessment after "deeper analysis."
+
+  - url: https://www.kim.senate.gov/senators-kim-schumer-gillibrand-and-booker-request-immediate-briefing-on-investigations-into-nj-and-ny-drone-sightings/
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: Four-senator letter (Kim, Schumer, Gillibrand, Booker) demanding immediate briefing on NJ and NY drone sightings. First multi-state Senate pressure for answers.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — CNN =====
+
+  - url: https://www.cnn.com/2024/12/12/us/new-jersey-drone-sightings/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: CNN early explainer on the mysterious drone sightings prompting security concerns.
+
+  - url: https://www.cnn.com/2024/12/13/us/drone-sightings-new-jersey-investigation/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: CNN on officials demanding explanation as sightings spread beyond NJ to metro NY area.
+
+  - url: https://www.cnn.com/2024/12/15/us/drone-sightings-east-coast/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: CNN on East Coast drone sightings spread. Part of the geographic expansion coverage.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — NBC =====
+
+  - url: https://www.nbcnews.com/news/us-news/drone-sightings-spread-new-jersey-officials-express-outrage-federal-re-rcna184107
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: NBC News on sightings spreading beyond NJ with officials expressing outrage at federal response.
+
+  - url: https://www.nbcnews.com/news/us-news/drones-new-jersey-us-sightings-what-know-rcna184367
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: NBC News "what we know" explainer with ongoing updates.
+
+  - url: https://www.nbcnews.com/news/us-news/mystery-deepens-surrounding-drone-sightings-conspiracy-theories-take-f-rcna184365
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit, iranian-mothership, loose-nuke]
+    notes: NBC News on how the mystery deepened as conspiracy theories (Iranian mothership, loose nuke) gained traction.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — NPR =====
+
+  - url: https://www.npr.org/2024/12/11/nx-s1-5226000/new-jersey-drones
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [drones-legit]
+    notes: Early NPR coverage of the NJ drone mystery. "Mystery drones flying over New Jersey have residents and officials puzzled."
+
+  - url: https://www.npr.org/2024/12/15/nx-s1-5229573/drones-in-new-jersey-skies-something-or-nothing
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit, mass-hysteria]
+    notes: NPR "something or nothing?" framing of the drone debate.
+
+  - url: https://www.npr.org/2024/12/15/nx-s1-5229628/drones-congress-new-jersey-east-coast-sightings
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: NPR on congressional response to East Coast drone sightings spread.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — CBS =====
+
+  - url: https://www.cbsnews.com/news/drones-new-jersey-what-we-know/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: CBS News multi-state explainer. Covers NJ, NY, PA, and other East Coast drone sightings.
+
+  - url: https://www.cbsnews.com/newyork/news/new-jersey-drones-objects-morris-county-somerset-county/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-10
+    narratives: [drones-legit]
+    notes: CBS New York on possible drones spotted over Morris and Somerset County critical infrastructure.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — ABC =====
+
+  - url: https://abcnews.go.com/US/mystery-drones-new-jersey-new-york-timeline-what-officials-said/story?id=116824178
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: ABC News compiled official-statement timeline for NJ and NY drone sightings.
+
+  - url: https://abcnews.go.com/US/new-jersey-drone-mystery/story?id=116719847
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [drones-legit]
+    notes: ABC News "what to know and what can be done" early mystery coverage.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — PBS =====
+
+  - url: https://www.pbs.org/newshour/show/news-wrap-white-house-says-mysterious-drones-over-new-jersey-not-a-safety-threat
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit, mass-hysteria]
+    notes: PBS NewsHour on the White House characterizing NJ drones as not a safety threat.
+
+  # ===== NEWS: LOCAL + REGIONAL =====
+
+  - url: https://www.fox5ny.com/news/drones-nj-mystery-sightings-nyc-new-jersey
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: Fox 5 New York on the mystery sightings in the NYC/NJ area.
+
+  - url: https://www.fox5ny.com/news/nj-fbi-drone-sightings-new-jersey
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-10
+    narratives: [drones-legit]
+    notes: Fox 5 NY on FBI investigating drone clusters over NJ skies.
+
+  - url: https://www.fox5ny.com/news/ny-nj-drones-timeline-2024
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [drones-legit]
+    notes: Fox 5 NY compiled timeline of NJ and NY drone sightings.
+
+  - url: https://www.newsnationnow.com/us-news/northeast/drones-over-new-jersey-mystery-continues/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: NewsNation on the continuing drone mystery one month after first sightings.
+
+  # ===== NEWS: ADDITIONAL WASHINGTON TIMES =====
+
+  - url: https://www.washingtontimes.com/news/2024/dec/12/know-mysterious-drones-reported-flying-new-jersey/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: Washington Times "what we know" explainer.
+
+  - url: https://www.washingtontimes.com/news/2024/dec/15/drone-sightings-keep-happening-new-jersey-know-kno/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: Washington Times ongoing coverage as sightings continued.
+
+  - url: https://www.washingtontimes.com/news/2024/dec/20/mystery-drone-sightings-continue-new-jersey-across/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-20
+    narratives: [drones-legit]
+    notes: Washington Times on sightings continuing across the US after the NJ peak.
+
+  # ===== NEWS: ADDITIONAL NEWSWEEK + US NEWS =====
+
+  - url: https://www.newsweek.com/new-jersey-drone-sightings-live-updates-2001315
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit, iranian-mothership, loose-nuke]
+    notes: Newsweek live updates thread tracking conspiracy theories alongside official statements.
+
+  - url: https://www.usnews.com/news/offbeat/articles/2024-12-14/mystery-drone-sightings-keep-happening-in-new-jersey-heres-what-we-know-and-dont-know
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: US News AP-syndicated "what we know" roundup as sightings spread beyond NJ.
+
+  # ===== NEWS: ROLLING STONE + SLATE =====
+
+  - url: https://www.rollingstone.com/politics/politics-features/drone-panic-uap-new-jersey-1235531077/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-15
+    narratives: [drones-legit, mass-hysteria, uap]
+    notes: Rolling Stone retrospective analysis of the NJ drone panic and its UAP dimensions.
+
+  - url: https://slate.com/life/2024/12/drones-new-jersey-faa-ban-ufo-aliens-extraterrestrial.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-18
+    narratives: [uap, mass-hysteria]
+    notes: Slate on the UFO/alien explanation being more popular than expected among the public.
+
+  # ===== FACT-CHECK SOURCES =====
+
+  - url: https://www.snopes.com/news/2024/12/13/drones-new-jersey-what-we-know/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: Snopes "what we know" fact-check roundup. FBI had collected 3,000+ reports by Dec 10.
+
+  - url: https://www.snopes.com/fact-check/unidentified-drone-new-jersey-video-icemanfox1/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [mass-hysteria]
+    notes: Snopes debunk of a viral fake drone video that was digitally created.
+
+  - url: https://www.snopes.com/news/2024/12/20/radiation-drone-new-york/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-20
+    narratives: [loose-nuke]
+    notes: Snopes unpacking claims linking high radiation levels in NYC to drone sightings.
+
+  - url: https://www.factcheck.org/2024/12/what-we-know-about-the-drones/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [drones-legit]
+    notes: FactCheck.org evidence-based summary of what is and is not known about the NJ drones.
+
+  - url: https://www.politifact.com/factchecks/2024/dec/17/facebook-posts/fact-check-no-reported-drones-dont-have-directed-e/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [false-flag]
+    notes: PolitiFact debunk of claims that drones carried directed-energy weapons causing "pestilence."
+
+  # ===== ACADEMIC / SCIENCE / ANALYSIS =====
+
+  - url: https://www.scientificamerican.com/article/what-are-the-mystery-drones-reported-over-new-york-and-new-jersey/
+    source_kind: academic
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: Scientific American analysis of the mystery drones. Discusses smartphone optics limitations and misidentification.
+
+  - url: https://www.scientificamerican.com/article/mysterious-drone-sightings-illustrate-just-how-many-fill-americas-skies/
+    source_kind: academic
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [drones-legit, mass-hysteria]
+    notes: Scientific American on the scale of routine drone activity in US airspace (1.8M recreational, ~1M commercial in 2024).
+
+  - url: https://www.scientificamerican.com/article/no-its-not-a-good-idea-to-shoot-at-new-jersey-mystery-drones/
+    source_kind: academic
+    adapter: wayback
+    event_date: 2024-12-16
+    narratives: [drones-legit]
+    notes: Scientific American on the risks of shooting at drones, responding to Trump's "shoot them down" rhetoric.
+
+  - url: https://news.northeastern.edu/2024/12/14/drones-over-new-jersey/
+    source_kind: academic
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit, mass-hysteria]
+    notes: Northeastern University expert analysis. Sociologist Robert Bartholomew drew parallels to WWI-era social panics.
+
+  # ===== PODCAST / SOCIAL — ADDITIONAL =====
+
+  - url: https://open.spotify.com/episode/0s8LxfQkQ1x1BEoNmfm6VB
+    source_kind: podcast
+    adapter: direct
+    event_date: 2024-12-16
+    narratives: [loose-nuke]
+    notes: Spotify version of Kim Komando's "Are the NJ drones searching for nukes?" episode. Complements the Apple Podcasts entry.
+
+  # ===== DEFENSE / MILITARY ANALYSIS =====
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/4002374/joint-staff-addresses-drones-over-new-jersey-military-installations/
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: Official DoD Joint Staff statement addressing drones over NJ military installations.
+
+  - url: https://defensescoop.com/2024/12/12/new-jersey-unidentified-drones-dod-poised-to-respond-if-threaten-military-assets/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-12
+    narratives: [drones-legit]
+    notes: DefenseScoop on DoD posture if NJ drones "escalate to threaten" military assets.
+
+  - url: https://defensescoop.com/2024/12/14/new-jersey-drones-military-frustrated-picatinny-naval-weapons-station-earle/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-14
+    narratives: [drones-legit]
+    notes: DefenseScoop on military "frustrated" by mysterious drone activity near Picatinny Arsenal and Naval Weapons Station Earle.
+
+  - url: https://www.twz.com/news-features/what-were-those-jersey-drones-former-high-ranking-faa-official-gives-his-take
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-15
+    narratives: [drones-legit, test-flights]
+    notes: The War Zone analysis from a former senior FAA official on what the NJ drones likely were.
+
+  - url: https://www.twz.com/air/what-cops-saw-chasing-down-jersey-drones-detailed-in-new-documents
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-20
+    narratives: [drones-legit]
+    notes: The War Zone on newly released law enforcement documents detailing what police observed while pursuing drones.
+
+  - url: https://www.liberationtimes.com/home/coast-guard-logs-reveal-december-drone-swarms-over-new-jersey-coast-with-some-prosaic-explanations-provided
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-10
+    narratives: [drones-legit, mass-hysteria]
+    notes: Liberation Times on Coast Guard logs revealing December drone swarm reports over the NJ coastline, with some prosaic explanations.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — MSNBC / HUFFPOST =====
+
+  - url: https://www.msnbc.com/top-stories/latest/drone-sightings-new-jersey-trump-shoot-down-rcna184247
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: MSNBC on Trump's "shoot them down" response to the drone sightings.
+
+  - url: https://www.huffpost.com/entry/donald-trump-drones_n_675cb403e4b0890282a008f2
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: HuffPost on Trump calling on feds to explain or shoot down mystery drones.
+
+  - url: https://thehill.com/homenews/state-watch/5039992-trump-drones-shot-down/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: The Hill on Trump calling for mystery drones to be shot down.
+
+  - url: https://www.newsweek.com/trump-weighs-mystery-drone-sightings-shoot-them-down-2000781
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-13
+    narratives: [drones-legit]
+    notes: Newsweek on Trump's "shoot them down" Truth Social post.
+
+  # ===== NEWS: ADDITIONAL NATIONAL — CNN (regulation/criticism) =====
+
+  - url: https://www.cnn.com/2024/12/17/us/sightings-drone-regulations-detection-technology/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-17
+    narratives: [drones-legit]
+    notes: CNN on what officials are doing and proposing (detection technology, regulation) in response to sightings.
+
+  - url: https://www.cnn.com/2024/12/15/politics/mysterious-drone-sightings-lawmakers-criticize-response/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: CNN on bipartisan congressional criticism of the federal response to drone sightings.
+
+  # ===== NEWS: ADDITIONAL NBC (local + frustration) =====
+
+  - url: https://www.nbcnews.com/news/us-news/new-jersey-drones-mystery-fbi-homeland-security-rcna183758
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-11
+    narratives: [drones-legit]
+    notes: NBC News on local NJ officials demanding answers from FBI and DHS as the mystery deepens.
+
+  - url: https://www.nbcphiladelphia.com/news/local/mystery-drone-sightings-new-jersey/4054419/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-15
+    narratives: [drones-legit]
+    notes: NBC Philadelphia local coverage of mystery drone sightings across NJ.
+
+  # ===== NEWS: EARLY PERIOD (Nov 13 - Dec 8) COVERAGE =====
+
+  - url: https://abc7ny.com/post/nj-drone-mystery-new-sighting-reported-lebanon-hunterdon-county/15629209/
+    source_kind: news
+    adapter: wayback
+    event_date: 2024-12-06
+    narratives: [drones-legit]
+    notes: ABC 7 New York on early sightings in Hunterdon County before the story went national.
+
+  - url: https://patch.com/new-jersey/morristown/year-nj-s-drone-sightings-what-we-know
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-15
+    narratives: [drones-legit, test-flights]
+    notes: Patch NJ retrospective "what we know" roundup from Morristown area. Includes private contractor claim.
+
+  - url: https://thehill.com/policy/technology/5564066-private-contractor-2024-mystery-drones/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-20
+    narratives: [test-flights]
+    notes: The Hill on reports that a private contractor claimed responsibility for the 2024 NJ drone flights.
+
+  - url: https://www.foxnews.com/us/source-ufo-panic-drone-mystery-claims-responsibility-frenzy-report
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-20
+    narratives: [test-flights]
+    notes: Fox News on a private contractor admitting responsibility for the NJ mystery drones.
+
+  # ===== REFERENCE CORPUS (aggregators for ground truth verification) =====
+
+  # ===== GAP-FILLING: Dec 21 2024 – Jan 28 2025 =====
+  # The corpus had zero documents between Dec 20 and Jan 28. These entries
+  # target the 38-day gap to improve contradicting evidence lag for the
+  # mass-hysteria narrative (Claim 6).
+
+  - url: https://reason.com/2024/12/20/police-data-n-j-drone-sightings-concentrated-along-airport-flight-paths/
+    source_kind: news
+    adapter: direct
+    event_date: 2024-12-20
+    narratives: [mass-hysteria]
+    notes: Reason analysis showing Monmouth County police sighting map aligns with commercial flight paths. Evidence for misidentification thesis. Andy Kim Flightradar24 verification included.
+
+  - url: https://dronexl.co/2024/12/19/faa-temporary-flight-restrictions-drones-nj/
+    source_kind: news
+    adapter: direct
+    event_date: 2024-12-19
+    narratives: [drones-legit, mass-hysteria]
+    notes: FAA imposes 22 TFRs across NJ through Jan 17. If sightings were pure misidentification, TFRs would be unnecessary. Contradicts mass-hysteria framing.
+
+  - url: https://www.nbcnews.com/news/us-news/faa-issues-temporary-ban-drone-flights-areas-new-jersey-rcna184831
+    source_kind: news
+    adapter: direct
+    event_date: 2024-12-19
+    narratives: [drones-legit, mass-hysteria]
+    notes: NBC News reporting on FAA drone flight bans in NJ and NY. TFRs effective through mid-January. Institutional action contradicts mass-hysteria-only explanation.
+
+  - url: https://dronexl.co/2025/01/05/what-happened-mysterious-drone-sightings-new-jersey/
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-05
+    narratives: [mass-hysteria, drones-legit]
+    notes: DroneXL analysis from the gap period. Notes topic fell out of news cycle, frames sightings as mass hysteria. Key gap-filling document for evaluating how the narrative settled.
+
+  - url: https://dronexl.co/2025/01/10/trump-promises-investigation-into-mysterious-drone-activity-at-bedminster-golf-course/
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-10
+    narratives: [drones-legit, mass-hysteria]
+    notes: Trump promises investigation into Bedminster drone activity in Jan 2025. Contradicts mass-hysteria closure by signaling the issue remained unresolved at the highest political level.
+
+  - url: https://www.newsweek.com/matthew-livelsberger-had-theory-about-mystery-drones-alleged-manifesto-2009560
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-03
+    narratives: [drones-legit, loose-nuke]
+    notes: Livelsberger Cybertruck bomber manifesto alleged Chinese drone surveillance along Atlantic coast. Demonstrates how information vacuum enabled conspiracy migration from drone sightings to domestic terrorism.
+
+  - url: https://www.faa.gov/newsroom/dhs-fbi-faa-dod-joint-statement-ongoing-response-reported-drone-sightings
+    source_kind: gov
+    adapter: direct
+    event_date: 2024-12-17
+    narratives: [drones-legit, mass-hysteria]
+    notes: Joint DHS/FBI/FAA/DoD statement on ongoing response. Asserts no anomalous activity, but acknowledges continued investigation.
+
+  - url: https://www.nbcnews.com/news/us-news/white-house-says-new-jersey-drones-authorized-faa-was-not-enemy-rcna189646
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-28
+    narratives: [mass-hysteria, drones-legit, test-flights]
+    notes: NBC coverage of Leavitt press conference. "Not the enemy" statement. Attributes sightings to FAA-authorized research and hobbyists. Resolves the vacuum but contradicts pure mass-hysteria by confirming real drones existed.
+
+  - url: https://www.cnn.com/2025/01/28/politics/white-house-drones/index.html
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-28
+    narratives: [mass-hysteria, drones-legit]
+    notes: CNN coverage of Trump WH drone announcement. Frames sightings as "hysteria" in headline while reporting real FAA-authorized operations existed.
+
+  - url: https://www.cbsnews.com/news/mystery-drones-northeast-u-s-faa-authorized/
+    source_kind: news
+    adapter: direct
+    event_date: 2025-01-28
+    narratives: [mass-hysteria, drones-legit, test-flights]
+    notes: CBS News on WH drone explanation. Multiple sources confirm FAA authorization for some drones plus hobbyist activity. Key document for mass-hysteria evidence lag.
+
+  - url: https://www.huffpost.com/entry/andy-kim-drones-donald-trump_n_67609df8e4b007ff17a49f8e
+    source_kind: news
+    adapter: direct
+    event_date: 2024-12-18
+    narratives: [mass-hysteria, drones-legit]
+    notes: Andy Kim says drone scare fueled by lack of communication and distrust in government. Frames the issue as institutional communication failure, not pure misidentification.
+
+  # ===== RETROSPECTIVE / REFERENCE =====
+
+  - url: https://en.wikipedia.org/wiki/2024_United_States_drone_sightings
+    source_kind: academic
+    adapter: wayback
+    event_date: 2025-01-31
+    narratives: [drones-legit, mass-hysteria, iranian-mothership, loose-nuke, test-flights]
+    notes: Wikipedia aggregator. Best single index of primary sources for the incident. Not a primary source itself — included for corpus completeness and as a retrospective summary.
+
+  - url: https://reason.com/2025/05/09/what-the-feds-knew-about-the-new-jersey-drone-scare/
+    source_kind: news
+    adapter: wayback
+    event_date: 2025-01-31
+    narratives: [mass-hysteria, drones-legit]
+    notes: Reason retrospective with FOIA-released TSA and federal documents showing what agencies internally knew during the scare. Published May 2025 but documents cover the Dec 2024 period.

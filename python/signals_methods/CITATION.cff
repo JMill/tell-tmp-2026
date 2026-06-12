@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use signals_methods in your research, please cite it as below."
+title: "signals_methods: Weak-signal detection methods for sensemaking under uncertainty"
+abstract: >-
+  Four novel weak-signal detection methods introduced as part of a Doctor of
+  Engineering praxis at Penn State. The Information Vacuum Index (IVI) measures
+  structural imbalance between discourse and authoritative activity; Narrative
+  Velocity Divergence (NVD) measures per-narrative ratios of narrative velocity
+  to evidence velocity; the Source Independence Graph (SIG) produces independence
+  scores and amplification ratios from a citation graph; Sensemaking Quality
+  Metrics (SQM) evaluate the three signals against a ground-truth timeline.
+type: software
+authors:
+  - family-names: Miller
+    given-names: Jonathan
+    affiliation: "Penn State, Doctor of Engineering program"
+    email: jbm213@psu.edu
+version: "0.1.0"
+date-released: "2026-04-19"
+url: "https://github.com/JMill/praxis-deng"
+repository-code: "https://github.com/JMill/praxis-deng/tree/main/dev/tell/python/signals_methods"
+keywords:
+  - weak signal detection
+  - sensemaking
+  - human-machine teaming
+  - anomaly detection
+  - osint
+  - narrative analysis

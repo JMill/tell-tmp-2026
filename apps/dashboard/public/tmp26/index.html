@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TMP 2026 — Sensemaking quality, not prediction (deck preview)</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg: #F6F4EE; --card: #FBF9F2; --ink: #111714; --ink2: #4D4A42;
+    --muted: #8A8577; --border: #E4DED1; --accent: #B04A2E;
+    --accent-muted: #C67B5C; --green: #5C7A6A; --grid: #C2BAA6;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; background: #DDD8CC; font-family: var(--sans); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+  #stage {
+    position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .slide {
+    flex: 0 0 auto; width: 1280px; height: 720px; min-width: 1280px; background: var(--bg); color: var(--ink);
+    box-shadow: 0 18px 60px rgba(17,23,20,.28), 0 2px 8px rgba(17,23,20,.12);
+    display: none; position: relative; overflow: hidden; transform-origin: center center;
+  }
+  .slide.active { display: block; }
+  .slide.active .rise { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }
+  .slide.active .rise:nth-child(2) { animation-delay: .08s; }
+  .slide.active .rise:nth-child(3) { animation-delay: .16s; }
+  .slide.active .rise:nth-child(4) { animation-delay: .24s; }
+  .slide.active .rise:nth-child(5) { animation-delay: .32s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+  .pad { position: absolute; inset: 64px 72px; display: flex; flex-direction: column; }
+  .kicker {
+    font-size: 13px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin-bottom: 18px;
+  }
+  .kicker.quiet { color: var(--muted); }
+  h1 { font-size: 58px; line-height: 1.06; font-weight: 700; letter-spacing: -.015em; max-width: 22ch; }
+  h1 .turn { color: var(--accent); }
+  h2 { font-size: 40px; line-height: 1.12; font-weight: 700; letter-spacing: -.01em; max-width: 26ch; }
+  .sub { font-size: 21px; color: var(--ink2); line-height: 1.45; max-width: 58ch; margin-top: 22px; }
+
+  .foot {
+    position: absolute; left: 72px; right: 72px; bottom: 34px; display: flex;
+    justify-content: space-between; align-items: baseline;
+    font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px;
+  }
+  .foot .wtf { color: var(--ink2); font-weight: 600; letter-spacing: .04em; }
+  .chip {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em;
+    color: var(--ink2); border: 1px solid var(--border); background: var(--card);
+    border-radius: 999px; padding: 4px 12px;
+  }
+
+  /* figure plates */
+  .plate { position: absolute; inset: 0; }
+  .plate img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .plate-tag {
+    position: absolute; top: 26px; right: 32px; z-index: 2;
+  }
+  .backup .plate-tag .chip { color: var(--accent); border-color: var(--accent-muted); }
+
+  /* slide 1 */
+  .byline { margin-top: 44px; font-size: 18px; color: var(--ink2); line-height: 1.7; }
+  .byline strong { color: var(--ink); font-size: 21px; font-weight: 700; display: block; }
+  .rule { width: 64px; height: 3px; background: var(--accent); margin: 30px 0 0; }
+
+  /* slide 2 + question slides */
+  .center { justify-content: center; align-items: flex-start; }
+  .qmark { font-size: 120px; color: var(--border); font-weight: 700; line-height: .8; margin-bottom: 8px; }
+
+  /* reframe slide */
+  .frame-row { display: flex; gap: 28px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--border); }
+  .frame-row .tag { flex: 0 0 200px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+  .frame-row .tag.bad { color: var(--muted); }
+  .frame-row .tag.good { color: var(--accent); }
+  .frame-row p { font-size: 27px; line-height: 1.3; font-weight: 600; }
+  .frame-row p.dim { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent-muted); text-decoration-thickness: 2px; font-weight: 500; }
+  .theory { margin-top: 34px; display: flex; gap: 56px; }
+  .theory div { font-size: 16px; color: var(--ink2); line-height: 1.5; max-width: 30ch; }
+  .theory strong { color: var(--ink); display: block; font-size: 17px; }
+
+  /* measures slide */
+  .measure { display: grid; grid-template-columns: 150px 1fr; gap: 30px; padding: 30px 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+  .measure .abbr { font-size: 42px; font-weight: 700; color: var(--accent); letter-spacing: -.02em; }
+  .measure .what { font-size: 23px; line-height: 1.35; color: var(--ink); }
+  .measure .what em { font-style: normal; color: var(--muted); font-size: 17px; display: block; margin-top: 6px; }
+
+  /* demo slide */
+  .demo-url { font-size: 46px; font-weight: 700; color: var(--accent); margin: 26px 0 34px; letter-spacing: -.01em; }
+  .demo-path { display: flex; gap: 14px; align-items: center; font-size: 19px; color: var(--ink2); }
+  .demo-path span { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 20px; }
+  .demo-path b { color: var(--muted); font-weight: 400; }
+  .qr { position: absolute; right: 88px; top: 50%; transform: translateY(-50%); text-align: center; }
+  .qr img { width: 200px; height: 200px; display: block; margin: 0 auto 14px; }
+  .qr span { font-size: 14px; color: var(--ink2); }
+
+  /* generalization slide */
+  .domains { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; }
+  .domain { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 28px 24px; }
+  .domain .icon { width: 32px; height: 32px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; margin-bottom: 10px; }
+  .domain h3 { font-size: 21px; margin-bottom: 8px; }
+  .domain p { font-size: 16px; color: var(--ink2); line-height: 1.45; }
+
+  /* close slide */
+  .close-url { font-size: 72px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); margin: 26px 0 6px; }
+  .close-url .dot { color: var(--accent); }
+  .close-sub { font-size: 20px; color: var(--ink2); }
+  .contact { margin-top: 52px; font-size: 18px; color: var(--ink2); line-height: 1.8; }
+
+  /* speaker notes */
+  #notes {
+    position: fixed; left: 0; right: 0; bottom: 0; max-height: 38vh; overflow: auto;
+    background: var(--ink); color: var(--bg); padding: 22px 36px 28px;
+    font-size: 16px; line-height: 1.6; display: none; z-index: 10;
+  }
+  #notes.open { display: block; }
+  #notes .nlabel { color: var(--accent-muted); font-size: 12px; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 8px; }
+  #hud {
+    position: fixed; top: 14px; right: 18px; z-index: 10; font-size: 12.5px; color: #555048;
+    background: rgba(246,244,238,.85); border: 1px solid var(--border); border-radius: 999px; padding: 5px 14px;
+  }
+</style>
+</head>
+<body>
+<div id="hud"></div>
+<div id="stage">
+
+  <!-- 1 · Title -->
+  <section class="slide" data-time="0:00–0:45">
+    <div class="pad center">
+      <div class="kicker rise">CMU TMP Graduate Consortium · June 16, 2026</div>
+      <h1 class="rise">Sensemaking quality,<br><span class="turn">not prediction</span></h1>
+      <p class="sub rise">Three measures for detecting narrative capture</p>
+      <div class="rule rise"></div>
+      <div class="byline rise">
+        <strong>Jonathan “JMill” Miller</strong>
+        Doctor of Engineering Program, School of Engineering Design and Innovation,<br>
+        The Pennsylvania State University<br>
+        jbm213@psu.edu · linkedin.com/in/jmill
+      </div>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>1 / 14</span></div>
+  </section>
+
+  <!-- 2 · Question -->
+  <section class="slide" data-time="0:45–1:30">
+    <div class="pad center">
+      <div class="qmark rise">?</div>
+      <h2 class="rise" style="max-width:24ch">Can we measure when public discourse is outpacing institutional response, <span style="color:var(--accent)">while it is happening?</span></h2>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>2 / 14</span></div>
+  </section>
+
+  <!-- 3 · Case timeline -->
+  <section class="slide" data-time="1:30–3:00">
+    <div class="plate"><img src="figures/stage/fig1-timeline.svg" alt="NJ drones timeline with the 38-day silence"></div>
+    <div class="plate-tag"><span class="chip">THE CASE</span></div>
+  </section>
+
+  <!-- 4 · Reframe -->
+  <section class="slide" data-time="3:00–4:30">
+    <div class="pad center">
+      <div class="kicker rise">The reframe</div>
+      <h2 class="rise" style="margin-bottom:10px">Grade the sensemaking, not the prediction</h2>
+      <div class="frame-row rise">
+        <div class="tag bad">Wrong question</div>
+        <p class="dim">Did the system predict the right answer?</p>
+      </div>
+      <div class="frame-row rise">
+        <div class="tag good">Right question</div>
+        <p>Did it keep human sensemaking healthy while nobody knew the answer?</p>
+      </div>
+      <div class="theory rise">
+        <div><strong>Klein (2007)</strong>Sensemaking activities as design requirements, not citations.</div>
+        <div><strong>Leveson (2012)</strong>The information environment modeled as a control structure.</div>
+      </div>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>4 / 14</span></div>
+  </section>
+
+  <!-- 5 · Three measures -->
+  <section class="slide" data-time="4:30–6:00">
+    <div class="pad center">
+      <div class="kicker rise">The instrument</div>
+      <h2 class="rise" style="margin-bottom:4px;max-width:36ch">Three measures catch three distinct failure modes</h2>
+      <div class="measure rise">
+        <div class="abbr">IVI</div>
+        <div class="what">The gap between public discourse and institutional response.
+          <em>Information Vacuum Index · rises when people talk and institutions go quiet</em></div>
+      </div>
+      <div class="measure rise">
+        <div class="abbr">NVD</div>
+        <div class="what">How fast a claim spreads against how fast its evidence accumulates.
+          <em>Narrative Velocity Divergence · popular and unsupported is a measurable state</em></div>
+      </div>
+      <div class="measure rise">
+        <div class="abbr">SIG</div>
+        <div class="what">Whether repetition is corroboration or echo.
+          <em>Source Independence Graph · counts independent origins, not outlets</em></div>
+      </div>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>5 / 14</span></div>
+  </section>
+
+  <!-- 6 · Live demo -->
+  <section class="slide" data-time="6:00–9:30">
+    <div class="pad center">
+      <div class="kicker rise">Live</div>
+      <h2 class="rise">Every measure runs live on a public dashboard</h2>
+      <div class="demo-url rise">tell-fyi.vercel.app</div>
+      <div class="demo-path rise">
+        <span>IVI series</span><b>→</b><span>NVD divergence</span><b>→</b><span>Independence table</span>
+      </div>
+    </div>
+    <div class="qr">
+      <img src="figures/stage/qr-tell-fyi.svg" alt="QR code for tell-fyi.vercel.app">
+      <span>Scan for the live pipeline</span>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>6 / 14</span></div>
+  </section>
+
+  <!-- 6a/6b/6c · Backups -->
+  <section class="slide backup" data-time="demo backup">
+    <div class="plate"><img src="figures/stage/fig2-ivi.svg" alt="IVI series, peak 17.0 on Dec 24"></div>
+  </section>
+  <section class="slide backup" data-time="demo backup">
+    <div class="plate"><img src="figures/stage/fig3-nvd.svg" alt="NVD for four narratives"></div>
+  </section>
+  <section class="slide backup" data-time="demo backup">
+    <div class="plate"><img src="figures/stage/fig5-independence.svg" alt="Source independence per narrative"></div>
+  </section>
+
+  <!-- 7 · Convergence -->
+  <section class="slide" data-time="9:30–10:45">
+    <div class="plate"><img src="figures/stage/fig7-sqm.svg" alt="Sensemaking quality metrics card"></div>
+    <div class="plate-tag"><span class="chip">FINDINGS</span></div>
+  </section>
+
+  <!-- 8 · Slow contradiction -->
+  <section class="slide" data-time="10:45–12:00">
+    <div class="plate"><img src="figures/stage/fig4-hypotheses.svg" alt="Daily hypothesis distributions and entropy"></div>
+    <div class="plate-tag"><span class="chip">THE FINDING</span></div>
+  </section>
+
+  <!-- 9 · Stability -->
+  <section class="slide" data-time="12:00–13:30">
+    <div class="plate"><img src="figures/stage/fig6-stability.svg" alt="Stability across three corpus builds"></div>
+    <div class="plate-tag"><span class="chip">ROBUSTNESS</span></div>
+  </section>
+
+  <!-- 10 · Generalization -->
+  <section class="slide" data-time="13:30–14:20">
+    <div class="pad center">
+      <div class="kicker rise">Where this goes</div>
+      <h2 class="rise" style="max-width:36ch">The architecture transfers wherever discourse outruns institutional response</h2>
+      <div class="domains">
+        <div class="domain rise">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2.5" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21.5" y2="12"/><line x1="5" y1="5" x2="7.5" y2="7.5"/><line x1="16.5" y1="16.5" x2="19" y2="19"/><line x1="19" y1="5" x2="16.5" y2="7.5"/><line x1="7.5" y1="16.5" x2="5" y2="19"/></svg>
+          <h3>Biosecurity</h3><p>Ambiguous early reports, slow institutional response, fast unofficial theories.</p></div>
+        <div class="domain rise">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><rect x="10.5" y="10.5" width="3" height="3"/><line x1="9.5" y1="4.5" x2="9.5" y2="7"/><line x1="12" y1="4.5" x2="12" y2="7"/><line x1="14.5" y1="4.5" x2="14.5" y2="7"/><line x1="9.5" y1="17" x2="9.5" y2="19.5"/><line x1="12" y1="17" x2="12" y2="19.5"/><line x1="14.5" y1="17" x2="14.5" y2="19.5"/><line x1="4.5" y1="9.5" x2="7" y2="9.5"/><line x1="4.5" y1="12" x2="7" y2="12"/><line x1="4.5" y1="14.5" x2="7" y2="14.5"/><line x1="17" y1="9.5" x2="19.5" y2="9.5"/><line x1="17" y1="12" x2="19.5" y2="12"/><line x1="17" y1="14.5" x2="19.5" y2="14.5"/></svg>
+          <h3>Emerging technology</h3><p>Public discourse outrunning regulatory understanding.</p></div>
+        <div class="domain rise">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 L7 13 h4 l-2 8 6-10 h-4 z"/></svg>
+          <h3>Critical infrastructure</h3><p>Competing explanations circulating before root cause lands.</p></div>
+        <div class="domain rise">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="7" r="2.2"/><circle cx="12" cy="17.5" r="2.2"/><line x1="8.2" y1="7" x2="15.8" y2="7"/><line x1="7" y1="9" x2="11" y2="15.6"/><line x1="17" y1="9" x2="13" y2="15.6"/></svg>
+          <h3>Cyber attribution</h3><p>Contested claims amplified faster than forensics can answer.</p></div>
+      </div>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>13 / 14</span></div>
+  </section>
+
+  <!-- 11 · Close -->
+  <section class="slide" data-time="14:20–15:00">
+    <div class="pad center">
+      <div class="kicker rise">The takeaway</div>
+      <h2 class="rise" style="max-width:34ch">Sensemaking quality is measurable while the answer is still unknown</h2>
+      <div class="close-url rise">sensemaking<span class="dot">.</span>wtf</div>
+      <p class="close-sub rise">Papers, methods, and the live pipeline · tell-fyi.vercel.app</p>
+      <div class="contact rise">
+        <strong style="color:var(--ink)">Jonathan “JMill” Miller</strong><br>
+        jbm213@psu.edu · linkedin.com/in/jmill<br>
+        Doctor of Engineering Program, School of Engineering Design and Innovation, The Pennsylvania State University
+      </div>
+    </div>
+    <div class="foot"><span class="wtf">sensemaking.wtf</span><span>14 / 14</span></div>
+  </section>
+
+</div>
+
+<div id="notes"><span class="nlabel"></span><span id="ntext"></span></div>
+
+<script>
+  const slides = [...document.querySelectorAll(".slide")];
+  const hud = document.getElementById("hud");
+  const notes = document.getElementById("notes");
+  const ntext = document.getElementById("ntext");
+  let i = 0;
+
+  function fit() {
+    const s = Math.min(innerWidth / 1320, innerHeight / 770, 3);
+    slides.forEach(el => el.style.transform = `scale(${s})`);
+  }
+  const touchDevice = matchMedia("(pointer: coarse)").matches;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((el, k) => el.classList.toggle("active", k === i));
+    const hint = touchDevice && i === 0 ? " · tap to advance" : "";
+    hud.textContent = `${i + 1} / ${slides.length}${hint}`;
+    ntext.textContent = slides[i].dataset.notes || "";
+    location.hash = i + 1;
+  }
+  addEventListener("keydown", e => {
+    if (["ArrowRight", "PageDown", " "].includes(e.key)) show(i + 1);
+    else if (["ArrowLeft", "PageUp"].includes(e.key)) show(i - 1);
+    else if (e.key === "Home") show(0);
+    else if (e.key === "End") show(slides.length - 1);
+    else if (e.key.toLowerCase() === "n") notes.classList.toggle("open");
+  });
+
+  // Tap and click: left third goes back, the rest advances.
+  // Swipes do not fire synthetic clicks, so the two handlers do not double-advance.
+  addEventListener("click", e => {
+    if (e.target.closest("#notes") || e.target.closest("a")) return;
+    show(e.clientX < innerWidth / 3 ? i - 1 : i + 1);
+  });
+  let touchX = null, touchY = null;
+  addEventListener("touchstart", e => {
+    touchX = e.touches[0].clientX;
+    touchY = e.touches[0].clientY;
+  }, { passive: true });
+  addEventListener("touchend", e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    const dy = e.changedTouches[0].clientY - touchY;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(dx < 0 ? i + 1 : i - 1);
+    touchX = null;
+  }, { passive: true });
+
+  addEventListener("resize", fit);
+  fit();
+  show((parseInt(location.hash.slice(1), 10) || 1) - 1);
+</script>
+</body>
+</html>

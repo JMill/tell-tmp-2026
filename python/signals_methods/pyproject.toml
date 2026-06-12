@@ -1,0 +1,54 @@
+[project]
+name = "signals-methods"
+version = "0.1.0"
+description = "Novel weak signal detection methods: Information Vacuum Index (IVI), Narrative Velocity Divergence (NVD), Source Independence Graph (SIG), and Sensemaking Quality Metrics (SQM)."
+requires-python = ">=3.12"
+readme = "README.md"
+authors = [
+    { name = "Jonathan Miller", email = "jbm213@psu.edu" },
+]
+keywords = [
+    "weak signal detection",
+    "sensemaking",
+    "human-machine teaming",
+    "osint",
+    "anomaly detection",
+    "narrative analysis",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "signals-core",
+    "typer>=0.15.0",
+    "rich>=13.0.0",
+    "psycopg[binary]>=3.2.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/JMill/praxis-deng"
+Source = "https://github.com/JMill/praxis-deng/tree/main/dev/tell/python/signals_methods"
+Issues = "https://github.com/JMill/praxis-deng/issues"
+"Praxis docs" = "https://github.com/JMill/praxis-deng/tree/main/dev/tell/docs"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.uv.sources]
+signals-core = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/signals_methods"]

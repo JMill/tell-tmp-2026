@@ -1,0 +1,464 @@
+{
+  "corpus_version": "nj-drones-2026-04-09",
+  "extracted_from": "production Neon branch (read-only)",
+  "query": "select window_end::date as day, value, discourse_count, authoritative_count from signal_ivi where topic = %(topic)s and window_days = 7 and window_end between '2024-11-15' and '2025-02-05' order by window_end",
+  "note": "7-day IVI series. signal_ivi keys on (topic, window_end, window_days); rows hold the latest compute, which is the 2026-04-09 build.",
+  "rows": [
+    {
+      "day": "2024-11-21",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-22",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-23",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-24",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-25",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-26",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-27",
+      "value": 0.5,
+      "discourse_count": 1,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-11-28",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-11-29",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-11-30",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-01",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-02",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-03",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-04",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-05",
+      "value": 1.0,
+      "discourse_count": 2,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-12-06",
+      "value": 0.6666667,
+      "discourse_count": 2,
+      "authoritative_count": 2
+    },
+    {
+      "day": "2024-12-07",
+      "value": 0.6666667,
+      "discourse_count": 2,
+      "authoritative_count": 2
+    },
+    {
+      "day": "2024-12-08",
+      "value": 0.6666667,
+      "discourse_count": 2,
+      "authoritative_count": 2
+    },
+    {
+      "day": "2024-12-09",
+      "value": 1.0,
+      "discourse_count": 4,
+      "authoritative_count": 3
+    },
+    {
+      "day": "2024-12-10",
+      "value": 1.0,
+      "discourse_count": 4,
+      "authoritative_count": 3
+    },
+    {
+      "day": "2024-12-11",
+      "value": 3.0,
+      "discourse_count": 12,
+      "authoritative_count": 3
+    },
+    {
+      "day": "2024-12-12",
+      "value": 3.6,
+      "discourse_count": 18,
+      "authoritative_count": 4
+    },
+    {
+      "day": "2024-12-13",
+      "value": 5.4,
+      "discourse_count": 27,
+      "authoritative_count": 4
+    },
+    {
+      "day": "2024-12-14",
+      "value": 4.571429,
+      "discourse_count": 32,
+      "authoritative_count": 6
+    },
+    {
+      "day": "2024-12-15",
+      "value": 5.285714,
+      "discourse_count": 37,
+      "authoritative_count": 6
+    },
+    {
+      "day": "2024-12-16",
+      "value": 6.571429,
+      "discourse_count": 46,
+      "authoritative_count": 6
+    },
+    {
+      "day": "2024-12-17",
+      "value": 6.375,
+      "discourse_count": 51,
+      "authoritative_count": 7
+    },
+    {
+      "day": "2024-12-18",
+      "value": 5.875,
+      "discourse_count": 47,
+      "authoritative_count": 7
+    },
+    {
+      "day": "2024-12-19",
+      "value": 7.8333335,
+      "discourse_count": 47,
+      "authoritative_count": 5
+    },
+    {
+      "day": "2024-12-20",
+      "value": 8.8,
+      "discourse_count": 44,
+      "authoritative_count": 4
+    },
+    {
+      "day": "2024-12-21",
+      "value": 13.0,
+      "discourse_count": 39,
+      "authoritative_count": 2
+    },
+    {
+      "day": "2024-12-22",
+      "value": 11.333333,
+      "discourse_count": 34,
+      "authoritative_count": 2
+    },
+    {
+      "day": "2024-12-23",
+      "value": 11.5,
+      "discourse_count": 23,
+      "authoritative_count": 1
+    },
+    {
+      "day": "2024-12-24",
+      "value": 17.0,
+      "discourse_count": 17,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-25",
+      "value": 13.0,
+      "discourse_count": 13,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-26",
+      "value": 6.0,
+      "discourse_count": 6,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-27",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-28",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-29",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-30",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2024-12-31",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-01",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-02",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-03",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-04",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-05",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-06",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-07",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-08",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-09",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-10",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-11",
+      "value": 2.0,
+      "discourse_count": 2,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-12",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-13",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-14",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-15",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-16",
+      "value": 1.0,
+      "discourse_count": 1,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-17",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-18",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-19",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-20",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-21",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-22",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-23",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-24",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-25",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-26",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-27",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-28",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-29",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-30",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-01-31",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-02-01",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-02-02",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-02-03",
+      "value": 8.0,
+      "discourse_count": 8,
+      "authoritative_count": 0
+    },
+    {
+      "day": "2025-02-04",
+      "value": 0.0,
+      "discourse_count": 0,
+      "authoritative_count": 0
+    }
+  ]
+}

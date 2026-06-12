@@ -1,0 +1,185 @@
+# NJ Drones: STAMP Controller Definitions
+#
+# Institutional actors modeled as controllers in Leveson's STAMP framework.
+# Each controller has a defined jurisdiction, available control actions
+# (actuators), and information needs (which signals matter to them).
+#
+# This file follows the same pattern as narratives.yaml: hand-authored by
+# JMill, loaded at runtime by the prescriptive logic module, and used to
+# generate role-differentiated advisories from signal state.
+
+metadata:
+  corpus: nj-drones
+  last_updated: 2026-04-12
+  authored_by: claude  # [REVIEW] JMill should review and refine controller definitions
+
+controllers:
+  # -----------------------------------------------------------------------
+  # Institutional controllers (STAMP: controllers issuing control actions)
+  # -----------------------------------------------------------------------
+
+  - slug: faa
+    label: Federal Aviation Administration
+    role: institutional
+    stamp_function: controller
+    jurisdiction: civil airspace regulation, drone authorization, Temporary Flight Restrictions
+    available_actions:
+      - type: issue_statement
+        label: "Issue public statement addressing airspace activity"
+      - type: issue_tfr
+        label: "Issue Temporary Flight Restriction"
+      - type: publish_data
+        label: "Release drone detection or radar data"
+      - type: coordinate
+        label: "Coordinate with DoD on military airspace"
+    information_needs: [ivi, sig]
+    narratives:
+      - slug: drones-legit
+        relationship: responder
+      - slug: mass-hysteria
+        relationship: responder
+
+  - slug: dhs
+    label: Department of Homeland Security
+    role: institutional
+    stamp_function: controller
+    jurisdiction: homeland security threat assessment, critical infrastructure protection
+    available_actions:
+      - type: issue_statement
+        label: "Issue public threat assessment"
+      - type: disclose_evidence
+        label: "Release specific evidence or intelligence"
+      - type: coordinate
+        label: "Coordinate inter-agency response"
+      - type: investigate
+        label: "Open or publicize investigation"
+    information_needs: [ivi, nvd, sig]
+    narratives:
+      - slug: iranian-mothership
+        relationship: responder
+      - slug: loose-nuke
+        relationship: responder
+      - slug: drones-legit
+        relationship: responder
+
+  - slug: dod
+    label: Department of Defense / Pentagon
+    role: institutional
+    stamp_function: controller
+    jurisdiction: military airspace, national defense, classified operations
+    available_actions:
+      - type: issue_statement
+        label: "Issue public denial or confirmation"
+      - type: disclose_evidence
+        label: "Declassify or release relevant intelligence"
+      - type: coordinate
+        label: "Coordinate with FAA on airspace deconfliction"
+    information_needs: [ivi, nvd, sig]
+    narratives:
+      - slug: iranian-mothership
+        relationship: responder
+      - slug: test-flights
+        relationship: responder
+      - slug: war-game
+        relationship: responder
+
+  # -----------------------------------------------------------------------
+  # Political controllers (elected officials with public platform authority)
+  # -----------------------------------------------------------------------
+
+  - slug: congress-oversight
+    label: Congressional Oversight (relevant committees and members)
+    role: political
+    stamp_function: controller
+    jurisdiction: oversight hearings, legislative action, public statements
+    available_actions:
+      - type: issue_statement
+        label: "Issue public statement or demand briefing"
+      - type: convene_hearing
+        label: "Convene oversight hearing"
+      - type: request_briefing
+        label: "Request classified briefing from agencies"
+    information_needs: [ivi, nvd, sig]
+    narratives:
+      - slug: iranian-mothership
+        relationship: originator  # Van Drew originated this narrative
+      - slug: drones-legit
+        relationship: monitor
+
+  - slug: white-house
+    label: White House
+    role: political
+    stamp_function: controller
+    jurisdiction: executive authority, public communication, inter-agency direction
+    available_actions:
+      - type: issue_statement
+        label: "Issue official White House statement"
+      - type: direct_agencies
+        label: "Direct agencies to respond or investigate"
+      - type: disclose_evidence
+        label: "Authorize declassification or public release"
+    information_needs: [ivi, nvd]
+    narratives:
+      - slug: test-flights
+        relationship: originator  # Trump WH Jan 28 statement
+      - slug: mass-hysteria
+        relationship: originator  # Biden WH framing
+
+  # -----------------------------------------------------------------------
+  # State and local controllers
+  # -----------------------------------------------------------------------
+
+  - slug: state-local
+    label: State and Local Officials (NJ Governor, local law enforcement)
+    role: institutional
+    stamp_function: controller
+    jurisdiction: state emergency management, local airspace coordination, public safety communication
+    available_actions:
+      - type: issue_statement
+        label: "Issue public safety statement"
+      - type: coordinate
+        label: "Request federal assistance or briefing"
+    information_needs: [ivi]
+    narratives:
+      - slug: drones-legit
+        relationship: responder
+      - slug: mass-hysteria
+        relationship: responder
+
+  # -----------------------------------------------------------------------
+  # Analyst / researcher roles (STAMP: sensors providing feedback)
+  # -----------------------------------------------------------------------
+
+  - slug: media-organizations
+    label: News Media Organizations
+    role: media
+    stamp_function: sensor
+    jurisdiction: public information, source verification, narrative framing
+    available_actions:
+      - type: verify_sources
+        label: "Verify source independence before amplifying claims"
+      - type: contextualize
+        label: "Provide context on evidence weight and competing hypotheses"
+    information_needs: [sig, nvd]
+    narratives:
+      - slug: iranian-mothership
+        relationship: amplifier
+      - slug: drones-legit
+        relationship: monitor
+
+  - slug: osint-analysts
+    label: OSINT Analysts and Researchers
+    role: analyst
+    stamp_function: sensor
+    jurisdiction: open-source analysis, evidence synthesis, hypothesis evaluation
+    available_actions:
+      - type: assess
+        label: "Produce structured situation assessment"
+      - type: flag_gaps
+        label: "Identify information gaps and evidence needs"
+    information_needs: [ivi, nvd, sig]
+    narratives:
+      - slug: drones-legit
+        relationship: monitor
+      - slug: uap
+        relationship: monitor

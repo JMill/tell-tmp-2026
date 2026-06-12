@@ -1,0 +1,155 @@
+\documentclass[10pt, letterpaper]{article}
+
+% ── Packages ──────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext}          % Palatino-family text
+\usepackage{newpxmath}          % matching math
+\usepackage[scaled=0.88]{beramono}
+\usepackage{microtype}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+
+% ── Colors ────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{B04A2E}
+\definecolor{muted}{HTML}{8A8577}
+
+% ── Section formatting (compact for one-pager) ────────────────
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}\MakeUppercase}{\thesection}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries}{\thesubsection}{0pt}{}
+\titlespacing*{\subsection}{0pt}{4pt}{1pt}
+
+\setlist{nosep, leftmargin=*}
+
+% ── Custom commands ───────────────────────────────────────────
+\newcommand{\method}[1]{\textbf{\textcolor{accent}{#1}}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ── Title block ───────────────────────────────────────────────
+\begingroup
+\centering
+{\Large\bfseries Sensemaking Quality, Not Prediction}\\[3pt]
+{\normalsize\itshape Three measures for detecting narrative capture in real time}\\[6pt]
+{\small Jonathan Miller \;\textbullet\; Doctor of Engineering, Penn State College of Engineering}\\
+{\footnotesize\color{muted} TELL pipeline overview \;\textbullet\; \texttt{tell-fyi.vercel.app/brief} \;\textbullet\; May 2026 \;\textbullet\; v0.1 working draft}
+\par
+\endgroup
+
+\vspace{6pt}
+{\color{muted}\hrule height 0.4pt}
+\vspace{6pt}
+
+% ── Abstract ──────────────────────────────────────────────────
+\section*{\color{accent}\MakeUppercase{Abstract}}
+\vspace{-4pt}
+
+When public discourse outruns institutional response during ambiguous, high-uncertainty events, unevidenced narratives capture the resulting vacuum.
+The 2024 New Jersey aerial phenomena incident produced a measurable case: more than five thousand FBI tips, four federal agencies declaring ``nothing anomalous,'' a congressional claim of an Iranian drone mothership, a podcast-originated loose-nuclear-weapon theory, and a 269 percent surge in laser strikes against commercial aircraft.
+TELL is an open-source intelligence pipeline that asks an upstream question.
+Rather than predicting what an event was, it evaluates whether the information environment was supporting human sensemaking while the answer was unknown.
+Three novel measures target distinct failure modes.
+Klein's sensemaking framework and Leveson's STAMP control-structure modeling enter as design requirements rather than post-hoc rhetoric.
+Retrospective analysis of a 204-document corpus surfaces the structural conditions of narrative capture and produces results stable across three corpus densities.
+
+% ── The Three Measures ────────────────────────────────────────
+\section{The Three Measures}
+
+\textbf{\method{Information Vacuum Index} (IVI).}
+A rolling-window ratio between the count of public discourse documents and the count of authoritative documents from federal agencies, congressional offices, and primary investigators.
+Above one means more public talk than institutional response.
+Above ten means a structural vacuum.
+
+\textbf{\method{Narrative Velocity Divergence} (NVD).}
+A per-narrative ratio between the rate at which a named narrative spreads and the rate at which evidence supporting it accumulates.
+Above one means the narrative is outpacing its evidence base.
+Computed for each of eight named narratives across the corpus.
+
+\textbf{\method{Source Independence Graph} (SIG).}
+A topology measure that traces every document carrying a narrative back to its attributable origin source, then computes the count of independent sources versus the count of amplifying outlets.
+A score of one with a high amplification ratio is the structural signature of an echo chamber, not corroboration.
+
+These three measures plug into four Sensemaking Quality Metrics: contradicting-evidence lag, composite narrative-capture risk, evidence-narrative alignment, and premature-closure resistance.
+
+% ── Headline Findings ─────────────────────────────────────────
+\section{Headline Findings}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{tabular}{@{}p{0.36\linewidth} l l@{}}
+  \toprule
+  \textbf{Measure} & \textbf{Result} & \textbf{Date} \\
+  \midrule
+  IVI peak & \textbf{17.0} (17 discourse, 0 authoritative) & 2024-12-24 \\
+  Iranian Mothership NVD & \textbf{1.20} (narrative outpacing evidence) & 2024-12-11 \\
+  Iranian Mothership SIG & \textbf{score 1, 6$\times$ amplification} & invariant \\
+  Mass-hysteria contradiction lag & \textbf{1{,}128 hours} (47 days unchallenged) & from 2024-12-16 \\
+  Composite capture-risk alert & fires on Iranian Mothership & 2024-12-11, 12 \\
+  Mean entropy (H1--H5), 26 days & \textbf{86.5\%} of theoretical maximum & 26 days \\
+  Evidence-narrative alignment & \textbf{95.7\%} of windows & 47 windows \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+The Iranian Mothership result is invariant across corpus sizes of 38, 96, and 204 documents.
+The 1{,}128-hour lag on the institutional mass-hysteria framing is not a pipeline failure.
+It is a measurement of which framings institutional silence protects.
+
+% ── Validation Status ─────────────────────────────────────────
+\section{Validation Status}
+
+Eight abstract claims, scored against committed code, persisted data, and reproducible test runs:
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.1}
+\small
+\begin{tabular}{@{}p{0.7\linewidth} l@{}}
+  \toprule
+  \textbf{Claim} & \textbf{Status} \\
+  \midrule
+  Multi-source ingestion (gov, news, aviation, academic, social) & \textbf{validated} \\
+  Information Vacuum Index & \textbf{validated} \\
+  Narrative Velocity Divergence & \textbf{validated} \\
+  Source Independence Graph & \textbf{validated} \\
+  Klein and Leveson as design requirements & partial \\
+  Surfaces contradicting evidence within hours & partial (2 of 3 same-day) \\
+  Maintains structured uncertainty across hypotheses & \textbf{validated} \\
+  Flags conditions conducive to narrative capture & \textbf{validated} \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+Six validated, two partial.
+Stability of the three signal methods confirmed across three corpus builds.
+
+% ── Generalization ────────────────────────────────────────────
+\section{Generalization}
+
+The New Jersey case is the validation corpus, not the point.
+The architecture generalizes to ambiguous high-uncertainty events with the same structural shape: biosecurity incidents where early reports are unclear and institutional response is deliberately slow, emerging-technology governance where public discourse outpaces regulatory understanding, contested-attribution cyber incidents, and critical-infrastructure failures with competing pre-root-cause explanations.
+
+% ── Resources ─────────────────────────────────────────────────
+\section{Resources}
+
+\begin{description}[style=nextline, leftmargin=1.5em, itemsep=2pt]
+  \item[\textnormal{\textbf{Live dashboard.}}] \texttt{tell-fyi.vercel.app}
+  \item[\textnormal{\textbf{Reproducible claim ledger.}}] \texttt{dev/tell/docs/abstract-claims.md}
+  \item[\textnormal{\textbf{Architecture mapping.}}] \texttt{dev/tell/docs/methods/framework-mapping.md}
+  \item[\textnormal{\textbf{Methods documentation.}}] \texttt{dev/tell/docs/methods/} (\texttt{ivi.md}, \texttt{nvd.md}, \texttt{independence.md}, \texttt{sqm.md})
+  \item[\textnormal{\textbf{Citation.}}] Miller, TELL pipeline, Penn State D.Eng. praxis, 2026.
+\end{description}
+
+\end{document}

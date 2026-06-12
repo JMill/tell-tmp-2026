@@ -1,0 +1,46 @@
+[project]
+name = "vercel-blob-client"
+version = "0.1.0"
+description = "Reverse-engineered Python REST client for Vercel Blob. Upload and fetch private or public blobs without depending on the @vercel/blob JavaScript SDK."
+requires-python = ">=3.12"
+readme = "README.md"
+authors = [
+    { name = "Jonathan Miller", email = "jbm213@psu.edu" },
+]
+keywords = [
+    "vercel",
+    "vercel-blob",
+    "blob-storage",
+    "object-storage",
+    "rest-client",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx>=0.28.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/JMill/praxis-deng/tree/main/dev/tell/python/vercel_blob_client"
+Source = "https://github.com/JMill/praxis-deng/tree/main/dev/tell/python/vercel_blob_client"
+Issues = "https://github.com/JMill/praxis-deng/issues"
+"Vercel Blob docs" = "https://vercel.com/docs/storage/vercel-blob"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vercel_blob_client"]

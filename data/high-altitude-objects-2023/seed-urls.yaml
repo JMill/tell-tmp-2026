@@ -1,0 +1,741 @@
+# Feb 2023 High-Altitude Objects — Seed URL List
+#
+# Starting points for the retrospective corpus ingestion. The batch ingester
+# (signals ingest batch) reads this file, iterates each entry, and pipelines
+# it through the appropriate adapter.
+#
+# Schema (per entry):
+#   url:         the canonical URL to fetch
+#   source_kind: gov | news | social | academic | aviation | forum | podcast | other
+#   adapter:     which ingest adapter to use (wayback | direct)
+#   event_date:  approximate date of the event the URL documents (YYYY-MM-DD)
+#   narratives:  list of narrative tags this URL relates to (see narratives.yaml)
+#   notes:       optional free-text
+#
+# All URLs below were surfaced via the research pass documented in
+# research/2026-04-19-verified-events.md. Each corresponds to at least one
+# canonical event in timeline.yaml.
+#
+# Adapter routing convention:
+#   - direct  for gov sources and stable PDF permalinks
+#   - wayback for tier-1 news to stabilize against paywall and content drift
+#
+# Host migrations to be aware of:
+#   - defense.gov -> war.gov (mid-2025 rebrand; Article IDs stable)
+#   - whitehouse.gov (Biden era) -> bidenwhitehouse.archives.gov
+
+metadata:
+  corpus: high-altitude-objects-2023
+  last_updated: 2026-04-19
+  compiled_from: research/2026-04-19-verified-events.md + web search expansion
+  authored_by: Claude (draft for JMill review)
+
+seeds:
+  # ===== GOVERNMENT: US DEPARTMENT OF DEFENSE (war.gov / navy.mil) =====
+
+  - url: https://www.war.gov/News/Releases/Release/Article/3287173/dod-statement-on-high-altitude-surveillance-balloon/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-02
+    narratives: [prc-surveillance]
+    notes: First public DoD acknowledgment of the PRC balloon, Brig. Gen. Pat Ryder attributed.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3287204/senior-defense-official-holds-a-background-briefing-on-high-altitude-surveillan
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-02
+    narratives: [prc-surveillance]
+    notes: Senior defense official on-background briefing confirming PRC attribution and prior similar incursions.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3288141/pentagon-press-secretary-brig-gen-pat-ryder-holds-an-on-camera-press-briefing/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-03
+    narratives: [prc-surveillance]
+    notes: Ryder on-camera briefing confirming balloon at 60,000 feet over the central United States.
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/3288103/general-says-chinese-surveillance-balloon-now-over-center-of-us/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-03
+    narratives: [prc-surveillance]
+    notes: DoD news summary of Ryder's Feb 3 briefing.
+
+  - url: https://www.war.gov/News/Releases/Release/Article/3288535/statement-from-secretary-of-defense-lloyd-j-austin-iii/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: SecDef Austin announces successful shootdown over territorial waters off South Carolina.
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/3288543/f-22-safely-shoots-down-chinese-spy-balloon-off-south-carolina-coast/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: DoD narrative of the Feb 4 F-22 engagement.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3288618/senior-defense-official-and-senior-military-official-hold-an-off-camera-on-back/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: Post-shootdown background briefing with engagement time, munitions, altitudes, and Jan 28 Aleutians entry disclosure.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3289888/gen-glen-vanherck-commander-north-american-aerospace-defense-command-and-united/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-06
+    narratives: [prc-surveillance, misidentification-threshold]
+    notes: VanHerck NORAD briefing. Four prior undetected transits disclosed; domain-awareness-gap framing.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3293101/pentagon-press-secretary-air-force-brig-gen-pat-ryder-holds-an-on-camera-press/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-08
+    narratives: [prc-surveillance]
+    notes: Ryder Feb 8 briefing confirming four prior PRC balloon transits.
+
+  - url: https://www.war.gov/News/Transcripts/Transcript/Article/3295889/pentagon-press-secretary-air-force-brig-gen-pat-ryder-holds-an-on-camera-press
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: Ryder Feb 10 briefing on Alaska object shootdown; engagement time 13:45 EST.
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/3295813/air-force-shoots-down-high-altitude-object-off-alaskan-coast/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: DoD narrative summary of Alaska engagement.
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/3296905/efforts-underway-to-recover-object-downed-over-lake-huron/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-13
+    narratives: [uap-unknown, official-recreation-research, hobbyist-pico-balloon]
+    notes: DoD Lake Huron recovery update; AIM-9X, 14:42 EST intercept, 20,000 ft, Melissa Dalton ASD-HD quote.
+
+  - url: https://www.war.gov/News/News-Stories/Article/Article/3297104/chinese-surveillance-balloons-global-in-scope-says-official/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-13
+    narratives: [prc-surveillance]
+    notes: DoD summary of Kirby Feb 13 attribution; global PLA program across 40+ countries.
+
+  - url: https://www.war.gov/News/Releases/Release/Article/3964824/department-of-defense-releases-the-annual-report-on-unidentified-anomalous-phen/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-10-25
+    narratives: [uap-unknown, prc-surveillance, misidentification-threshold]
+    notes: DoD companion release for FY2023 ODNI UAP annual report.
+
+  - url: https://www.navy.mil/Press-Office/News-Stories/Article/3290232/us-navy-collecting-surveillance-balloon-debris/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-06
+    narratives: [prc-surveillance]
+    notes: Navy recovery operations step-up on Feb 6 at 10:00 EST; asset list including USS Carter Hall.
+
+  # ===== GOVERNMENT: WHITE HOUSE (bidenwhitehouse.archives.gov) =====
+
+  - url: https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/10/press-briefing-by-press-secretary-karine-jean-pierre-and-national-security-council-coordinator-for-strategic-communications-john-kirby-february-10-2023/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: Kirby Feb 10 briefing confirming Alaska shootdown; no known origin at this point.
+
+  - url: https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/13/press-briefing-by-press-secretary-karine-jean-pierre-and-national-security-council-coordinator-for-strategic-communications-john-kirby-february-13-2023/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-13
+    narratives: [prc-surveillance, uap-unknown]
+    notes: Kirby Feb 13 briefing; global PLA program attribution; "no indication of aliens" phrasing.
+
+  - url: https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/14/press-briefing-by-press-secretary-karine-jean-pierre-2-14-2023/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-14
+    narratives: [official-recreation-research]
+    notes: KJP Feb 14 briefing; continued balloon Q&A; weather-balloon characterization.
+
+  - url: https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2023/02/16/remarks-by-president-biden-on-the-united-states-response-to-recent-aerial-objects/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-16
+    narratives: [prc-surveillance, official-recreation-research]
+    notes: Biden formal address 14:11 EST from South Court Auditorium. Canonical US-government narrative frame.
+
+  - url: https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/17/press-briefing-by-press-secretary-karine-jean-pierre-and-nsc-coordinator-for-strategic-communications-john-kirby-9/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-17
+    narratives: [prc-surveillance, official-recreation-research]
+    notes: Kirby Feb 17 consolidated status briefing across all three later-object recovery sites.
+
+  # ===== GOVERNMENT: CONGRESS =====
+
+  - url: https://www.congress.gov/bill/118th-congress/house-resolution/104
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-09
+    narratives: [prc-surveillance]
+    notes: H.Res.104 congress.gov landing page. Agreed 419-0-15.
+
+  - url: https://clerk.house.gov/Votes/2023117
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-09
+    narratives: [prc-surveillance]
+    notes: Roll call 117 official vote record.
+
+  - url: https://www.govinfo.gov/content/pkg/CREC-2023-02-09/html/CREC-2023-02-09-pt1-PgH794-2.htm
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-09
+    narratives: [prc-surveillance]
+    notes: Congressional Record floor debate on H.Res.104.
+
+  - url: https://www.congress.gov/crs_external_products/IN/PDF/IN12118/IN12118.1.pdf
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-27
+    narratives: [prc-surveillance, misidentification-threshold]
+    notes: CRS Insight IN12118 "Monitoring the Sovereign Skies" by Bart Elias. First formal congressional-analytical product.
+
+  - url: https://www.everycrsreport.com/reports/IN12118.html
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-27
+    narratives: [prc-surveillance, misidentification-threshold]
+    notes: HTML-accessible mirror of IN12118.
+
+  - url: https://krishnamoorthi.house.gov/media/press-releases/gallagher-krishnamoorthi-joint-statement-suspected-ccp-spy-balloon
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-02
+    narratives: [prc-surveillance]
+    notes: First joint statement of the House Select Committee on the CCP.
+
+  - url: https://homeland.house.gov/2023/02/04/chairman-green-statement-on-removal-of-chinese-spy-balloon-from-u-s-airspace/
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: House Homeland Security Chairman Green Feb 4 statement.
+
+  - url: https://www.wicker.senate.gov/2023/3/wicker-rubio-blast-pentagon-for-avoiding-questions-on-chinese-spy-balloon
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-03
+    narratives: [prc-surveillance]
+    notes: Wicker-Rubio Senate oversight follow-up to Feb 9/14 classified briefings.
+
+  # ===== GOVERNMENT: ODNI AND AARO =====
+
+  - url: https://www.dni.gov/index.php/newsroom/reports-publications/reports-publications-2023/3733-2023-consolidated-annual-report-on-unidentified-anomalous-phenomena
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-10-25
+    narratives: [uap-unknown, prc-surveillance, misidentification-threshold]
+    notes: ODNI FY2023 UAP annual report landing page.
+
+  - url: https://www.dni.gov/files/ODNI/documents/assessments/FY2023-Consolidated-Annual-Report-UAP-Oct2023.pdf
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-10-25
+    narratives: [uap-unknown, prc-surveillance, misidentification-threshold]
+    notes: ODNI FY2023 UAP report PDF. 291 reports in-window, 290 air domain.
+
+  - url: https://www.aaro.mil/Portals/136/PDFs/UNCLASSIFIED-FY23_Consolidated_Annual_Report_on_UAP-Oct_25_2023_1236.pdf
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-10-25
+    narratives: [uap-unknown, prc-surveillance, misidentification-threshold]
+    notes: AARO-hosted mirror of the same report.
+
+  # ===== GOVERNMENT: CANADA =====
+
+  - url: https://www.canada.ca/en/department-national-defence/news/2023/02/minister-anandprovides-an-important-national-security-update.html
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-14
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: Canadian Minister of National Defence Anand Feb 14 national security update.
+
+  - url: https://www.canada.ca/en/department-national-defence/corporate/reports-publications/proactive-disclosure/nddn-7-march-23/key-issues.html
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-03-07
+    narratives: [prc-surveillance, uap-unknown]
+    notes: Canadian DND briefing notes for House Standing Committee on National Defence.
+
+  - url: https://www.canada.ca/en/department-national-defence/corporate/reports-publications/proactive-disclosure/secd-april-24-2023/norad-authorities-and-operations.html
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-04-24
+    narratives: [prc-surveillance]
+    notes: Canadian Senate briefing note on NORAD Authorities and Operations.
+
+  # ===== GOVERNMENT: FBI =====
+
+  - url: https://www.fbi.gov/news/stories/chinese-high-altitude-balloon-recovery
+    source_kind: gov
+    adapter: wayback
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: FBI news story on Quantico Laboratory Division forensic testing. Live URL 403s under WebFetch; wayback fallback recommended.
+
+  # ===== GOVERNMENT: PRC MFA =====
+
+  - url: https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/lxjzh/202405/t20240530_11347465.html
+    source_kind: gov
+    adapter: direct
+    event_date: 2023-02-15
+    narratives: [prc-civilian-weather, adversary-black-tech]
+    notes: Wang Wenbin Feb 15 2023 MFA press conference. URL path timestamp is publishing-system date; content is the Feb 15 transcript.
+
+  # ===== NEWS: TIER-1 NATIONAL (wayback) =====
+
+  - url: https://www.cnn.com/2023/02/03/politics/china-us-balloon-intl/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-03
+    narratives: [prc-surveillance]
+    notes: Blinken postpones Beijing trip.
+
+  - url: https://www.cnn.com/politics/live-news/suspected-chinese-balloon-over-us-02-04-23/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: CNN Feb 4 live blog; FAA ground stops 12:45-15:15 EST.
+
+  - url: https://www.cnn.com/2023/02/11/politics/norad-additional-object-northern-canada/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: CNN Yukon shootdown coverage with Biden-Trudeau coordination detail.
+
+  - url: https://www.cnn.com/2023/02/12/politics/lake-huron-high-altitude-object/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-12
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: CNN Lake Huron shootdown coverage; F-16 Minnesota ANG, octagonal shape with strings.
+
+  - url: https://www.cnn.com/2023/02/16/politics/president-biden-downed-objects/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-16
+    narratives: [prc-surveillance, official-recreation-research]
+    notes: CNN Biden aerial-objects address coverage.
+
+  - url: https://www.cnn.com/2023/06/29/politics/china-surveillance-balloon-pentagon-intl-hnk/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-06-29
+    narratives: [prc-surveillance]
+    notes: CNN tier-1 on DoD final attribution.
+
+  - url: https://www.cnn.com/2023/12/29/politics/chinese-spy-balloon-us-internet-provider/index.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-12-29
+    narratives: [prc-surveillance]
+    notes: CNN long-tail report on ISP command-and-control.
+
+  - url: https://www.washingtonpost.com/national-security/2023/02/03/blinken-postpones-china-trip-suspected-spy-balloon-detected-over-us/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-03
+    narratives: [prc-surveillance]
+    notes: WaPo Blinken trip postponement; paywalled live, wayback recommended.
+
+  - url: https://www.washingtonpost.com/national-security/2023/02/17/illinois-hobbyist-balloon-missing-yukon/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-17
+    narratives: [hobbyist-pico-balloon]
+    notes: WaPo primary reporting on the K9YO-15 hypothesis.
+
+  - url: https://www.npr.org/2023/02/04/1154527155/faa-halts-flights-chinese-spy-balloon
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: NPR Feb 4 shootdown report.
+
+  - url: https://www.npr.org/2023/02/11/1156347424/us-military-shot-down-unidentified-object-canada
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: NPR Yukon shootdown.
+
+  - url: https://www.npr.org/2023/02/12/1156428862/us-shoot-down-ufo-unidentified-object-lake-huron
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-12
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: NPR Lake Huron.
+
+  - url: https://www.npr.org/2023/02/13/1156488174/china-us-spy-balloons-airspace
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-13
+    narratives: [prc-civilian-weather, adversary-black-tech]
+    notes: NPR PRC counter-claim.
+
+  - url: https://www.npr.org/2023/02/14/1156731462/china-spy-balloon-timeline-key-dates
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-14
+    narratives: [prc-surveillance]
+    notes: NPR consolidated timeline feature.
+
+  - url: https://www.npr.org/2023/02/18/1158048921/pico-balloon-k9yo
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-18
+    narratives: [hobbyist-pico-balloon]
+    notes: NPR pico-balloon follow-up.
+
+  - url: https://www.nbcnews.com/politics/white-house/us-shoots-flying-object-alaska-airspace-white-house-says-rcna70166
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: NBC Alaska shootdown.
+
+  - url: https://www.nbcnews.com/politics/national-security/powerful-radars-limited-scope-no-one-spotted-bunch-objects-floating-no-rcna70690
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-13
+    narratives: [misidentification-threshold]
+    notes: NBC feature on NORAD radar-gap and velocity-filter adjustment.
+
+  - url: https://www.nbcnews.com/news/world/china-surveillance-spy-balloons-us-airspace-rcna70330
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-13
+    narratives: [prc-civilian-weather, adversary-black-tech]
+    notes: NBC on PRC counter-claim.
+
+  - url: https://www.nbcnews.com/politics/national-security/china-spy-balloon-collected-intelligence-us-military-bases-rcna77155
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-04-03
+    narratives: [prc-surveillance]
+    notes: NBC April 3 2023 report that balloon collected intelligence despite blocking efforts. Critical long-tail contradicting-evidence signal.
+
+  - url: https://abcnews.go.com/Politics/us-shoots-high-altitude-object-alaska-white-house/story?id=97040022
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: ABC Alaska shootdown.
+
+  - url: https://www.cbc.ca/news/world/us-response-china-spy-balloon-1.6737412
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: CBC shootdown report.
+
+  - url: https://www.cbc.ca/news/politics/norad-monitoring-airborne-object-north-1.6745575
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: CBC Yukon shootdown; Trudeau announcement.
+
+  - url: https://www.cbc.ca/news/canada/missing-balloon-yukon-1.6752141
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-18
+    narratives: [hobbyist-pico-balloon]
+    notes: CBC pico-balloon hypothesis coverage.
+
+  - url: https://www.theglobeandmail.com/canada/article-norad-high-altitude-object-canada/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: Globe and Mail Yukon coverage; paywalled live, wayback recommended.
+
+  - url: https://www.pbs.org/newshour/nation/u-s-prepares-to-shoot-down-chinese-balloon-over-atlantic-ocean
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: PBS NewsHour via AP wire.
+
+  - url: https://www.memeorandum.com/230209/p45
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-09
+    narratives: [prc-surveillance]
+    notes: Memeorandum index entry for the Feb 9 NYT SIGINT-payload story by Edward Wong.
+
+  - url: https://www.militarytimes.com/news/your-military/2023/06/29/dod-chinese-spy-balloon-did-not-collect-transmit-data-over-the-us/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-06-29
+    narratives: [prc-surveillance]
+    notes: Military Times on DoD Ryder June 29 final attribution briefing.
+
+  - url: https://www.military.com/daily-news/2023/02/14/f-16-missile-missed-object-shot-down-over-lake-huron-joint-chiefs-chairman-says.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-14
+    narratives: [uap-unknown]
+    notes: Military.com on Gen. Milley acknowledgment of first-shot AIM-9 miss at Lake Huron.
+
+  - url: https://news.usni.org/2023/02/06/navy-underwater-robots-divers-searching-for-remains-of-chinese-spy-balloon-salvage-ship-set-to-deploy-from-little-creek-for-recovery
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-06
+    narratives: [prc-surveillance]
+    notes: USNI News on Navy recovery operations.
+
+  - url: https://news.usni.org/2023/02/09/uss-carter-hall-heading-back-to-virginia-as-rough-seas-anticipated-in-chinese-spy-balloon-search
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-09
+    narratives: [prc-surveillance]
+    notes: USNI News on Carter Hall weather-driven recovery pause.
+
+  - url: https://news.usni.org/2023/02/17/navy-coast-guard-wrap-chinese-spy-balloon-recovery-off-south-carolina
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-17
+    narratives: [prc-surveillance]
+    notes: USNI News on recovery wrap.
+
+  # ===== LOCAL / REGIONAL NEWS =====
+
+  - url: https://billingsgazette.com/news/local/balloon-spotted-over-billings-being-investigated-as-chinese-spy-airship/article_f3ba383e-a348-11ed-810b-93023cfc3fb6.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-01
+    narratives: [prc-surveillance]
+    notes: Billings Gazette local report; Chase Doak and Larry Mayer photographs.
+
+  - url: https://www.ypradio.org/regional-news/2023-02-20/billings-boy-and-his-dad-recall-balloon-sighting-i-thought-it-was-the-comet
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-20
+    narratives: [prc-surveillance]
+    notes: YPR eyewitness follow-up.
+
+  - url: https://www.postandcourier.com/news/faa-grounds-planes-charleston-myrtle-beach-airports-including-charleston-afb/article_95e5a0ec-a4bd-11ed-9405-07ed5f2e9baf.html
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: Post and Courier on FAA ground stop and Charleston AFB participation.
+
+  - url: https://alaskapublic.org/2023/02/10/after-china-balloon-scare-air-force-shoots-down-object-flying-above-alaskas-north-slope/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-10
+    narratives: [uap-unknown]
+    notes: Alaska Public Media local Feb 10 report.
+
+  - url: https://www.adn.com/nation-world/2023/02/10/us-shoots-down-object-posing-reasonable-threat-off-alaska-coastline-white-house-says/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: Anchorage Daily News local Feb 10 report.
+
+  - url: https://www.detroitnews.com/story/news/local/michigan/2023/02/12/object-decommissioned-over-lake-huron-michigan-airspace-closure/69897024007/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-12
+    narratives: [uap-unknown]
+    notes: Detroit News Lake Huron coverage; includes Lake Michigan airspace closure detail.
+
+  - url: https://www.ktvq.com/object-hovering-above-montana-airspace-causes-faa-to-issue-temporary-flight-restriction
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [misidentification-threshold]
+    notes: Montana local on FAA TFR.
+
+  - url: https://www.washingtontimes.com/news/2023/feb/11/faa-temporarily-closed-montana-airspace-after-ufo-/
+    source_kind: news
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [misidentification-threshold]
+    notes: Washington Times on Montana airspace closure timeline.
+
+  # ===== AVIATION AND TRADE PRESS =====
+
+  - url: https://www.twz.com/f-22-shoots-down-chinese-spy-balloon-off-carolinas-with-missile
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: The War Zone F-22 engagement narrative; Mach 1.3, AIM-9X standoff.
+
+  - url: https://www.twz.com/the-operation-to-down-chinas-spy-balloon-in-moment-by-moment-audio
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-06
+    narratives: [prc-surveillance]
+    notes: War Zone moment-by-moment audio reconstruction with FRANK01/FRANK02 call signs.
+
+  # NOTE: Three 2024 retrospective items are intentionally excluded from this
+  # seed list, even though they are cited in research/2026-04-19-fourth-fifth-
+  # object-anomalies.md as the evidentiary center of gravity for the
+  # hobbyist-pico-balloon narrative. The TELL ingestion and signal compute
+  # pipeline does not filter corpus documents by event_date (see
+  # signals_ingest.batch.run_batch and signals_methods.storage.
+  # load_corpus_documents), so including 2024 retrospectives here would fold
+  # them into IVI/NVD/SQM computations for the Feb 2023 window and skew the
+  # signal outputs. They remain in the dossier as narrative evidence, and can
+  # be ingested later as a separate corpus version (e.g.
+  # high-altitude-objects-2023-retrospective-YYYY-MM-DD) when a
+  # cross-corpus scoring facility is needed:
+  #   - https://www.twz.com/air/first-look-at-mystery-object-shot-down-over-canada-by-f-22-raptor-last-year (2024-09)
+  #   - https://www.twz.com/air/details-about-search-for-mystery-object-shot-down-over-lake-huron-disclosed (2024)
+  #   - https://theaviationist.com/2024/09/25/image-of-unidentified-object-shot-down-over-canada/ (2024-09-25)
+
+  - url: https://theaviationist.com/2023/02/12/f-16-shoots-down-an-unidentified-octagon-shaped-object-over-lake-huron/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-12
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: Aviationist Lake Huron F-16 coverage.
+
+  - url: https://defensescoop.com/2023/02/10/f-22-fighter-jet-shoots-down-mysterious-object-off-the-coast-of-alaska/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: DefenseScoop Alaska shootdown detail.
+
+  - url: https://defensescoop.com/2023/02/13/norad-adjusts-radar-gates-to-sharpen-detection-of-anomalous-objects-as-ufo-recovery-intensifies/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-13
+    narratives: [misidentification-threshold, prc-surveillance]
+    notes: DefenseScoop VanHerck radar-gate adjustment coverage. Key misidentification-threshold reference.
+
+  - url: https://www.airforce-technology.com/news/norad-increases-radar-sensors/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-13
+    narratives: [misidentification-threshold]
+    notes: Air Force Technology on NORAD sensor filter expansion.
+
+  - url: https://www.aerotime.aero/articles/war-on-uaps-restrictions-over-montana-triggered-by-radar-anomaly-us-military
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02-11
+    narratives: [misidentification-threshold, uap-unknown]
+    notes: AeroTime on NORAD radar-anomaly characterization of Montana.
+
+  - url: https://taskandpurpose.com/news/us-military-norad-radar-balloons/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-02
+    narratives: [misidentification-threshold]
+    notes: Task and Purpose on NORAD domain-awareness gap.
+
+  - url: https://www.defensenews.com/congress/2023/05/10/a-new-design-for-homeland-defense-is-in-the-works-at-northcom/
+    source_kind: aviation
+    adapter: wayback
+    event_date: 2023-05-10
+    narratives: [misidentification-threshold, prc-surveillance]
+    notes: Defense News on NORTHCOM homeland-defense redesign.
+
+  # ===== ACADEMIC / THINK TANK =====
+
+  - url: https://www.csis.org/analysis/chinese-spy-balloons-skys-limit
+    source_kind: academic
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: CSIS analysis titled Chinese Spy Balloons and the Sky is the Limit by Bonny Lin and co-authors, on the PRC ISR balloon program.
+
+  - url: https://www.csis.org/analysis/building-chinas-mistake-advance-us-interests-after-balloon
+    source_kind: academic
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: CSIS policy piece on US strategic response options after the balloon incident.
+
+  - url: https://www.csis.org/analysis/air-spy-balloon-and-what-it-means-canada
+    source_kind: academic
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance, uap-unknown, hobbyist-pico-balloon]
+    notes: CSIS analysis of the Yukon engagement and Canadian-sovereignty implications.
+
+  - url: https://www.csis.org/people/bonny-lin
+    source_kind: academic
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: CSIS China Power Project director profile, used to anchor subsequent commentary in the Source Independence Graph.
+
+  - url: https://www.cna.org/reports/2023/02/PRC-Spy-Balloon-Reveals-New-Arena-of-Strategic-Competition.pdf
+    source_kind: academic
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: CNA report "PRC Spy Balloon Reveals New Arena of Strategic Competition" (Distribution A, cleared for public release).
+
+  # ===== PODCAST =====
+
+  - url: https://warontherocks.com/2023/02/what-happens-if-the-balloon-goes-up-with-china/
+    source_kind: podcast
+    adapter: direct
+    event_date: 2023-02
+    narratives: [prc-surveillance]
+    notes: War on the Rocks Feb 2023 episode on US-China conflict framing after the balloon incident; Will Inboden and Hal Brands.
+
+  # ===== FORUM / SOCIAL =====
+
+  - url: https://nibbb.org/2023/02/17/a-statement-from-the-nibbb-on-current-events/
+    source_kind: forum
+    adapter: direct
+    event_date: 2023-02-17
+    narratives: [hobbyist-pico-balloon]
+    notes: Northern Illinois Bottlecap Balloon Brigade statement. Origin of the hobbyist-pico-balloon narrative.
+
+  # ===== OTHER / NAVIGATIONAL =====
+
+  - url: https://en.wikipedia.org/wiki/2023_Chinese_balloon_incident
+    source_kind: other
+    adapter: direct
+    event_date: 2023-02-04
+    narratives: [prc-surveillance]
+    notes: Wikipedia navigational index with extensive primary-source footnotes.
+
+  - url: https://en.wikipedia.org/wiki/2023_Alaska_high-altitude_object
+    source_kind: other
+    adapter: direct
+    event_date: 2023-02-10
+    narratives: [uap-unknown, official-recreation-research]
+    notes: Wikipedia navigational index for the Alaska object.
+
+  - url: https://en.wikipedia.org/wiki/2023_Yukon_high-altitude_object
+    source_kind: other
+    adapter: direct
+    event_date: 2023-02-11
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: Wikipedia navigational index for the Yukon object.
+
+  - url: https://en.wikipedia.org/wiki/2023_Lake_Huron_high-altitude_object
+    source_kind: other
+    adapter: direct
+    event_date: 2023-02-12
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    notes: Wikipedia navigational index for the Lake Huron object.

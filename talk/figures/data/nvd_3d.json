@@ -1,0 +1,4320 @@
+{
+  "corpus_version": "nj-drones-2026-04-09",
+  "extracted_from": "production Neon branch (read-only)",
+  "query": "select narrative_slug, window_end::date as day, nvd_value, narrative_velocity, evidence_velocity from signal_nvd where topic = %(topic)s and corpus_version = %(corpus)s and window_days = 3 and window_end between '2024-11-15' and '2025-02-05' order by narrative_slug, window_end",
+  "note": "3-day NVD for all eight narratives, 2026-04-09 corpus build.",
+  "rows": [
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-21",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-22",
+      "nvd_value": 0.6666667,
+      "narrative_velocity": 2,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-23",
+      "nvd_value": 0.6666667,
+      "narrative_velocity": 2,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-24",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-03",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-04",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-05",
+      "nvd_value": 0.75,
+      "narrative_velocity": 3,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-06",
+      "nvd_value": 0.75,
+      "narrative_velocity": 3,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-07",
+      "nvd_value": 0.75,
+      "narrative_velocity": 3,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-08",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-09",
+      "nvd_value": 0.75,
+      "narrative_velocity": 3,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-10",
+      "nvd_value": 0.8,
+      "narrative_velocity": 4,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-11",
+      "nvd_value": 1.2,
+      "narrative_velocity": 12,
+      "evidence_velocity": 9
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-12",
+      "nvd_value": 1.2,
+      "narrative_velocity": 18,
+      "evidence_velocity": 14
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-13",
+      "nvd_value": 1.2272727,
+      "narrative_velocity": 27,
+      "evidence_velocity": 21
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-14",
+      "nvd_value": 1.0833334,
+      "narrative_velocity": 26,
+      "evidence_velocity": 23
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-15",
+      "nvd_value": 1.1,
+      "narrative_velocity": 22,
+      "evidence_velocity": 19
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-16",
+      "nvd_value": 1.3333334,
+      "narrative_velocity": 24,
+      "evidence_velocity": 17
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-17",
+      "nvd_value": 1.4117647,
+      "narrative_velocity": 24,
+      "evidence_velocity": 16
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-18",
+      "nvd_value": 1.5333333,
+      "narrative_velocity": 23,
+      "evidence_velocity": 14
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-19",
+      "nvd_value": 1.125,
+      "narrative_velocity": 18,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-20",
+      "nvd_value": 1.0625,
+      "narrative_velocity": 17,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-21",
+      "nvd_value": 0.9285714,
+      "narrative_velocity": 13,
+      "evidence_velocity": 13
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-22",
+      "nvd_value": 0.85714287,
+      "narrative_velocity": 6,
+      "evidence_velocity": 6
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-03",
+      "nvd_value": 1.0,
+      "narrative_velocity": 1,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-04",
+      "nvd_value": 1.0,
+      "narrative_velocity": 1,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-05",
+      "nvd_value": 1.0,
+      "narrative_velocity": 2,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-06",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-07",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-10",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-11",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-12",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-28",
+      "nvd_value": 0.8888889,
+      "narrative_velocity": 8,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-29",
+      "nvd_value": 0.8888889,
+      "narrative_velocity": 8,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-30",
+      "nvd_value": 0.8888889,
+      "narrative_velocity": 8,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "drones-legit",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 5
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "false-flag",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-11",
+      "nvd_value": 1.2,
+      "narrative_velocity": 6,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-12",
+      "nvd_value": 1.2,
+      "narrative_velocity": 6,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-13",
+      "nvd_value": 1.0,
+      "narrative_velocity": 6,
+      "evidence_velocity": 5
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 5
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-16",
+      "nvd_value": 0.4,
+      "narrative_velocity": 2,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-17",
+      "nvd_value": 0.5,
+      "narrative_velocity": 2,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-18",
+      "nvd_value": 0.5,
+      "narrative_velocity": 2,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-13",
+      "nvd_value": 0.1,
+      "narrative_velocity": 1,
+      "evidence_velocity": 9
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-14",
+      "nvd_value": 0.083333336,
+      "narrative_velocity": 1,
+      "evidence_velocity": 11
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-15",
+      "nvd_value": 0.09090909,
+      "narrative_velocity": 1,
+      "evidence_velocity": 10
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-16",
+      "nvd_value": 0.16666667,
+      "narrative_velocity": 2,
+      "evidence_velocity": 11
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-17",
+      "nvd_value": 0.125,
+      "narrative_velocity": 2,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-18",
+      "nvd_value": 0.125,
+      "narrative_velocity": 2,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 12
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 11
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 9
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 5
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-28",
+      "nvd_value": 0.2,
+      "narrative_velocity": 1,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-29",
+      "nvd_value": 0.2,
+      "narrative_velocity": 1,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-30",
+      "nvd_value": 0.2,
+      "narrative_velocity": 1,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 9
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 14
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 21
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 23
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 19
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 17
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 16
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 14
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 15
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 13
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 6
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-28",
+      "nvd_value": 0.33333334,
+      "narrative_velocity": 3,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-29",
+      "nvd_value": 0.33333334,
+      "narrative_velocity": 3,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-30",
+      "nvd_value": 0.33333334,
+      "narrative_velocity": 3,
+      "evidence_velocity": 8
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-12",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-13",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-14",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-16",
+      "nvd_value": 1.0,
+      "narrative_velocity": 1,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-17",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-18",
+      "nvd_value": 1.0,
+      "narrative_velocity": 2,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-19",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-20",
+      "nvd_value": 1.0,
+      "narrative_velocity": 2,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-21",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-22",
+      "nvd_value": 0.5,
+      "narrative_velocity": 1,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "uap",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-11-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 5
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 4
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 3
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 2
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2024-12-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-06",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-07",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-08",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-09",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-10",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-11",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-12",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 1
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-13",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-14",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-15",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-16",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-17",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-18",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-19",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-20",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-21",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-22",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-23",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-24",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-25",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-26",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-27",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-28",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-29",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-30",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-01-31",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-02-01",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-02-02",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-02-03",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-02-04",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    },
+    {
+      "narrative_slug": "war-game",
+      "day": "2025-02-05",
+      "nvd_value": 0.0,
+      "narrative_velocity": 0,
+      "evidence_velocity": 0
+    }
+  ]
+}

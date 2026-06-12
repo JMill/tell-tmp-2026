@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software or the methods it implements, cite as below."
+title: "TELL: a weak-signal detection pipeline for ambiguous information environments"
+type: software
+authors:
+  - family-names: Miller
+    given-names: Jonathan
+    email: jbm213@psu.edu
+    affiliation: "Doctor of Engineering Program, School of Engineering Design and Innovation, The Pennsylvania State University"
+version: tmp-2026
+date-released: "2026-06-12"
+url: "https://github.com/JMill/tell-tmp-2026"
+license: Apache-2.0
+notes: "Frozen snapshot as presented at the CMU Technology, Management, and Policy Graduate Consortium, June 16, 2026: 'Sensemaking quality, not prediction: three measures for detecting narrative capture.'"

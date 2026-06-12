@@ -1,0 +1,509 @@
+@import "tailwindcss";
+
+:root {
+  --surface-primary: #F6F4EE;
+  --surface-card: #FBF9F2;
+  --surface-stat: #F9F6EF;
+  --surface-teardown: #FDF5F2;
+  --text-primary: #111714;
+  --text-secondary: #4D4A42;
+  --text-muted: #8A8577;
+  --border-primary: #E4DED1;
+  --border-secondary: #D6CFBC;
+  --accent: #B04A2E;
+  --accent-muted: #C67B5C;
+  --chart-gray: #8A8577;
+  --chart-green: #5C7A6A;
+  --chart-tan: #A89B7C;
+  --chart-mauve: #8B6B7E;
+  --accent-border-dark: #8A3420;
+  --skeleton: #E4DED1;
+  --code-bg: #E4DED1;
+  --grid-muted: #C2BAA6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-primary: #1A1A17;
+    --surface-card: #242420;
+    --surface-stat: #1F1F1B;
+    --surface-teardown: #2A1F1B;
+    --text-primary: #E8E6E0;
+    --text-secondary: #B5B0A5;
+    --text-muted: #807B6E;
+    --border-primary: #3A3832;
+    --border-secondary: #33312B;
+    --accent: #D4644A;
+    --accent-muted: #D4906F;
+    --chart-gray: #807B6E;
+    --chart-green: #6E9480;
+    --chart-tan: #B5A88E;
+    --chart-mauve: #9F7E92;
+    --accent-border-dark: #A04030;
+    --skeleton: #33312B;
+    --code-bg: #33312B;
+    --grid-muted: #4A473F;
+  }
+}
+
+@theme inline {
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-card: var(--surface-card);
+  --color-surface-stat: var(--surface-stat);
+  --color-surface-teardown: var(--surface-teardown);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-skeleton: var(--skeleton);
+  --color-code-bg: var(--code-bg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--surface-primary);
+  color: var(--text-primary);
+}
+
+/* ---------------------------------------------------------------------------
+ * Editorial scope: share-route only.
+ * Loaded via the share-route layout, which sets a --font-serif variable on a
+ * wrapping div with the .essay-root class. Dashboard typography is
+ * unaffected. Placeholder serif is Source Serif 4 via next/font/google;
+ * UAPNOW webfonts swap in later.
+ * ------------------------------------------------------------------------- */
+
+.essay-root {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  color: var(--text-primary);
+}
+
+.essay-prose {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--text-primary);
+  display: grid;
+  grid-template-columns:
+    minmax(1.25rem, 1fr)
+    minmax(0, 38rem)
+    minmax(1.25rem, 1fr);
+}
+
+.essay-prose > * {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.essay-prose > figure,
+.essay-prose > .breakout,
+.essay-prose > .essay-divider {
+  grid-column: 1 / -1;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 64rem;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+  box-sizing: border-box;
+}
+
+.essay-prose p {
+  margin: 0 0 1.35em;
+}
+
+.essay-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.essay-prose em {
+  font-style: italic;
+}
+
+.essay-prose strong {
+  font-weight: 600;
+}
+
+.essay-prose blockquote {
+  margin: 2.5em 0;
+  padding-left: 1.5em;
+  border-left: 2px solid var(--accent);
+  font-size: 1.45rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-primary);
+  letter-spacing: -0.005em;
+}
+
+.essay-prose h1 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0 0 0.5em;
+}
+
+.essay-prose h2 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 2.5em 0 0.7em;
+}
+
+.essay-prose h3 {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 2em 0 0.4em;
+}
+
+.essay-prose .lede::first-letter {
+  initial-letter: 3 2;
+  -webkit-initial-letter: 3 2;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: 0.08em;
+  padding-right: 0.05em;
+}
+
+@supports not ((initial-letter: 3) or (-webkit-initial-letter: 3)) {
+  .essay-prose .lede::first-letter {
+    float: left;
+    font-size: 4.6em;
+    line-height: 0.85;
+    margin-top: 0.04em;
+    margin-right: 0.08em;
+    padding-bottom: 0.05em;
+  }
+}
+
+.essay-prose > .essay-pullquote {
+  grid-column: 1 / -1;
+  margin: 3em auto;
+  width: 100%;
+  max-width: 56rem;
+  padding: 1.6em clamp(1rem, 4vw, 2.5rem);
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.essay-pullquote p {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.25;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.essay-pullquote cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 1em;
+}
+
+.essay-prose figure {
+  margin: 2.75em 0;
+}
+
+.essay-prose figcaption {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-top: 0.6em;
+  letter-spacing: 0.005em;
+}
+
+.essay-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0 2.5em;
+  color: var(--text-muted);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.essay-divider::before,
+.essay-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-primary);
+  margin: 0 1.25em;
+}
+
+@media print {
+  .essay-root {
+    background: #ffffff;
+    color: #000000;
+    padding: 0;
+  }
+  .essay-prose {
+    font-size: 10.5pt;
+    line-height: 1.5;
+    display: block;
+    max-width: none;
+  }
+  .essay-prose > * {
+    grid-column: auto;
+    max-width: none;
+    padding-inline: 0;
+  }
+  .essay-prose h1 {
+    font-size: 22pt;
+    page-break-after: avoid;
+  }
+  .essay-prose h2 {
+    font-size: 13pt;
+    page-break-after: avoid;
+  }
+  .essay-prose h3 {
+    page-break-after: avoid;
+  }
+  .essay-prose p {
+    orphans: 3;
+    widows: 3;
+  }
+  .essay-prose figure,
+  .essay-prose blockquote,
+  .essay-prose .essay-pullquote {
+    page-break-inside: avoid;
+  }
+  .essay-divider {
+    page-break-before: always;
+    margin: 0 0 1.2em;
+  }
+  .essay-divider:first-of-type {
+    page-break-before: avoid;
+  }
+  .essay-prose a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .essay-pullquote {
+    border-color: #000000;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Brief scope: the public 1-2 page TELL overview at /brief.
+ * Tighter type, denser layout than .essay-prose, designed to print to a
+ * single letter-size page with @page rules. Reuses the same --font-serif
+ * variable loaded by the brief-route layout.
+ * ------------------------------------------------------------------------- */
+
+.brief-root {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  color: var(--text-primary);
+}
+
+.brief-prose {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--text-primary);
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.brief-prose p {
+  margin: 0 0 0.7em;
+}
+
+.brief-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.brief-prose strong {
+  font-weight: 600;
+}
+
+.brief-prose em {
+  font-style: italic;
+}
+
+.brief-prose h1 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(1.65rem, 3.5vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.2em;
+  text-align: center;
+}
+
+.brief-prose h2 {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 1.5em 0 0.4em;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 0.7em;
+}
+
+.brief-prose .brief-subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.9em;
+}
+
+.brief-prose .brief-byline {
+  text-align: center;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin: 0 0 0.2em;
+}
+
+.brief-prose .brief-meta {
+  text-align: center;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 1em;
+}
+
+.brief-prose .brief-rule {
+  border: 0;
+  border-top: 1px solid var(--border-primary);
+  margin: 0 0 1em;
+}
+
+.brief-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 0.6em 0 1em;
+}
+
+.brief-prose thead th {
+  text-align: left;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-primary);
+  padding: 0.4em 0.5em;
+}
+
+.brief-prose tbody td {
+  border-bottom: 1px solid var(--border-primary);
+  padding: 0.4em 0.5em;
+  vertical-align: top;
+}
+
+.brief-prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.brief-prose tbody td:first-child {
+  font-weight: 500;
+}
+
+.brief-prose figure {
+  margin: 1em 0;
+}
+
+.brief-prose figcaption {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  margin-top: 0.4em;
+}
+
+.brief-prose ul,
+.brief-prose ol {
+  padding-left: 1.4em;
+  margin: 0 0 0.9em;
+}
+
+.brief-prose li {
+  margin-bottom: 0.25em;
+}
+
+@page {
+  size: letter;
+  margin: 0.7in;
+}
+
+@media print {
+  .brief-root {
+    background: #ffffff;
+    color: #000000;
+    padding: 0;
+  }
+  .brief-prose {
+    font-size: 9.5pt;
+    line-height: 1.35;
+    max-width: none;
+    padding: 0;
+  }
+  .brief-prose h1 {
+    font-size: 16pt;
+    margin-bottom: 4pt;
+  }
+  .brief-prose .brief-subtitle {
+    font-size: 10.5pt;
+  }
+  .brief-prose .brief-byline,
+  .brief-prose .brief-meta {
+    font-size: 8pt;
+  }
+  .brief-prose h2 {
+    font-size: 7.5pt;
+    margin-top: 10pt;
+    page-break-after: avoid;
+  }
+  .brief-prose figure,
+  .brief-prose table {
+    page-break-inside: avoid;
+  }
+  .brief-prose a {
+    color: #000000;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,75 @@
+[project]
+name = "tell"
+version = "0.0.0"
+description = "TELL: a weak-signal detection pipeline for information environments where the comfortable explanation is usually wrong"
+requires-python = ">=3.12"
+readme = "README.md"
+dependencies = [
+    "signals-core",
+    "signals-ingest",
+    "signals-methods",
+    "signals-analyze",
+    "signals-cli",
+    "vercel-blob-client",
+]
+
+[tool.uv.sources]
+signals-core = { workspace = true }
+signals-ingest = { workspace = true }
+signals-methods = { workspace = true }
+signals-analyze = { workspace = true }
+signals-cli = { workspace = true }
+vercel-blob-client = { workspace = true }
+
+[tool.uv.workspace]
+members = [
+    "python/signals_core",
+    "python/signals_ingest",
+    "python/signals_methods",
+    "python/signals_analyze",
+    "python/signals_cli",
+    "python/vercel_blob_client",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "UP", "SIM", "RUF"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+# The H1-H5 system prompt and tool-description strings are multi-paragraph
+# English text. Breaking them at 100 columns would hurt readability
+# without helping anyone. Exempt the file from the line-length rule.
+"python/signals_analyze/src/signals_analyze/hypothesis_scoring.py" = ["E501"]
+
+# Typer CLIs declare options as `typer.Option(...)` in argument defaults.
+# That is the framework's canonical pattern — B008 would force every
+# option to move to a module-level singleton, which Typer then cannot
+# introspect for help text. Exempt the CLI modules.
+"python/*/src/*/cli.py" = ["B008"]
+
+# signals_methods/cli.py displays amplification ratios as "6×" using the
+# MULTIPLICATION SIGN (U+00D7). That is the correct mathematical glyph,
+# not the Latin letter x, so RUF001 is a false positive here.
+"python/signals_methods/src/signals_methods/cli.py" = ["B008", "RUF001"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["python"]
+python_files = ["test_*.py", "*_test.py"]

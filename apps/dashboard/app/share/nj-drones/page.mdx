@@ -1,0 +1,171 @@
+import { IviChart } from "@/app/_components/ivi-chart";
+import { NvdChart } from "@/app/_components/nvd-chart";
+import { HypothesisChart } from "@/app/_components/hypothesis-chart";
+import { IndependenceTable } from "@/app/_components/independence-table";
+import { IndependenceGraphSection } from "@/app/_components/independence-graph-section";
+import { Dossier } from "./_components/dossier";
+import { SectionDivider } from "./_components/section-divider";
+import { StatTile } from "./_components/stat-tile";
+import { FigureBlock } from "./_components/figure-block";
+import { PullQuote } from "./_components/pull-quote";
+
+export const dynamic = "force-dynamic";
+
+<Dossier
+  recipient="policy audiences"
+  context="Pre-release draft"
+  date="May 7, 2026 · v0.1 draft"
+/>
+
+# The Forty-Seven-Day Vacuum
+
+### What the New Jersey drone panic looks like inside a weak-signal pipeline
+
+<p className="lede">On the afternoon of December 17, 2024, the Federal Aviation Administration counted one hundred and twenty-three laser strikes against aircraft in American skies. Twenty-four of them rose from New Jersey. A helicopter pilot needed treatment after a green beam caught him in the eyes. The state had spent six weeks watching unidentified lights drift across its critical infrastructure, and what remained of public trust was being aimed at any aircraft within reach. The agency in charge of investigating those lights had stopped saying anything new about them three days earlier, and would not say anything new for forty-seven days more.</p>
+
+The drones over New Jersey are now a closed file in most newsrooms. The Trump White House announced on January 28, 2025 that the objects had been authorized by the FAA "for research and various other reasons," with hobbyist activity blamed for the rest. Legacy outlets ran the story as a resolution. The information environment closed; the policy questions did not.
+
+This document reports what the case looks like through a weak-signal detection pipeline built across the last year of my D.Eng. praxis. The pipeline ingested two hundred and four documents from forty-nine source domains across the November 2024 to April 2026 window. It does not predict what the drones were. It evaluates how well the information environment was supporting human sensemaking while no one knew. The findings below are stable across three corpus sizes; the headline numbers have not moved as evidence accumulated.
+
+<SectionDivider label="I  THE THIRTY-EIGHT DAYS" />
+
+The most consequential fact about the New Jersey case is not what the public said. It is what the federal government did not say. Between the Federal Aviation Administration's December 18, 2024 issuance of twenty-two temporary flight restrictions over critical infrastructure and the Karoline Leavitt press briefing of January 28, 2025, the federal communicative posture went quiet. Five distinct narratives circulated. None of them was decisively answered until the gap closed.
+
+The Information Vacuum Index measures the asymmetry between public discourse and authoritative response. For each rolling seven-day window, it counts the number of discourse documents in the corpus and compares them with the number of authoritative documents from federal agencies, congressional offices, and primary investigators. A score above one means more public talk than institutional response. A score above ten means a structural vacuum.
+
+<FigureBlock caption={<>Information Vacuum Index, seven-day rolling window, New Jersey drones corpus, November 2024 to April 2026. The accent-shaded band marks the December 11–25 vacuum window. Peak IVI sits at 17.0 on the seven days ending December 24, 2024, with seventeen discourse documents and zero authoritative responses.</>}>
+  <IviChart topic="nj-drones" />
+</FigureBlock>
+
+<StatTile
+  value="17.0"
+  unit="peak ivi"
+  label="December 24, 2024"
+  context="Seventeen discourse documents, zero authoritative responses, in the seven days ending Christmas Eve. The top ten IVI windows in the corpus all fall inside the December 16 to 25 stretch."
+/>
+
+The peak does not arrive at the moment of crisis. It arrives later, in the silence that follows the crisis. The FAA's December 16 joint statement of "over five thousand sightings" and "nothing anomalous" closed the federal mouth. The TFRs, with their authorization for deadly force against drones posing imminent threat, opened the federal hand. After that, the only federal voice in the corpus for nearly six weeks was a trickle of FAA notices extending restrictions into additional counties.
+
+The vacuum was not a metaphor and not a feeling. It was a measurable property of the information environment, and it lasted long enough to do real damage.
+
+<PullQuote attribution="Information Vacuum Index, NJ drones corpus">
+  The vacuum was not a metaphor and not a feeling. It was a measurable property of the information environment.
+</PullQuote>
+
+<SectionDivider label="II  THE MOTHERSHIP" />
+
+The narrative that did the most damage was already in flight by the time the silence began. On December 11, 2024, Representative Jeff Van Drew of New Jersey appeared on Fox News and told Harris Faulkner that "from very high sources" an Iranian mothership had been launched off the East Coast a month earlier. He called for the drones to be shot down. Within hours, the claim was on Newsweek, NBC News, Washington Times, U.S. News & World Report, and UPI. Within hours, the Pentagon spokesperson Sabrina Singh told reporters there was no Iranian ship off the coast of the United States.
+
+Both halves of the exchange entered the corpus the same day. The pipeline saw both. The question is what it should have done with each.
+
+Narrative Velocity Divergence answers that question by tracking, for each named narrative, the rate at which the narrative spreads compared with the rate at which evidence accumulates. The ratio is constructed so that one means perfect parity, above one means narrative outpacing evidence, and below one means evidence outpacing narrative. The Iranian Mothership narrative crosses one on the day of emergence.
+
+<FigureBlock caption={<>Narrative Velocity Divergence, three-day rolling window, eight narratives. The accent-shaded band marks December 11–13. Iranian Mothership peaks at 1.20 on December 11–12, the Van Drew Fox News appearance and the Pentagon same-day denial.</>}>
+  <NvdChart topic="nj-drones" corpusVersion="nj-drones-2026-04-08" />
+</FigureBlock>
+
+<StatTile
+  value="1.20"
+  unit="nvd, dec 11–12"
+  label="Iranian Mothership"
+  context="Narrative spreading at 1.2 times the rate of supporting evidence on the day of emergence. The ratio compresses as the corpus grows, from 2.00 in the 38-document corpus to 1.20 at 204 documents. The compression itself is informative. Density-dependent metrics narrow as evidence accumulates per window."
+/>
+
+A reader unfamiliar with the metric should know that 1.20 is not a small number for this measurement. It sits above one in a ratio designed to hover near one when sources behave responsibly. Six articles claiming the same thing on a Wednesday afternoon, with the Pentagon denying it the same Wednesday afternoon, is the structural condition that the metric was built to detect. When the same metric runs over the rest of the corpus, no other narrative crosses the threshold on the day of its emergence. The Iranian Mothership did.
+
+<SectionDivider label="III  THE ECHO" />
+
+The narrative looked corroborated. Six different outlets carried it within forty-eight hours. To a Senate office reading clips, it would have appeared to be an emerging consensus across mainstream news. The Source Independence Graph examines whether that consensus has any independent ground beneath it.
+
+For each narrative, the pipeline traces the documents that carry it back to their attributable origin sources. It then computes a topology score: how many independent sources contributed evidence, and what is the ratio between document count and source count. A score of one with a high amplification ratio is not corroboration. It is one source repeated across many outlets without any of them adding independent observation.
+
+<FigureBlock caption={<>Source Independence Graph table, all narratives in the New Jersey drones corpus. The Iranian Mothership row is flagged as an echo chamber: independence score 1, six documents, six unique domains, all amplifying a single congressional statement.</>}>
+  <IndependenceTable topic="nj-drones" corpusVersion="nj-drones-2026-04-08" />
+</FigureBlock>
+
+<FigureBlock caption={<>Echo chamber topology. Narratives with independence score at or below two render as a hub-and-spoke graph, with the originating source at the center and amplifying domains radiating outward. The Iranian Mothership graph is the canonical case.</>}>
+  <IndependenceGraphSection topic="nj-drones" corpusVersion="nj-drones-2026-04-08" />
+</FigureBlock>
+
+<StatTile
+  value="6×"
+  unit="amplification, score 1"
+  label="Iranian Mothership independence"
+  context="Six documents, six unique domains, zero independent sources beyond the originating Van Drew statement. The result is invariant across corpus sizes of 38, 96, and 204 documents. Echo amplification is a structural property of the topology, not an artifact of sampling."
+/>
+
+The same calculation, run on other narratives, produces different shapes. The Drones-Legit narrative has independence score 31 across 105 documents and 49 domains. That is what genuine corroboration looks like in this metric. The Iranian Mothership cluster, with the same surface count of mainstream outlets, looks structurally nothing like it.
+
+This is the part that matters most for a Senate audience. The visual fact of "many outlets reporting the same thing" is not, on its own, evidence that the thing is true. The pipeline detects the difference, and the difference shows up cleanly in the data.
+
+<SectionDivider label="IV  THE FORTY-SEVEN-DAY SILENCE" />
+
+The Iranian Mothership was contradicted within hours. Other narratives were not.
+
+Among the narratives the pipeline tracks, the most stubborn is the framing that emerged from the federal joint statement of December 16, 2024: that the New Jersey reports were a mass hysteria event composed of misidentified commercial aircraft, hobbyist drones, and astronomical objects. Larry Hogan's video of the Orion constellation, posted from his Davidsonville driveway and labeled with a community note, became the canonical illustration. The framing was institutionally convenient. It was also, in the corpus, unchallenged for one thousand one hundred and twenty-eight hours.
+
+<StatTile
+  value="1,128"
+  unit="hours"
+  label="Mass-hysteria narrative, time to first contradicting document"
+  context="Forty-seven days between the December 16 joint statement and the first corpus document that explicitly contradicts the misidentification framing. The first contradiction came from inside the institution: the January 28 Trump White House statement reframing the sightings as authorized FAA research. The lag is not a pipeline failure. It is a measurement of which framings institutional silence protects."
+/>
+
+Forty-seven days is a long time to sit unanswered. It is long enough for laser strikes against aircraft to surge. It is long enough for an emergency landing pattern at Stewart International Airport in Newburgh to become a recurring news event. It is long enough for the FAA's twenty-two temporary flight restrictions to become permanent fixtures in twenty-two New Jersey communities, with the federal authorization for deadly force against drones quietly remaining live throughout. The framing went unchallenged because no one with authority offered an alternative, and no journalist appears to have been pulled by an editor toward filing one.
+
+This is the kind of silence that the Information Vacuum Index measures. It is the kind of unchallenged narrative that the Source Independence Graph cannot help with, because the framing's apparent corroboration is supplied by the federal government itself. The pipeline cannot manufacture sources where none exist. It can, however, make the absence visible as a measurement, in hours.
+
+<SectionDivider label="V  HOLDING FIVE AT ONCE" />
+
+While public narratives accelerated and corrected, the formal evidence base did something different. The pipeline scores each document in the corpus against five competing hypotheses about what the drones were: H1 sensor artifact, H2 natural phenomenon, H3 unclassified technology, H4 classified technology, H5 unknown. The scores are independent probabilities, not a forced choice. A document can score high on multiple hypotheses simultaneously, which is exactly what the New Jersey case demands.
+
+The aggregate distribution, day by day, has an entropy. Entropy is a measure of how spread the probability is across the five options. Maximum entropy means all five hypotheses are equally plausible. Zero entropy means the system has collapsed to a single answer. Premature closure of complex investigations is what happens when entropy collapses early. The pipeline tracks whether it does.
+
+<FigureBlock caption={<>Daily H1–H5 hypothesis distribution. Each bar is one day. Bar height is the day's entropy in bits, capped at the theoretical maximum of log₂(5) ≈ 2.32 bits. Segments are the relative probability of each hypothesis. Mean entropy across the corpus is 2.01 bits, or 86.5 percent of theoretical maximum. No hypothesis ever zeros out across the entire corpus window.</>}>
+  <HypothesisChart topic="nj-drones" corpusVersion="nj-drones-2026-04-08" />
+</FigureBlock>
+
+<StatTile
+  value="86.5%"
+  unit="of max entropy"
+  label="Mean across 26 days"
+  context="The aggregate distribution preserves structured uncertainty across the entire window. Entropy peaks at 96.4 percent of maximum on December 11, the day of maximum public chaos. The system is most uncertain when it should be most uncertain, and never collapses to a single hypothesis even at the resolution moment."
+/>
+
+The right test for a sensemaking system is not whether it picks the correct answer at the start. The right test is whether it preserves the option to be surprised. Entropy at 86.5 percent of theoretical maximum across twenty-six days is the right kind of uncertainty. It is not paralysis. It is the system holding five candidates open while evidence accumulates and shifting the modal hypothesis as the evidence demands. On December 12, after the Larry Hogan video was identified as Orion, the modal hypothesis briefly shifted to H1, sensor artifact. Then it shifted back. The system updated. It did not collapse.
+
+<PullQuote attribution="On premature closure">
+  The right test for a sensemaking system is not whether it picks the correct answer at the start. The right test is whether it preserves the option to be surprised.
+</PullQuote>
+
+<SectionDivider label="VI  WHAT THIS MEASURES, AND WHAT IT DOES NOT" />
+
+The pipeline does not predict what the drones were. The Trump White House said FAA-authorized research and hobbyists. The UAP community said something more interesting. New Jersey Assemblywoman Dawn Fantasia released briefing notes describing objects up to six feet in diameter with six-to-seven-hour endurance, well outside hobbyist class. The pipeline takes no position on which framing is correct. It is not designed to.
+
+The pipeline asks an upstream question: while the answer is unknown, is the information environment healthy enough that a thoughtful institution can do its job? Four sensemaking quality metrics formalize the question.
+
+The first is contradicting evidence lag. For each named narrative, how long does the pipeline take to surface the first piece of evidence that disputes it? For the Iranian Mothership, zero hours. For the Loose Nuke conspiracy theory that braided the December 5 lost-medical-equipment alert into the drone story, zero hours. For the institutional mass-hysteria framing, one thousand one hundred and twenty-eight hours.
+
+The second is composite narrative-capture risk. When the Information Vacuum Index, Narrative Velocity Divergence, and Source Independence Graph converge on the same narrative on the same day, the pipeline produces an alert. For the New Jersey case, the alert fires twice: on December 11 and December 12, both for the Iranian Mothership. The convergence is the structural precondition for narrative capture. It is also the moment at which an analyst, briefed by the system, has the most leverage to intervene.
+
+The third is evidence-narrative alignment. Across forty-seven time windows, the most amplified narrative is also the most evidence-supported in 95.7 percent of cases. The 4.3 percent misalignment is where the interesting failures live.
+
+The fourth is premature closure resistance. Entropy floor 65.6 percent across all windows. The system narrows when the evidence narrows and never collapses.
+
+The architecture is a working version of Klein's sensemaking framework and Leveson's STAMP control structure rendered in code. Klein's six activities map onto the four signals and the hypothesis distribution. Leveson's control loops map onto the discourse-versus-authoritative partition that drives the IVI. The mapping is not metaphorical. Each method instantiates a specific Klein activity at a specific point in the pipeline.
+
+<SectionDivider label="VII  WHAT THIS IS FOR" />
+
+The New Jersey case is the validation corpus, not the point. The architecture generalizes wherever events outrun institutional language.
+
+A biosecurity incident in which early reports are ambiguous and the institutional response is deliberately slow has the same structural shape as the New Jersey case. So does an emerging-technology governance question in which public discourse outpaces regulatory understanding. So does an algorithmic amplification event in which platform dynamics accelerate a narrative independent of evidence. So does any critical-infrastructure failure in which competing explanations circulate before root-cause analysis is complete.
+
+For a Senate audience, the policy question this work serves is upstream of the standard accuracy debate. The standard debate asks whether the federal government got the New Jersey answer right. The upstream question asks whether the federal information posture made the answer findable. On the New Jersey case, the answer the pipeline produces is structural and measurable. The communications gap between December 18 and January 28 was the longest authoritative silence in the corpus. The Iranian Mothership was the only narrative whose echo amplification crossed every threshold simultaneously. The mass-hysteria framing went unchallenged for a measured 1,128 hours. The system held five hypotheses open through all of it, never closing prematurely on any one.
+
+These are not opinions. They are properties of the information environment that this case produced, computed against a corpus of two hundred and four documents from forty-nine sources, stable across three corpus sizes. They are available as source material if any of them is useful for the June talk.
+
+The dashboard is at <a href="https://tell-fyi.vercel.app">tell-fyi.vercel.app</a>. A one-page research overview of the project, designed to print cleanly to PDF for forwarding inside a Senate office, is at <a href="https://tell-fyi.vercel.app/brief">tell-fyi.vercel.app/brief</a>. The empirical claim ledger, with reproducible numbers and per-claim status, lives in the repository at `dev/tell/docs/abstract-claims.md`. The architecture mapping to Klein and Leveson is at `dev/tell/docs/methods/framework-mapping.md`. The standard attribution, if a slide needs one, is "Miller, TELL pipeline, Penn State D.Eng. praxis, 2026."
+
+If a chart export at presentation resolution would save preparation time, ask. If a Zoom walkthrough at any point in the next month would help, ask. The work was built for exactly this kind of use.
+
+<SectionDivider label="END" />

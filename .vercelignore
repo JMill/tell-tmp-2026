@@ -1,0 +1,9 @@
+# Exclude non-deployment assets from Vercel builds
+python/
+corpus/
+docs/
+schemas/
+scripts/
+.github/
+*.md
+!apps/dashboard/**/*.md

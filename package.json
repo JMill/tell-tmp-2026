@@ -1,0 +1,29 @@
+{
+  "name": "tell",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TELL: a weak-signal detection pipeline for information environments where the comfortable explanation is usually wrong",
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter dashboard dev",
+    "build": "pnpm --filter dashboard build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {},
+  "pnpm": {
+    "overrides": {
+      "postcss": ">=8.5.10",
+      "esbuild": ">=0.25.0"
+    }
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}

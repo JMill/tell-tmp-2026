@@ -1,0 +1,112 @@
+# Feb 2023 High-Altitude Objects — Narrative Definitions
+#
+# Narratives that circulated during and after the February 2023 cluster of
+# high-altitude object events (PRC balloon shootdown Feb 4; Alaska object
+# Feb 10; Yukon object Feb 11; Montana radar anomaly Feb 11; Lake Huron
+# object Feb 12). Each narrative has a stable slug that events in
+# timeline.yaml can reference.
+#
+# Schema mirrors dev/tell/data/nj-drones/narratives.yaml exactly.
+
+metadata:
+  corpus: high-altitude-objects-2023
+  last_updated: 2026-04-19
+  authored_by: Claude (draft for JMill review)
+  source_dossier: research/2026-04-19-verified-events.md
+
+narratives:
+  - slug: prc-surveillance
+    label: "PRC PLA Surveillance Program"
+    category: adversary
+    hypothesis: H4-foreign
+    hypothesis_id: H4
+    keywords: ["spy balloon", "chinese balloon", "pla", "surveillance balloon", "sigint", "communications collection", "ccp balloon", "reconnaissance balloon"]
+    first_seen: 2023-02-02
+    originating_source: DoD press briefing (Brig. Gen. Pat Ryder) and background briefing, February 2 2023
+    claim: The high-altitude object shot down February 4 was a PRC PLA surveillance balloon carrying SIGINT-collection equipment, part of a global PRC military ISR program spanning more than 40 countries.
+    evidence_weight: strong
+    notes: Corroborated by DoD Feb 2 briefings, Feb 8 NYT reporting on SIGINT payload, Feb 9 H.Res.104 (passed 419-0), Feb 10 BIS Entity List addition of six PRC aerospace firms, and the Jun 29 DoD final statement. Partially contested by Apr NBC and Dec 2023 CNN reporting that collection and transmission may have occurred despite official denials.
+
+  - slug: prc-civilian-weather
+    label: "PRC Civilian Meteorological Airship"
+    category: domestic-legitimate
+    hypothesis: H3
+    hypothesis_id: H3
+    keywords: ["civilian airship", "meteorological research", "weather balloon", "blown off course", "force majeure", "unintended entry"]
+    first_seen: 2023-02-03
+    originating_source: PRC Ministry of Foreign Affairs statement, February 3 2023; reiterated by spokesperson Wang Wenbin at regular press conferences Feb 13-15
+    claim: The object was a civilian meteorological research airship blown off its intended course by winds, not a surveillance asset.
+    evidence_weight: moderate
+    notes: The PRC MFA was the named originator; the claim was repeatedly rejected by the US government and inconsistent with the Feb 8 NYT and Feb 10 BIS findings. Evidence weight is moderate rather than rumor because the originating source is a named state actor with official standing, even though the claim itself was eventually disconfirmed.
+
+  - slug: hobbyist-pico-balloon
+    label: "Hobbyist Pico-Balloon (NIBBB K9YO-15)"
+    category: domestic-legitimate
+    hypothesis: H3
+    hypothesis_id: H3
+    keywords: ["pico balloon", "nibbb", "northern illinois bottlecap", "k9yo", "wspr", "amateur radio", "ham radio", "bottlecap"]
+    first_seen: 2023-02-17
+    originating_source: Northern Illinois Bottlecap Balloon Brigade public statement, February 17 2023
+    claim: The Yukon object (and possibly the Alaska or Lake Huron objects) was an amateur pico-balloon, specifically NIBBB's K9YO-15, whose last WSPR telemetry placed it near Hagemeister Island on February 11.
+    evidence_weight: moderate
+    notes: The NIBBB statement explicitly declined to attribute without recovered wreckage, but the timing and geography of K9YO-15's disappearance are consistent with the Yukon engagement. Reinforced by Wash Post, NPR, and CBC reporting Feb 17-18. A CP-140 Aurora image released by Canadian DND in September 2024 showed an object visually consistent with a small pico-balloon with payload, increasing evidence weight but still short of official confirmation.
+
+  - slug: classified-us-tech
+    label: "Classified US Test Asset"
+    category: domestic-classified
+    hypothesis: H4-domestic
+    hypothesis_id: H4
+    keywords: ["us test asset", "dod experimental", "black program", "classified platform", "hypersonic test", "near-space asset", "contractor test"]
+    first_seen: 2023-02-11
+    originating_source: online speculation (forums, The War Zone commentary); not endorsed by any named government source
+    claim: One or more of the three later objects was a USG or US-contractor classified test asset erroneously engaged after the post-February-4 radar-gate adjustment.
+    evidence_weight: rumor
+    notes: No named government source corroborated this narrative at any point. Its persistence is a diagnostic case for the Source Independence Graph. The narrative propagated across many forum nodes without any authoritative-source anchor.
+
+  - slug: uap-unknown
+    label: "UAP / Unknown"
+    category: unknown
+    hypothesis: H5
+    hypothesis_id: H5
+    keywords: ["uap", "unidentified anomalous phenomena", "unidentified aerial", "non-human intelligence", "nhi", "anomalous object", "no known origin"]
+    first_seen: 2023-02-10
+    originating_source: Kirby White House press briefings Feb 10-13 (repeated "no known origin" framing); UAP-community commentators
+    claim: One or more of the three later objects is a non-attributable phenomenon not explained by H1 through H4, including the possibility of non-human intelligence.
+    evidence_weight: weak
+    notes: The Kirby "no indication of aliens" line at the Feb 13 briefing was issued specifically to pre-empt this narrative. Its existence as an officially-named foil indicates it had narrative traction in public discourse before institutional counter-framing could catch up. The October 2023 ODNI FY23 UAP report retrospectively placed the February cluster alongside 289 other UAP reports, dampening but not eliminating the residual-unknown claim.
+
+  - slug: misidentification-threshold
+    label: "NORAD Radar Sensitivity Adjustment"
+    category: dismissal
+    hypothesis: H1
+    hypothesis_id: H1
+    keywords: ["radar gate", "radar threshold", "velocity filter", "altitude filter", "sensitivity adjustment", "domain awareness gap", "radar anomaly", "norad gates"]
+    first_seen: 2023-02-12
+    originating_source: Gen. Glen VanHerck, NORAD Commander, Pentagon briefing February 12-13 2023
+    claim: The apparent cluster of objects after February 4 is largely an artifact of NORAD's decision to narrow its velocity and altitude filters after the PRC balloon shootdown, admitting slow and low-signature tracks that would otherwise have been filtered out. The Montana radar anomaly is the clearest illustration; the three engagements may include false or marginal tracks.
+    evidence_weight: strong
+    notes: Corroborated by DefenseScoop, NBC, Air Force Technology, and Task and Purpose reporting. VanHerck himself framed the pre-February-4 gap as a "domain awareness gap" and the post-February-4 state as increased sensitivity to previously-filtered tracks. This is the most structurally important narrative for the investigation because it explains the temporal clustering without requiring an increase in the underlying physical-object population.
+
+  - slug: adversary-black-tech
+    label: "Non-China Adversary Test Craft"
+    category: adversary
+    hypothesis: H4-foreign
+    hypothesis_id: H4
+    keywords: ["russian test", "iranian craft", "dprk", "north korea", "adversary platform", "foreign black program", "arctic adiz"]
+    first_seen: 2023-02-11
+    originating_source: online forums; amplified in part by the PRC counter-claim that US balloons transited Chinese airspace (Wang Wenbin, Feb 13)
+    claim: One or more of the three later objects was a non-China adversary (Russia, Iran, DPRK, or other) testing surveillance platforms in the Arctic ADIZ or over Canadian airspace.
+    evidence_weight: rumor
+    notes: No named government source corroborated this narrative. It is included in the narrative set because it shows persistent presence in forum corpora despite the absence of corroborating evidence. A useful negative control for the Source Independence Graph; both its amplification and its evidence base should score low.
+
+  - slug: official-recreation-research
+    label: "Private, Recreation, or Research Entities"
+    category: domestic-legitimate
+    hypothesis: H3
+    hypothesis_id: H3
+    keywords: ["recreation", "research", "private companies", "commercial balloon", "research institutions", "scientific balloon"]
+    first_seen: 2023-02-14
+    originating_source: John Kirby, White House Press Briefing, February 14 2023
+    claim: The three later objects (Alaska, Yukon, Lake Huron) were "most likely balloons tied to private companies, recreation, or research institutions studying weather or conducting other scientific research."
+    evidence_weight: weak
+    notes: Kirby's attribution was elevated to presidential framing by Biden's formal address on February 16. The attribution was issued within 72 hours of the Lake Huron shootdown and before any wreckage could have been recovered from any of the three sites. Evidence weight is weak because the US government has never produced named entities, specific flight manifests, or physical evidence to anchor the attribution; the NIBBB K9YO-15 hypothesis is compatible with this narrative but was never formally incorporated.

@@ -1,0 +1,77 @@
+# CU26 H1-H5 Hypothesis Framework
+#
+# The hypothesis set used by the pipeline to evaluate ambiguous phenomena.
+# Derived from the CU26 collaborative paper (2026). MECE: Mutually Exclusive,
+# Collectively Exhaustive.
+#
+# Each hypothesis has a stable ID (H1-H5), a tagline for UI, a longer
+# description, a default prior for civilian contexts, and a list of
+# example sub-hypotheses for more granular classification.
+
+metadata:
+  source: CU26 Framework (2026)
+  last_updated: 2026-04-06
+
+hypotheses:
+  - id: H1
+    tagline: Artifact
+    description: Data or sensor artifact. Event is produced by the measurement apparatus rather than a real-world phenomenon.
+    prior_civilian: 0.20
+    prior_military: 0.10
+    sub_hypotheses:
+      - parallax effects
+      - optical distortion / ghosting
+      - calibration drift
+      - time synchronization error
+      - resolution / aliasing / thresholding
+      - multipath / sidelobes / clutter
+
+  - id: H2
+    tagline: Natural
+    description: Natural physical source. Known or unknown natural phenomenon that matches the observation.
+    prior_civilian: 0.30
+    prior_military: 0.15
+    sub_hypotheses:
+      - atmospheric ducting / refraction
+      - plasmoids
+      - thermal inversions (atmosphere / underwater)
+      - animals (birds, fish)
+      - geophysical interference
+
+  - id: H3
+    tagline: Unclassified Technology
+    description: Human-made physical source, unclassified. Known civilian or commercial technology.
+    prior_civilian: 0.40
+    prior_military: 0.15
+    sub_hypotheses:
+      - civilian aircraft
+      - hobbyist drones
+      - satellites
+      - ISS
+      - weather balloons
+
+  - id: H4
+    tagline: Classified Technology
+    description: Human-made physical source, classified. May be domestic (USG or US industry) or foreign adversary.
+    prior_civilian: 0.05
+    prior_military: 0.50
+    sub_hypotheses:
+      - USG developmental programs
+      - US industry developmental programs
+      - foreign adversary (Russia)
+      - foreign adversary (China)
+      - foreign adversary (other)
+
+  - id: H5
+    tagline: Unknown
+    description: Other (unknown) physical phenomenon. Residual hypothesis for observations not explained by H1-H4.
+    prior_civilian: 0.05
+    prior_military: 0.10
+    sub_hypotheses:
+      - non-human intelligence (NHI)
+      - unknown exotic phenomenon
+      - residual unexplained
+
+# Civilian and military priors should sum to 1.0 within each column.
+# Civilian: 0.20 + 0.30 + 0.40 + 0.05 + 0.05 = 1.00
+# Military: 0.10 + 0.15 + 0.15 + 0.50 + 0.10 = 1.00

@@ -1,0 +1,96 @@
+{
+  "corpus_version": "nj-drones-2026-04-09",
+  "extracted_from": "production Neon branch (read-only)",
+  "query": "select narrative_slug, narrative_label, origin_label, total_documents, unique_domains, independent_sources, amplifier_sources, independence_score, amplification_ratio from signal_independence where topic = %(topic)s and corpus_version = %(corpus)s order by narrative_slug",
+  "note": "Source Independence Graph summary per narrative, 2026-04-09 corpus build.",
+  "rows": [
+    {
+      "narrative_slug": "drones-legit",
+      "narrative_label": "Legitimate Drones (Unattributed)",
+      "origin_label": "Initial military reports",
+      "total_documents": 105,
+      "unique_domains": 49,
+      "independent_sources": 30,
+      "amplifier_sources": 19,
+      "independence_score": 31.0,
+      "amplification_ratio": 3.387097
+    },
+    {
+      "narrative_slug": "false-flag",
+      "narrative_label": "False Flag / Project Blue Beam",
+      "origin_label": "Project Blue Beam / Online forums",
+      "total_documents": 0,
+      "unique_domains": 0,
+      "independent_sources": 0,
+      "amplifier_sources": 0,
+      "independence_score": 1.0,
+      "amplification_ratio": 0.0
+    },
+    {
+      "narrative_slug": "iranian-mothership",
+      "narrative_label": "Iranian Mothership",
+      "origin_label": "Rep. Jeff Van Drew (R-NJ)",
+      "total_documents": 6,
+      "unique_domains": 6,
+      "independent_sources": 0,
+      "amplifier_sources": 6,
+      "independence_score": 1.0,
+      "amplification_ratio": 6.0
+    },
+    {
+      "narrative_slug": "loose-nuke",
+      "narrative_label": "Loose Nuke / Dirty Bomb",
+      "origin_label": "Podcast (unspecified)",
+      "total_documents": 2,
+      "unique_domains": 2,
+      "independent_sources": 2,
+      "amplifier_sources": 0,
+      "independence_score": 3.0,
+      "amplification_ratio": 0.6666667
+    },
+    {
+      "narrative_slug": "mass-hysteria",
+      "narrative_label": "Mass Hysteria / Misidentification",
+      "origin_label": "Biden White House / Mainstream media",
+      "total_documents": 4,
+      "unique_domains": 4,
+      "independent_sources": 0,
+      "amplifier_sources": 4,
+      "independence_score": 1.0,
+      "amplification_ratio": 4.0
+    },
+    {
+      "narrative_slug": "test-flights",
+      "narrative_label": "FAA-Approved Test Flights",
+      "origin_label": "Online forums / Trump White House",
+      "total_documents": 3,
+      "unique_domains": 3,
+      "independent_sources": 0,
+      "amplifier_sources": 3,
+      "independence_score": 1.0,
+      "amplification_ratio": 3.0
+    },
+    {
+      "narrative_slug": "uap",
+      "narrative_label": "Genuine UAP",
+      "origin_label": "Online and mainstream media",
+      "total_documents": 6,
+      "unique_domains": 6,
+      "independent_sources": 4,
+      "amplifier_sources": 2,
+      "independence_score": 5.0,
+      "amplification_ratio": 1.2
+    },
+    {
+      "narrative_slug": "war-game",
+      "narrative_label": "War Game Exercise",
+      "origin_label": "Online forums",
+      "total_documents": 0,
+      "unique_domains": 0,
+      "independent_sources": 0,
+      "amplifier_sources": 0,
+      "independence_score": 1.0,
+      "amplification_ratio": 0.0
+    }
+  ]
+}

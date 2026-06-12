@@ -1,0 +1,498 @@
+# Feb 2023 High-Altitude Objects Ground-Truth Timeline
+#
+# Canonical events, dates, and narrative tags used to validate whether the
+# pipeline's weak-signal detection methods fire when expected on the
+# February 2023 cluster.
+#
+# AUTHORING NOTE: The events below were drafted on 2026-04-19 from the
+# verified research dossier at research/2026-04-19-verified-events.md as a
+# working starting point. JMill is expected to review, refine, and correct
+# these entries as empirical work uncovers discrepancies. Do NOT delegate
+# canonical date corrections to an LLM — the ground truth must be
+# human-audited against primary sources.
+#
+# Schema mirrors dev/tell/data/nj-drones/timeline.yaml exactly.
+# Fields per event:
+#   id:              unique slug, e.g. "2023-02-04-sc-balloon-shootdown"
+#   date:            ISO 8601 (YYYY-MM-DD) or YYYY-MM-DDTHH:MM if precise
+#   title:           short human-readable title
+#   summary:         1-3 sentence description
+#   category:        observation | institutional-statement | media-coverage |
+#                    policy-action | narrative-claim | evidence | other
+#   narratives:      list of narrative tags this event belongs to
+#                    (see narratives.yaml for the canonical set)
+#   sources:         list of source URLs (at least one, more preferred)
+#   evidence_weight: strong | moderate | weak | rumor
+#   notes:           freeform
+
+metadata:
+  corpus: high-altitude-objects-2023
+  window_start: 2023-01-28
+  window_end: 2023-12-31
+  last_updated: 2026-04-19
+  authored_by: Claude (draft for JMill review)
+  source_dossier: research/2026-04-19-verified-events.md
+  version: 0.1.0-draft
+
+events:
+
+  - id: 2023-01-28-aleutians-first-detection
+    date: 2023-01-28
+    title: NORAD detects PRC balloon entering US airspace over the Aleutians
+    summary: NORAD began tracking the high-altitude surveillance balloon as it entered US airspace near the Aleutian Islands. The balloon then transited into Canadian airspace on January 30 and re-entered US airspace over northern Idaho on January 31.
+    category: observation
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3288618/senior-defense-official-and-senior-military-official-hold-an-off-camera-on-back/
+      - https://en.wikipedia.org/wiki/2023_Chinese_balloon_incident
+    evidence_weight: strong
+    notes: First radar detection; roughly one week before the public became aware on Feb 1. The temporal offset between government tracking and public awareness is the precondition for all subsequent narrative dynamics.
+
+  - id: 2023-02-01-billings-public-sighting
+    date: 2023-02-01
+    title: Balloon publicly sighted and photographed over Billings, Montana
+    summary: Residents of Billings, Montana photographed and reported the balloon overhead. Photographs by Chase Doak and Larry Mayer triggered public awareness and pressure on the federal government to respond.
+    category: observation
+    narratives: [prc-surveillance]
+    sources:
+      - https://billingsgazette.com/news/local/balloon-spotted-over-billings-being-investigated-as-chinese-spy-airship/article_f3ba383e-a348-11ed-810b-93023cfc3fb6.html
+      - https://www.ypradio.org/regional-news/2023-02-20/billings-boy-and-his-dad-recall-balloon-sighting-i-thought-it-was-the-comet
+    evidence_weight: strong
+    notes: Public visibility is the key structural transition. Once the balloon was photographed from the ground, the information-advantage window closed and public narrative formation began.
+
+  - id: 2023-02-02-dod-first-statement
+    date: 2023-02-02
+    title: DoD publicly acknowledges the balloon
+    summary: The Department of Defense issued its first public statement on the high-altitude surveillance balloon, attributed to Pentagon Press Secretary Brig. Gen. Pat Ryder. A concurrent background briefing confirmed PRC attribution, prior similar incursions, and Milley and VanHerck recommendations against an over-land shootdown.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.war.gov/News/Releases/Release/Article/3287173/dod-statement-on-high-altitude-surveillance-balloon/
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3287204/senior-defense-official-holds-a-background-briefing-on-high-altitude-surveillan
+    evidence_weight: strong
+    notes: First institutional narrative entry in the corpus.
+
+  - id: 2023-02-02-select-committee-first-statement
+    date: 2023-02-02
+    title: House Select Committee on the CCP first joint statement
+    summary: Chairman Gallagher and Ranking Member Krishnamoorthi issued their first bipartisan statement from the newly-formed House Select Committee on the Chinese Communist Party. The statement called for transparency on detection, transit decisions, and the balloon's intelligence-collection capabilities.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://krishnamoorthi.house.gov/media/press-releases/gallagher-krishnamoorthi-joint-statement-suspected-ccp-spy-balloon
+    evidence_weight: strong
+    notes: Bipartisan framing; first Select Committee product.
+
+  - id: 2023-02-03-blinken-postpones-beijing-trip
+    date: 2023-02-03
+    title: Blinken postpones Beijing trip; Ryder on-camera briefing
+    summary: Secretary of State Antony Blinken postponed his scheduled February 5-6 Beijing trip, citing the balloon incursion as a sovereignty violation. Brig. Gen. Pat Ryder held an on-camera Pentagon briefing confirming the balloon was at approximately 60,000 feet over the central United States.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.cnn.com/2023/02/03/politics/china-us-balloon-intl/index.html
+      - https://www.washingtonpost.com/national-security/2023/02/03/blinken-postpones-china-trip-suspected-spy-balloon-detected-over-us/
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3288141/pentagon-press-secretary-brig-gen-pat-ryder-holds-an-on-camera-press-briefing/
+      - https://www.war.gov/News/News-Stories/Article/Article/3288103/general-says-chinese-surveillance-balloon-now-over-center-of-us/
+    evidence_weight: strong
+    notes: First diplomatic consequence.
+
+  - id: 2023-02-03-prc-civilian-airship-claim
+    date: 2023-02-03
+    title: PRC MFA claims civilian meteorological research airship
+    summary: The Chinese Ministry of Foreign Affairs characterized the balloon as a civilian meteorological research airship blown off course by winds, expressed regret for the incursion, and urged a calm response.
+    category: narrative-claim
+    narratives: [prc-civilian-weather]
+    sources:
+      - https://en.wikipedia.org/wiki/2023_Chinese_balloon_incident
+    evidence_weight: moderate
+    notes: Origin of the prc-civilian-weather narrative. Named state-actor source; eventually disconfirmed.
+
+  - id: 2023-02-04-faa-ground-stops
+    date: 2023-02-04T12:45
+    title: FAA ground stops at Charleston, Myrtle Beach, Wilmington
+    summary: The FAA implemented ground stops at CHS, MYR, and ILM between approximately 12:45 and 15:15 EST on February 4 to clear airspace for the shootdown operation. Charleston Air Force Base participated.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.cnn.com/politics/live-news/suspected-chinese-balloon-over-us-02-04-23/index.html
+      - https://www.postandcourier.com/news/faa-grounds-planes-charleston-myrtle-beach-airports-including-charleston-afb/article_95e5a0ec-a4bd-11ed-9405-07ed5f2e9baf.html
+    evidence_weight: strong
+    notes: First civilian-aviation-domain observable. The closure pattern itself became a narrative signal before the shootdown was publicly confirmed.
+
+  - id: 2023-02-04-sc-balloon-shootdown
+    date: 2023-02-04T14:39
+    title: F-22 shoots down PRC balloon off Surfside Beach, SC
+    summary: An F-22 Raptor fired one AIM-9X Sidewinder at 14:39 EST and destroyed the PRC surveillance balloon over US territorial waters six nautical miles off Surfside Beach, South Carolina. The F-22 was at 58,000 feet and Mach 1.3; the balloon was at 60,000 to 65,000 feet. Debris fell in approximately 47 feet of water over a seven-nautical-mile radius.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.war.gov/News/Releases/Release/Article/3288535/statement-from-secretary-of-defense-lloyd-j-austin-iii/
+      - https://www.war.gov/News/News-Stories/Article/Article/3288543/f-22-safely-shoots-down-chinese-spy-balloon-off-south-carolina-coast/
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3288618/senior-defense-official-and-senior-military-official-hold-an-off-camera-on-back/
+      - https://www.twz.com/f-22-shoots-down-chinese-spy-balloon-off-carolinas-with-missile
+      - https://www.twz.com/the-operation-to-down-chinas-spy-balloon-in-moment-by-moment-audio
+    evidence_weight: strong
+    notes: Call signs FRANK01 and FRANK02, named for WWI ace Lt. Frank Luke Jr. The shootdown is the first kinetic engagement of the sequence.
+
+  - id: 2023-02-04-house-green-statement
+    date: 2023-02-04
+    title: House Homeland Security Chairman Green statement on balloon removal
+    summary: House Homeland Security Committee Chairman Mark Green issued a statement framing the transit as a PRC sovereignty violation and calling for accountability on the delay before engagement.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://homeland.house.gov/2023/02/04/chairman-green-statement-on-removal-of-chinese-spy-balloon-from-u-s-airspace/
+    evidence_weight: strong
+    notes: First statement from a congressional committee chair.
+
+  - id: 2023-02-05-recovery-operations-begin
+    date: 2023-02-05
+    title: Navy recovery operations begin off South Carolina coast
+    summary: Navy recovery operations began off Surfside Beach on February 5 and stepped up February 6 at approximately 10:00 EST. Assets included USS Carter Hall, USNS Pathfinder, USS Oscar Austin, USS Philippine Sea, and Coast Guard cutters Venturous, Richard Snyder, and Nathan B. Bruckenthal. EODGRU 2 and salvage divers deployed from Joint Expeditionary Base Little Creek-Fort Story.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.navy.mil/Press-Office/News-Stories/Article/3290232/us-navy-collecting-surveillance-balloon-debris/
+      - https://news.usni.org/2023/02/06/navy-underwater-robots-divers-searching-for-remains-of-chinese-spy-balloon-salvage-ship-set-to-deploy-from-little-creek-for-recovery
+    evidence_weight: strong
+    notes: Recovery operations gate physical-evidence attribution downstream.
+
+  - id: 2023-02-06-vanherck-domain-awareness-gap
+    date: 2023-02-06
+    title: VanHerck discloses four prior undetected balloon transits
+    summary: Gen. Glen VanHerck held an off-camera on-the-record briefing disclosing that four prior PRC balloons had transited US territory undetected (three under Trump, one under Biden). He characterized the failure as a "domain awareness gap" and described the recovered debris field as approximately 1,500 meters by 1,500 meters.
+    category: institutional-statement
+    narratives: [prc-surveillance, misidentification-threshold]
+    sources:
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3289888/gen-glen-vanherck-commander-north-american-aerospace-defense-command-and-united/
+    evidence_weight: strong
+    notes: The domain-awareness-gap framing foreshadows the post-shootdown radar-sensitivity adjustment.
+
+  - id: 2023-02-08-ryder-confirms-prior-transits
+    date: 2023-02-08
+    title: Ryder confirms four prior PRC balloon transits; NYT reports SIGINT payload
+    summary: Brig. Gen. Pat Ryder confirmed from the Pentagon podium that four PRC balloons had transited US territory before the February 2023 incident. Concurrent NYT reporting (Edward Wong) disclosed that State Department analysis of imagery and debris identified communications-signals-collection equipment on the balloon.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3293101/pentagon-press-secretary-air-force-brig-gen-pat-ryder-holds-an-on-camera-press/
+      - https://www.memeorandum.com/230209/p45
+    evidence_weight: strong
+    notes: The State-Department-background briefing that NYT cited is flagged CITE-NEEDED in the dossier.
+
+  - id: 2023-02-09-hres104-passes
+    date: 2023-02-09T11:23
+    title: H.Res.104 passes House 419-0 condemning PRC surveillance
+    summary: The House of Representatives agreed to H.Res.104, "Condemning the Chinese Communist Party's use of a high-altitude surveillance balloon over United States territory as a brazen violation of United States sovereignty," at approximately 11:23 EST. Vote was 419 to 0 with 15 not voting.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.congress.gov/bill/118th-congress/house-resolution/104
+      - https://clerk.house.gov/Votes/2023117
+      - https://www.govinfo.gov/content/pkg/CREC-2023-02-09/html/CREC-2023-02-09-pt1-PgH794-2.htm
+    evidence_weight: strong
+    notes: Unanimous legislative convergence on prc-surveillance before intelligence-community and forensic attribution was complete. Strong Narrative Velocity Divergence signal.
+
+  - id: 2023-02-10-bis-entity-list-six-prc-firms
+    date: 2023-02-10
+    title: Commerce Department adds six PRC aerospace entities to BIS Entity List
+    summary: The Commerce Department Bureau of Industry and Security added six PRC entities to the Entity List on February 10 for supporting PLA-directed high-altitude balloon intelligence and reconnaissance programs. Entities included Beijing Nanjiang Aerospace Technology, CETC 48th Research Institute, Dongguan Lingkong, Eagles Men Aviation, Guangzhou Tian-Hai-Xiang Aviation, and Shanxi Eagles Men Aviation.
+    category: policy-action
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.cnbc.com/amp/2023/02/10/us-sanctions-six-chinese-tech-companies-for-supporting-spy-balloon-programs.html
+      - https://www.theregister.com/2023/02/13/chinese_balloon_tech_companies_banned/
+      - https://www.bloomberg.com/news/articles/2023-02-10/us-set-to-sanction-chinese-firms-connected-to-balloon-uproar
+    evidence_weight: strong
+    notes: First permanent economic-policy consequence. Implicitly corroborates prc-surveillance by naming PLA-supporting firms.
+
+  - id: 2023-02-10-alaska-object-shootdown
+    date: 2023-02-10T13:45
+    title: Alaska high-altitude object shot down over the North Slope
+    summary: An F-22 from Joint Base Elmendorf-Richardson fired one AIM-9X and destroyed a car-sized object at 40,000 feet over US territorial waters off the Alaska coast near Deadhorse and Prudhoe Bay. John Kirby confirmed the shootdown at the 13:00 EST White House press briefing.
+    category: policy-action
+    narratives: [uap-unknown, classified-us-tech, official-recreation-research]
+    sources:
+      - https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/10/press-briefing-by-press-secretary-karine-jean-pierre-and-national-security-council-coordinator-for-strategic-communications-john-kirby-february-10-2023/
+      - https://www.war.gov/News/Transcripts/Transcript/Article/3295889/pentagon-press-secretary-air-force-brig-gen-pat-ryder-holds-an-on-camera-press
+      - https://www.war.gov/News/News-Stories/Article/Article/3295813/air-force-shoots-down-high-altitude-object-off-alaskan-coast/
+      - https://defensescoop.com/2023/02/10/f-22-fighter-jet-shoots-down-mysterious-object-off-the-coast-of-alaska/
+      - https://www.nbcnews.com/politics/white-house/us-shoots-flying-object-alaska-airspace-white-house-says-rcna70166
+      - https://alaskapublic.org/2023/02/10/after-china-balloon-scare-air-force-shoots-down-object-flying-above-alaskas-north-slope/
+      - https://www.adn.com/nation-world/2023/02/10/us-shoots-down-object-posing-reasonable-threat-off-alaska-coastline-white-house-says/
+      - https://abcnews.go.com/Politics/us-shoots-high-altitude-object-alaska-white-house/story?id=97040022
+    evidence_weight: strong
+    notes: Second kinetic engagement. Recovered per Pentagon statements; no public attribution ever issued.
+
+  - id: 2023-02-11-yukon-object-shootdown
+    date: 2023-02-11T15:41
+    title: Yukon object shot down by US F-22 in Canadian airspace
+    summary: A US F-22 operating under NORAD command fired an AIM-9X and destroyed a cylindrical object at approximately 40,000 feet over central Yukon Territory, approximately 100 miles from the US-Canada border. Prime Minister Trudeau announced the engagement; the shootdown was the first NORAD engagement under Canadian sovereignty.
+    category: policy-action
+    narratives: [uap-unknown, hobbyist-pico-balloon, classified-us-tech, official-recreation-research]
+    sources:
+      - https://www.canada.ca/en/department-national-defence/news/2023/02/minister-anandprovides-an-important-national-security-update.html
+      - https://www.cbc.ca/news/politics/norad-monitoring-airborne-object-north-1.6745575
+      - https://www.cnn.com/2023/02/11/politics/norad-additional-object-northern-canada/index.html
+      - https://www.npr.org/2023/02/11/1156347424/us-military-shot-down-unidentified-object-canada
+      - https://www.theglobeandmail.com/canada/article-norad-high-altitude-object-canada/
+    evidence_weight: strong
+    notes: Third kinetic engagement. RCAF search declared unsuccessful Feb 17; no wreckage ever recovered. CP-140 imagery released by Canadian DND in September 2024.
+
+  - id: 2023-02-11-montana-radar-anomaly
+    date: 2023-02-11
+    title: Montana radar anomaly triggers FAA airspace closure
+    summary: NORAD radar detected what was initially characterized as an airborne object over Havre, Montana on the evening of February 11. The FAA issued a temporary flight restriction; F-15s scrambled. No object was visually acquired. NORAD subsequently characterized the return as an anomaly. The airspace was reopened.
+    category: policy-action
+    narratives: [misidentification-threshold, uap-unknown]
+    sources:
+      - https://www.ktvq.com/object-hovering-above-montana-airspace-causes-faa-to-issue-temporary-flight-restriction
+      - https://www.washingtontimes.com/news/2023/feb/11/faa-temporarily-closed-montana-airspace-after-ufo-/
+      - https://www.aerotime.aero/articles/war-on-uaps-restrictions-over-montana-triggered-by-radar-anomaly-us-military
+    evidence_weight: strong
+    notes: Fifth episode in the sequence. The only event in which the fundamental observable is a radar signature, not a physical object. Clearest illustration of misidentification-threshold.
+
+  - id: 2023-02-12-lake-huron-object-shootdown
+    date: 2023-02-12T14:42
+    title: Lake Huron object shot down by F-16
+    summary: An F-16 from the 148th Fighter Wing, Minnesota Air National Guard, fired AIM-9X missiles and destroyed an octagonal object at approximately 20,000 feet over Lake Huron on the US side of the border. The first missile missed and landed in the lake; the second struck. NORAD first detected the object at approximately 16:45 EST February 11 in Canadian airspace.
+    category: policy-action
+    narratives: [uap-unknown, hobbyist-pico-balloon, classified-us-tech, official-recreation-research]
+    sources:
+      - https://www.war.gov/News/News-Stories/Article/Article/3296905/efforts-underway-to-recover-object-downed-over-lake-huron/
+      - https://www.cnn.com/2023/02/12/politics/lake-huron-high-altitude-object/index.html
+      - https://www.npr.org/2023/02/12/1156428862/us-shoot-down-ufo-unidentified-object-lake-huron
+      - https://www.detroitnews.com/story/news/local/michigan/2023/02/12/object-decommissioned-over-lake-huron-michigan-airspace-closure/69897024007/
+      - https://www.military.com/daily-news/2023/02/14/f-16-missile-missed-object-shot-down-over-lake-huron-joint-chiefs-chairman-says.html
+      - https://theaviationist.com/2023/02/12/f-16-shoots-down-an-unidentified-octagon-shaped-object-over-lake-huron/
+      - https://www.twz.com/air/details-about-search-for-mystery-object-shot-down-over-lake-huron-disclosed
+    evidence_weight: strong
+    notes: Fourth kinetic engagement. First publicly-disclosed AIM-9 miss against a live target since 1978. No wreckage ever recovered.
+
+  - id: 2023-02-13-vanherck-radar-gate-adjustment
+    date: 2023-02-13
+    title: VanHerck discloses NORAD radar gate adjustment after Feb 4
+    summary: Gen. Glen VanHerck disclosed at a Pentagon briefing that NORAD had adjusted the gates on its radar systems after the February 4 shootdown, narrowing velocity and altitude filters that normally excluded slow and low-radar-cross-section tracks. The adjustment is the proximate technical cause of the anomalous-objects phase.
+    category: institutional-statement
+    narratives: [misidentification-threshold, prc-surveillance]
+    sources:
+      - https://defensescoop.com/2023/02/13/norad-adjusts-radar-gates-to-sharpen-detection-of-anomalous-objects-as-ufo-recovery-intensifies/
+      - https://www.airforce-technology.com/news/norad-increases-radar-sensors/
+      - https://www.nbcnews.com/politics/national-security/powerful-radars-limited-scope-no-one-spotted-bunch-objects-floating-no-rcna70690
+      - https://taskandpurpose.com/news/us-military-norad-radar-balloons/
+    evidence_weight: strong
+    notes: Single most important institutional statement for the misidentification-threshold narrative. Direct NORAD or DoD transcript is CITE-NEEDED in the dossier; trade and national press sources are used.
+
+  - id: 2023-02-13-prc-counter-claim-us-balloons
+    date: 2023-02-13
+    title: PRC counter-claim that US balloons transited Chinese airspace 10+ times
+    summary: Chinese MFA spokesperson Wang Wenbin claimed at the daily press conference that US high-altitude balloons had transited Chinese airspace more than ten times since early 2022. The US NSC promptly denied the claim, characterizing it as damage control.
+    category: narrative-claim
+    narratives: [prc-civilian-weather, adversary-black-tech]
+    sources:
+      - https://www.npr.org/2023/02/13/1156488174/china-us-spy-balloons-airspace
+      - https://www.nbcnews.com/news/world/china-surveillance-spy-balloons-us-airspace-rcna70330
+    evidence_weight: moderate
+    notes: Most sustained external counter-narrative to prc-surveillance. Never substantiated with dates, tracks, or photographs.
+
+  - id: 2023-02-13-kirby-global-pla-program
+    date: 2023-02-13
+    title: Kirby attributes PRC balloon to global PLA surveillance program
+    summary: At the White House press briefing, NSC spokesperson John Kirby attributed the February 4 balloon to a PRC military surveillance program operating across more than 40 countries and five continents. Kirby said the administration had no attribution for the three later objects and noted there was "no indication of aliens."
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/13/press-briefing-by-press-secretary-karine-jean-pierre-and-national-security-council-coordinator-for-strategic-communications-john-kirby-february-13-2023/
+      - https://www.war.gov/News/News-Stories/Article/Article/3297104/chinese-surveillance-balloons-global-in-scope-says-official/
+    evidence_weight: strong
+    notes: The "no indication of aliens" phrasing was issued specifically to pre-empt the uap-unknown narrative, by name.
+
+  - id: 2023-02-14-kirby-recreation-research-attribution
+    date: 2023-02-14
+    title: Kirby attributes three later objects to private, recreation, or research
+    summary: At the February 14 White House press briefing, John Kirby attributed the Alaska, Yukon, and Lake Huron objects to most likely being balloons tied to private companies, recreation, or research institutions. Kirby acknowledged no wreckage had been recovered and that attribution was based on observed flight characteristics and intelligence-community assessment rather than physical evidence.
+    category: institutional-statement
+    narratives: [official-recreation-research]
+    sources:
+      - https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/14/press-briefing-by-press-secretary-karine-jean-pierre-2-14-2023/
+    evidence_weight: strong
+    notes: Origin of the official-recreation-research narrative. Offered within 72 hours of Lake Huron and before any physical recovery could have corroborated it.
+
+  - id: 2023-02-14-anand-canadian-national-security-update
+    date: 2023-02-14
+    title: Canadian Minister of National Defence Anand briefing
+    summary: Canadian Minister of National Defence Anita Anand held a national security update briefing in Ottawa. She confirmed the Yukon shootdown as the first NORAD engagement under Canadian sovereignty and detailed coordination between Canadian and US forces. She did not attribute the object.
+    category: institutional-statement
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    sources:
+      - https://www.canada.ca/en/department-national-defence/news/2023/02/minister-anandprovides-an-important-national-security-update.html
+    evidence_weight: strong
+    notes: Canadian-government absence of attribution parallels the US absence for the three later objects.
+
+  - id: 2023-02-15-wang-mfa-continues-counter-claim
+    date: 2023-02-15
+    title: Wang Wenbin continues MFA counter-claim at press conference
+    summary: Wang Wenbin held a regular Chinese MFA press conference on February 15 and continued the counter-claim regarding US balloon transits of Chinese airspace. He also characterized the February 4 shootdown as "a clear overreaction that seriously contravenes the spirit of international law and customary international practice."
+    category: narrative-claim
+    narratives: [prc-civilian-weather, adversary-black-tech]
+    sources:
+      - https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/lxjzh/202405/t20240530_11347465.html
+    evidence_weight: moderate
+    notes: Primary-source MFA transcript. URL path timestamp is publishing-system date; press conference itself was February 15 2023.
+
+  - id: 2023-02-16-biden-aerial-objects-address
+    date: 2023-02-16T14:11
+    title: Biden formal address on recent aerial objects
+    summary: President Joseph Biden delivered a formal address from the South Court Auditorium at 14:11 EST. He confirmed PRC attribution for the February 4 balloon, distinguished it from the three later objects, attributed the three later objects to "most likely balloons tied to private companies, recreation, or research institutions," and announced a four-part interagency response including new classification standards and a NORAD domain-awareness expansion.
+    category: institutional-statement
+    narratives: [prc-surveillance, official-recreation-research]
+    sources:
+      - https://bidenwhitehouse.archives.gov/briefing-room/speeches-remarks/2023/02/16/remarks-by-president-biden-on-the-united-states-response-to-recent-aerial-objects/
+      - https://www.cnn.com/2023/02/16/politics/president-biden-downed-objects/index.html
+    evidence_weight: strong
+    notes: Kirby February 14 attribution elevated to presidential framing. Canonical US-government narrative frame for the incident.
+
+  - id: 2023-02-17-kirby-recovery-wrap-briefing
+    date: 2023-02-17
+    title: Kirby consolidated status briefing; Navy and USCG wrap SC recovery
+    summary: John Kirby held a White House briefing consolidating status across all three later-object recovery sites. The Navy and Coast Guard formally concluded PRC balloon debris recovery off South Carolina, having retrieved priority sensors and structural sections. Kirby confirmed intelligence-community assessments supported benign attribution for the three later objects.
+    category: institutional-statement
+    narratives: [prc-surveillance, official-recreation-research]
+    sources:
+      - https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2023/02/17/press-briefing-by-press-secretary-karine-jean-pierre-and-nsc-coordinator-for-strategic-communications-john-kirby-9/
+      - https://news.usni.org/2023/02/17/navy-coast-guard-wrap-chinese-spy-balloon-recovery-off-south-carolina
+    evidence_weight: strong
+    notes: Recovery conclusion for the PRC balloon. The only event with physical-evidence attribution ground truth is the one where recovery succeeded.
+
+  - id: 2023-02-17-rcaf-yukon-search-unsuccessful
+    date: 2023-02-17
+    title: RCAF declares Yukon search unsuccessful
+    summary: The Royal Canadian Air Force and Canadian authorities declared the ground and air search for Yukon-object debris unsuccessful and terminated recovery operations. No wreckage was located. A CP-140 Aurora image of the object in flight was released by DND in September 2024, more than eighteen months after the shootdown.
+    category: policy-action
+    narratives: [uap-unknown, hobbyist-pico-balloon]
+    sources:
+      - https://en.wikipedia.org/wiki/2023_Yukon_high-altitude_object
+      - https://theaviationist.com/2024/09/25/image-of-unidentified-object-shot-down-over-canada/
+      - https://www.twz.com/air/first-look-at-mystery-object-shot-down-over-canada-by-f-22-raptor-last-year
+    evidence_weight: strong
+    notes: Evidentiary center of gravity for the hobbyist-pico-balloon narrative. September 2024 DND image is visually consistent with a pico-balloon profile.
+
+  - id: 2023-02-17-nibbb-k9yo-statement
+    date: 2023-02-17
+    title: NIBBB statement on missing K9YO-15 pico-balloon
+    summary: The Northern Illinois Bottlecap Balloon Brigade issued a public statement acknowledging its pico-balloon designated K9YO-15 had gone missing and that the last WSPR telemetry placed it near Hagemeister Island, Alaska on February 11, 2023. NIBBB declined to attribute the Yukon shootdown to K9YO-15 in the absence of recovered wreckage.
+    category: narrative-claim
+    narratives: [hobbyist-pico-balloon]
+    sources:
+      - https://nibbb.org/2023/02/17/a-statement-from-the-nibbb-on-current-events/
+      - https://www.washingtonpost.com/national-security/2023/02/17/illinois-hobbyist-balloon-missing-yukon/
+      - https://www.npr.org/2023/02/18/1158048921/pico-balloon-k9yo
+      - https://www.cbc.ca/news/canada/missing-balloon-yukon-1.6752141
+    evidence_weight: moderate
+    notes: Origin of the hobbyist-pico-balloon narrative. NIBBB care not to over-attribute is itself a calibration signal for how the pipeline should score grassroots technical narratives.
+
+  - id: 2023-02-27-crs-in12118-published
+    date: 2023-02-27
+    title: Congressional Research Service publishes IN12118 on sovereign-skies monitoring
+    summary: The Congressional Research Service published Insight IN12118, "Monitoring the Sovereign Skies," authored by Bart Elias. The report covers ICAO Article 8 requirements, FAA tracking technologies, balloon notification and registration requirements, and the structure of Air Defense Identification Zones.
+    category: institutional-statement
+    narratives: [prc-surveillance, misidentification-threshold]
+    sources:
+      - https://www.congress.gov/crs_external_products/IN/PDF/IN12118/IN12118.1.pdf
+      - https://www.everycrsreport.com/reports/IN12118.html
+    evidence_weight: strong
+    notes: First formal congressional-analytical product on the incident. Supersedes the unverified IF12364 identifier in the original PHASED-PLAN draft.
+
+  - id: 2023-03-07-canadian-nddn-briefing-notes
+    date: 2023-03-07
+    title: Canadian NDDN committee briefing notes on high-altitude objects
+    summary: Canadian Department of National Defence published briefing notes prepared for the House of Commons Standing Committee on National Defence covering the high-altitude objects, NORAD authorities, and Canadian recovery operations.
+    category: institutional-statement
+    narratives: [prc-surveillance, uap-unknown]
+    sources:
+      - https://www.canada.ca/en/department-national-defence/corporate/reports-publications/proactive-disclosure/nddn-7-march-23/key-issues.html
+    evidence_weight: strong
+    notes: Canadian-government proactive-disclosure product reflecting consolidated position as of early March 2023.
+
+  - id: 2023-03-10-wicker-rubio-pentagon-letter
+    date: 2023-03-10
+    title: Wicker and Rubio letter criticizing Pentagon briefing responsiveness
+    summary: Sen. Roger Wicker (ranking on Senate Armed Services) and Sen. Marco Rubio (ranking on Senate Intelligence) issued a joint statement criticizing the Pentagon for avoiding questions in classified briefings on the balloon engagement. They pressed for detail on prior undetected transits, intelligence-collection capabilities of the recovered payload, and the administration's decision timeline.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.wicker.senate.gov/2023/3/wicker-rubio-blast-pentagon-for-avoiding-questions-on-chinese-spy-balloon
+    evidence_weight: strong
+    notes: Senate-side oversight counterpart to the House Select Committee's work.
+
+  - id: 2023-04-03-nbc-collected-intelligence-report
+    date: 2023-04-03
+    title: NBC reports PRC balloon collected intelligence from sensitive sites
+    summary: NBC News (Courtney Kube and Carol E. Lee) reported, citing two current senior US officials and one former senior administration official, that the PRC balloon had collected intelligence from sensitive US military sites during its transit, despite real-time US efforts to block collection. China controlled the balloon to make multiple passes over some sites in figure-eight patterns and transmitted data back to Beijing in real time.
+    category: media-coverage
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.nbcnews.com/politics/national-security/china-spy-balloon-collected-intelligence-us-military-bases-rcna77155
+    evidence_weight: moderate
+    notes: Critical Narrative Velocity Divergence data point. Anonymously-sourced report contradicted a still-public administration position.
+
+  - id: 2023-04-24-canadian-secd-norad-authorities
+    date: 2023-04-24
+    title: Canadian Senate briefing on NORAD authorities and operations
+    summary: Canadian Department of National Defence published a Senate-committee briefing note titled "NORAD Authorities and Operations" covering the legal and operational authorities invoked for the February 2023 shootdowns, Canadian sovereignty, NORAD command authorities, and consultation protocols.
+    category: institutional-statement
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.canada.ca/en/department-national-defence/corporate/reports-publications/proactive-disclosure/secd-april-24-2023/norad-authorities-and-operations.html
+    evidence_weight: strong
+    notes: Clearest statement of how the cross-border NORAD command relationship functioned during the incident.
+
+  - id: 2023-05-10-northcom-redesign-disclosed
+    date: 2023-05-10
+    title: NORTHCOM homeland defense redesign disclosed
+    summary: Defense News reported on a NORTHCOM briefing announcing an ongoing homeland-defense redesign initiative triggered in part by the February 2023 incidents. The effort covers domain-awareness sensor expansion, data integration, and command-and-control modernization.
+    category: institutional-statement
+    narratives: [misidentification-threshold, prc-surveillance]
+    sources:
+      - https://www.defensenews.com/congress/2023/05/10/a-new-design-for-homeland-defense-is-in-the-works-at-northcom/
+    evidence_weight: strong
+    notes: Long-tail institutional-response signal.
+
+  - id: 2023-06-29-dod-final-attribution
+    date: 2023-06-29
+    title: DoD final attribution; balloon did not collect or transmit intelligence
+    summary: Brig. Gen. Pat Ryder briefed from the Pentagon podium that the completed forensic analysis had determined the PRC balloon did not collect intelligence during its transit and did not transmit any collected signals. The announcement closed the balloon attribution question from the DoD's perspective.
+    category: institutional-statement
+    narratives: [prc-surveillance, misidentification-threshold]
+    sources:
+      - https://www.globalsecurity.org/military/library/news/2023/06/mil-230629-dod01.htm
+      - https://www.militarytimes.com/news/your-military/2023/06/29/dod-chinese-spy-balloon-did-not-collect-transmit-data-over-the-us/
+      - https://www.cnn.com/2023/06/29/politics/china-surveillance-balloon-pentagon-intl-hnk/index.html
+    evidence_weight: strong
+    notes: Canonical war.gov transcript URL is CITE-NEEDED. DoD final attribution closes one narrative but not the three later objects.
+
+  - id: 2023-10-25-odni-fy23-uap-report
+    date: 2023-10-25
+    title: ODNI publishes FY2023 UAP annual report
+    summary: ODNI published the FY2023 Consolidated Annual Report on Unidentified Anomalous Phenomena covering August 31 2022 through April 30 2023. The report includes 291 UAP reports, 290 in the air domain, and retrospectively incorporates the February 2023 high-altitude objects into the official UAP data set. DoD issued a companion release.
+    category: institutional-statement
+    narratives: [uap-unknown, prc-surveillance, misidentification-threshold]
+    sources:
+      - https://www.dni.gov/index.php/newsroom/reports-publications/reports-publications-2023/3733-2023-consolidated-annual-report-on-unidentified-anomalous-phenomena
+      - https://www.dni.gov/files/ODNI/documents/assessments/FY2023-Consolidated-Annual-Report-UAP-Oct2023.pdf
+      - https://www.aaro.mil/Portals/136/PDFs/UNCLASSIFIED-FY23_Consolidated_Annual_Report_on_UAP-Oct_25_2023_1236.pdf
+      - https://www.war.gov/News/Releases/Release/Article/3964824/department-of-defense-releases-the-annual-report-on-unidentified-anomalous-phen/
+    evidence_weight: strong
+    notes: Retrospective placement alongside 289 other reports dampens the uap-unknown narrative's exclusive claim on the three later objects.
+
+  - id: 2023-12-29-cnn-balloon-isp-report
+    date: 2023-12-29
+    title: CNN reports PRC balloon used US internet provider for command and control
+    summary: CNN reported that the PRC balloon used a US-based internet-service-provider connection to communicate its location back to the PRC during its transit, qualifying the DoD June 29 "did not transmit" statement by distinguishing between operational telemetry and mission intelligence collection.
+    category: media-coverage
+    narratives: [prc-surveillance]
+    sources:
+      - https://www.cnn.com/2023/12/29/politics/chinese-spy-balloon-us-internet-provider/index.html
+    evidence_weight: moderate
+    notes: Long-tail contradicting-evidence signal paired with the April 2023 NBC report. From a Sensemaking Quality Metrics perspective these are the contradicting-evidence-lag measurements for the prc-surveillance narrative's dominant sub-claim.
