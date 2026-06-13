@@ -1,10 +1,12 @@
 # TELL
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20681167.svg)](https://doi.org/10.5281/zenodo.20681167)
+
 **Totally Explainable, Looks Legit.** A weak-signal detection pipeline for information environments where the comfortable explanation is usually wrong.
 
 In poker, a "tell" is the unconscious signal that reveals what someone is concealing. In storytelling, to "tell" is to narrate. The pipeline detects tells (weak signals) hiding inside tells (narratives).
 
-> **Time capsule.** This repository is a frozen snapshot of the TELL pipeline exactly as presented at the Carnegie Mellon Technology, Management, and Policy Graduate Consortium on June 16, 2026, under the title *Sensemaking quality, not prediction: three measures for detecting narrative capture*. It is archived and will not change. Development continues; future milestones will be published the same way. The live dashboard is at [tell-fyi.vercel.app](https://tell-fyi.vercel.app), the talk slides at [tell-fyi.vercel.app/tmp26](https://tell-fyi.vercel.app/tmp26), and the deck plus its figure build pipeline are in [`talk/`](talk/).
+> **Time capsule.** This repository is a frozen snapshot of the TELL pipeline exactly as presented at the Carnegie Mellon Technology, Management, and Policy Graduate Consortium on June 16, 2026, under the title *Sensemaking quality, not prediction: three measures for detecting narrative capture*. It is archived and will not change. Development continues; future milestones will be published the same way. The live dashboard is at [sensemaking.wtf/projects/tell](https://sensemaking.wtf/projects/tell), the talk slides at [sensemaking.wtf/projects/tell/tmp26](https://sensemaking.wtf/projects/tell/tmp26), and the deck plus its figure build pipeline are in [`talk/`](talk/).
 
 ## What this is
 

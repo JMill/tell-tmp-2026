@@ -10,5 +10,10 @@ authors:
 version: tmp-2026
 date-released: "2026-06-12"
 url: "https://github.com/JMill/tell-tmp-2026"
+doi: 10.5281/zenodo.20681167
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20681167
+    description: "Concept DOI for all versions of this snapshot"
 license: Apache-2.0
 notes: "Frozen snapshot as presented at the CMU Technology, Management, and Policy Graduate Consortium, June 16, 2026: 'Sensemaking quality, not prediction: three measures for detecting narrative capture.'"
