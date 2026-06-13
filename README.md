@@ -114,13 +114,9 @@ tell/
 └── scripts/
 ```
 
-## Related work
+## Context
 
-- **Praxis paper:** `../../paper/` (forthcoming)
-- **The Uncertainty Game:** `../../artifact/` (sibling artifact; shares the same underlying architecture)
-- **CU26 collaborative paper:** source material in `../../intake/` pending publication
-- **Lawfare policy piece:** "The Disclosure Trap" in `../../intake/` pending publication
-- **First engagement using this work:** `../../engagements/2026-tmp-cmu/`
+TELL is the information-environment instantiation of a broader research program on engineering for sensemaking quality ([sensemaking.wtf](https://sensemaking.wtf)). A sibling instantiation, The Uncertainty Game, applies the same architecture to facilitated decision exercises. The pipeline was first presented at the CMU Technology, Management, and Policy Graduate Consortium on June 16, 2026.
 
 ## What is included, and what is not
 
